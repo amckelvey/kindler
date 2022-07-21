@@ -1,0 +1,28 @@
+{
+  "name": "kindler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server --ignore client",
+    "build": "cd client && npm run build",
+    "develop": "concurrently \"cd server && npm run start\" \"cd client && npm run start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "heroku-postbuild": "npm run seed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amckelvey/kindler.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amckelvey/kindler/issues"
+  },
+  "homepage": "https://github.com/amckelvey/kindler#readme",
+  "devDependencies": {
+    "concurrently": "^7.3.0"
+  }
+}
