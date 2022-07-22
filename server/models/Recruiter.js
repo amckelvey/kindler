@@ -20,7 +20,7 @@ const recSchema = new Schema({
   },
 });
 
-recSchema.pre("save", async (next) => {
+recSchema.pre("save", async function (next) {
   if (this.isNew || this.isModified("password")) {
     const saltRounds = 10;
     this.password = await bcrypt.hash(this.password, saltRounds);
@@ -29,7 +29,7 @@ recSchema.pre("save", async (next) => {
   next();
 });
 
-recSchema.methods.isCorrectPassword = async (password) => {
+recSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
 

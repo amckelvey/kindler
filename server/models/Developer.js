@@ -37,7 +37,7 @@ const devSchema = new Schema({
   ],
 });
 
-devSchema.pre("save", async (next) => {
+devSchema.pre("save", async function (next) {
   if (this.isNew || this.isModified("password")) {
     const saltRounds = 10;
     this.password = await bcrypt.hash(this.password, saltRounds);
@@ -46,7 +46,7 @@ devSchema.pre("save", async (next) => {
   next();
 });
 
-devSchema.methods.isCorrectPassword = async (password) => {
+devSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
 
