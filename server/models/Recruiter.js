@@ -30,7 +30,7 @@ recSchema.pre("save", async function (next) {
 });
 
 recSchema.methods.isCorrectPassword = async function (password) {
-  return bcrypt.compare(password, this.password);
+  return await bcrypt.compare(password, this.password);
 };
 
 const Recruiter = model("Recruiter", recSchema);
