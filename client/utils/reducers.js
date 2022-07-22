@@ -45,7 +45,13 @@ export default function reducer(state, action) {
     }
     
     case ADD_TECH: {
-      const newTech = 
+      const newTechId = state.techs[state.techs.length - 1].id + 1;
+      const newTech = { ...action.payload, id: newTechId }
+
+      return {
+        ...state,
+        techs: [...state.projects, newTech],
+      };
     }
   }
 }
