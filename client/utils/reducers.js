@@ -19,6 +19,7 @@ export default function reducer(state, action) {
         developers: [...state.developers, newDev],
       };
     }
+
     case ADD_RECRUITER: {
       const newRecruiterId = state.recruiters[state.recruiters.length - 1].id + 1;
       const newRecruiter = { ...action.payload, id: newRecruiterId };
@@ -28,13 +29,24 @@ export default function reducer(state, action) {
         recruiters: [...state.recruiters, newRecruiter],
       };
     }
+
     case LOGIN: {
       //TODO
     }
+
     case ADD_PROJECT: {
       const newProjectId = state.projects[state.projects.length - 1].id + 1;
-      const newProject = 
+      const newProject = { ...action.payload, id: newProjectId}
+
+      return {
+        ...state,
+        projects: [...state.projects, newProject],
+      };
+    }
+    
+    case ADD_TECH: {
+      const newTech = 
+    }
   }
-}
 }
 
