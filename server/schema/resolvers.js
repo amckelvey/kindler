@@ -25,18 +25,16 @@ const resolvers = {
   Mutation: {
     addDev: async (parent, args) => {
       const developer = await Developer.create(args);
-      const token = signToken(user);
-      return { token, developer };
+      const token = signToken(developer);
+      return { token, developer, role: "Developer" };
     },
     addRecruiter: async (parent, args) => {
       const recruiter = await Recruiter.create(args);
-      const token = signToken(user);
-      return { token, recruiter };
+      const token = signToken(recruiter);
+      return { token, recruiter, role: "Recruiter" };
     },
-    login: async (parent, { email, password }) => {
-      const user =
-        (await Developer.findOne({ email })) ||
-        (await Recruiter.findOne({ email }));
+    recLogin: async (parent, { email, password }) => {
+      const user = await Recruiter.findOne({ email });
 
       if (!user) {
         throw new AuthenticationError("Incorrect Credentials");
@@ -50,7 +48,24 @@ const resolvers = {
 
       const token = signToken(user);
 
-      return { token, user };
+      return { token, user, role: "Recruiter" };
+    },
+    devLogin: async (parent, { email, password }) => {
+      const user = await Developer.findOne({ email });
+
+      if (!user) {
+        throw new AuthenticationError("Incorrect Credentials");
+      }
+
+      const correctPw = await user.isCorrectPassword(password);
+
+      if (!correctPw) {
+        throw new AuthenticationError("Incorrect Credentials");
+      }
+
+      const token = signToken(user);
+
+      return { token, user, role: "Developer" };
     },
     addProject: async (parent, { name, description, image, tech }, context) => {
       if (context.developer) {

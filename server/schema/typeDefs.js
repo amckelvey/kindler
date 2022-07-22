@@ -1,8 +1,7 @@
 const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
-
-  type Developer{
+  type Developer {
     _id: ID!
     name: String!
     email: String!
@@ -13,13 +12,13 @@ const typeDefs = gql`
     bio: String
   }
 
-  type Recruiter{
+  type Recruiter {
     _id: ID!
     name: String!
     email: String!
     password: String!
   }
-  
+
   type Tech {
     _id: ID!
     name: String!
@@ -37,25 +36,31 @@ const typeDefs = gql`
     developers: [Developer]
     developer(name: String!): Developer
     recruiters: [Recruiter]
-    recruiter(name: String!): Recruiter 
+    recruiter(name: String!): Recruiter
     tech: [Tech]
-    project: [Project]
-
-  }  
+    projects: [Project]
+  }
 
   type Auth {
     token: ID!
-    user: User
+    role: String!
   }
 
-  type Mutations {
-    addDev(name: String!, email: String!, password: String!):Auth
-    addRecruiter(name: String!, email: String!, password: String!):Auth
-    login(email: String!, password: String!):Auth
-    addProject(name: String!, description: String!, image: String!)
-    addTech(name: String!, projectId: ID):Project
-    removeProject(projectId: ID):Project
-    removeTech(projectId: ID, techId: ID):Project
+  type Mutation {
+    addDev(
+      name: String!
+      email: String!
+      password: String!
+      job_status: String!
+      position: String!
+    ): Auth
+    addRecruiter(name: String!, email: String!, password: String!): Auth
+    recLogin(email: String!, password: String!): Auth
+    devLogin(email: String!, password: String!): Auth
+    addProject(name: String!, description: String!, image: String!): Project
+    addTech(name: String!, projectId: ID): Project
+    removeProject(projectId: ID): Project
+    removeTech(projectId: ID, techId: ID): Project
   }
 `;
 
