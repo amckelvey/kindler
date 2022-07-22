@@ -10,6 +10,7 @@ const typeDefs = gql`
     job_status: String!
     position: String!
     projects: [Project]
+    bio: String
   }
 
   type Recruiter{
