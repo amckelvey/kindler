@@ -1,7 +1,8 @@
 import {
   ADD_DEVELOPER,
   ADD_RECRUITER,
-  LOGIN,
+  DEV_LOGIN,
+  REC_LOGIN,
   ADD_PROJECT,
   ADD_TECH,
   REMOVE_PROJECT,
@@ -30,7 +31,11 @@ export default function reducer(state, action) {
       };
     }
 
-    case LOGIN: {
+    case DEV_LOGIN: {
+      //TODO
+    }
+
+    case REC_LOGIN: {
       //TODO
     }
 
@@ -53,6 +58,24 @@ export default function reducer(state, action) {
         techs: [...state.projects, newTech],
       };
     }
+
+    case REMOVE_PROJECT: {
+      return {
+        ...state,
+        projects: state.projects.filter((projects) => projects.id !== action.payload),
+      };
+    }
+
+    case REMOVE_TECH: {
+      return {
+        ...state,
+        techs: state.techs.filter((techs) => techs.id !== action.payload),
+      };
+    }
+
+    default: {
+      return state;
+    };
   }
 }
 
