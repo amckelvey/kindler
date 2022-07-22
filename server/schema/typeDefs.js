@@ -34,7 +34,10 @@ const typeDefs = gql`
   }
 
   type Query {
-    users: [User]
+    developers: [Developer]
+    developer(name: String!): Developer
+    recruiters: [Recruiter]
+    recruiter(name: String!): Recruiter 
     tech: [Tech]
     project: [Project]
 
