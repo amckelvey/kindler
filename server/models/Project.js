@@ -13,12 +13,7 @@ const projectSchema = new Schema({
     type: String,
     required: true,
   },
-  tech: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "Tech",
-    },
-  ],
+  tech: [techSchema],
 });
 
 const Project = model("Project", projectSchema);
