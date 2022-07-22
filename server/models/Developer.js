@@ -20,11 +20,9 @@ const devSchema = new Schema({
   },
   position: {
     type: String,
-    required: true,
   },
   job_status: {
     type: String,
-    required: true,
   },
   bio: {
     type: String,
