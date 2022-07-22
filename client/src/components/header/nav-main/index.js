@@ -5,18 +5,17 @@ export default function Header() {
     return (
         <nav>
             <div>
-                <h1 className='logo'>[ ]</h1>
+                <button className='logo' onClick={() => alert("this is our home")}>[ &nbsp;]</button>
             </div>
             <div>
-                <h3>Learn</h3>
+                <button onClick={() => alert("This is our website")}>Learn</button>
             </div>
             <div>
-                <h3>Safety</h3>
+                <button onClick={() => alert("Stay safe")}>Safety</button>
             </div>
             <div>
-                <h3>Support</h3>
+                <button onClick={() => alert("Need help? Me too!!")}>Support</button>
             </div>
-
         </nav>
     )
 }
