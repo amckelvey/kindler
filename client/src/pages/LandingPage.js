@@ -1,9 +1,8 @@
 import React from "react";
 import SignUpBtn from "../components/signUpBtn";
 import SignInBtn from "../components/signInBtn";
-import Hero from "../components/hero";
+import LogoutBtn from "../components/logoutBtn";
 import Auth from "../utils/auth";
-import { TypeOrFieldNameRegExp } from "@apollo/client/cache/inmemory/helpers";
 
 const styles = {
   sloganContainer: {
@@ -50,6 +49,23 @@ const LandingPage = () => {
         <div style={styles.buttonContainer}>
           <SignUpBtn style={styles.button} />
           <SignInBtn style={styles.button} />
+        </div>
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <div className="sloganContainer" style={styles.sloganContainer}>
+          <div>
+            <h2 style={styles.slogan}>
+              <span style={styles.brackets}>&#123;</span> #COMMIT TO YOUR RIGHT
+              DEVELOPER <span style={styles.brackets}>&#125;</span>
+            </h2>
+          </div>
+        </div>
+        <br />
+        <div style={styles.buttonContainer}>
+          <LogoutBtn style={styles.button} />
         </div>
       </div>
     );
