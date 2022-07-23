@@ -32,11 +32,15 @@ const client = new ApolloClient({
 const styles = {
   LogoBracket: {
     color: "#179FF6",
-    
+    fontSize: "65px",
+    fontWeight: "300"
   },
   name: {
     color: "#9CDCFB",
-    margin: "0 1em",
+    margin: "0.1em 0 0 0.5em",
+    fontSize: "50px",
+    fontWeight: "300",
+    letterSpacing: "15px"
 
   }
 }
