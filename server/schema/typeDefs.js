@@ -39,6 +39,7 @@ const typeDefs = gql`
     recruiter(email: String!): Recruiter
     tech: [Tech]
     projects: [Project]
+    project(projectId: ID!): Project
   }
 
   type Auth {

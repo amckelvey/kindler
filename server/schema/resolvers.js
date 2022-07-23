@@ -20,6 +20,9 @@ const resolvers = {
       const params = email ? { email } : {};
       return Project.find(params);
     },
+    project: async (parent, { projectId }) => {
+      return Project.findOne({ _id: projectId });
+    },
   },
 
   Mutation: {

@@ -59,4 +59,17 @@ export const QUERY_SINGLE_RECRUITER = gql`
   }
 `;
 
-export const QUERY_SINGLE_PROJECT = gql``;
+export const QUERY_SINGLE_PROJECT = gql`
+  query project($projectId: ID!) {
+    project(projectId: $projectId) {
+      _id
+      name
+      description
+      image
+      tech {
+        _id
+        name
+      }
+    }
+  }
+`;
