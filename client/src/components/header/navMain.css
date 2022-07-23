@@ -7,7 +7,7 @@ nav {
 
 
 /* Buttons styles start */
-button {
+.navbutton {
     display: inline-block;
     border: none;
     padding: 1rem 2rem;
@@ -25,18 +25,18 @@ button {
     -moz-appearance: none;
 }
 
-button:hover,
-button:focus {
+.navbutton:hover,
+.navbutton:focus {
     font-weight: bold;
 }
 
-button:focus {
+.navbutton:focus {
     outline: 1px solid #fff;
     outline-offset: -4px;
     font-weight: bold;
 }
 
-button:active {
+.navbutton:active {
     transform: scale(0.99);
     font-weight: bold;
 }
