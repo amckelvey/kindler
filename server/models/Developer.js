@@ -20,11 +20,9 @@ const devSchema = new Schema({
   },
   position: {
     type: String,
-    required: true,
   },
   job_status: {
     type: String,
-    required: true,
   },
   bio: {
     type: String,
@@ -47,7 +45,7 @@ devSchema.pre("save", async function (next) {
 });
 
 devSchema.methods.isCorrectPassword = async function (password) {
-  return bcrypt.compare(password, this.password);
+  return await bcrypt.compare(password, this.password);
 };
 
 const Developer = model("Developer", devSchema);

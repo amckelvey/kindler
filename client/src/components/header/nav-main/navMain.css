@@ -12,7 +12,7 @@ button {
   padding: 1rem 2rem;
   margin: 0;
   text-decoration: none;
-  color: #ffffff;
+  color: #a8a8a8;
   background-color: #333333;
   font-family: sans-serif;
   font-size: 1rem;
@@ -42,5 +42,5 @@ button:active {
 /* Button styles end */
 
 .logo {
-  color: Blue;
+  color: #179ff6;
 }
