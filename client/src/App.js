@@ -2,7 +2,7 @@ import React from 'react'
 import Header from './components/header';
 import Main from './components/main';
 import Footer from './components/footer';
-import Home from './pages/Home';
+import LandingPage from './pages/LandingPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { setContext } from '@apollo/client/link/context';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
@@ -48,11 +48,11 @@ function App() {
             <Routes>
               <Route 
                 path="/" 
-                element={<Home />} 
+                element={<LandingPage />} 
               />
               <Route 
                 path="/login" 
-                element={<Home />} 
+                element={<LandingPage />} 
               />
 
             </Routes>
