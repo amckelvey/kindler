@@ -52,9 +52,9 @@ const typeDefs = gql`
     recLogin(email: String!, password: String!): Auth
     devLogin(email: String!, password: String!): Auth
     addProject(name: String!, description: String!, image: String!): Project
-    addTech(name: String!, projectId: ID): Project
-    removeProject(projectId: ID): Project
-    removeTech(projectId: ID, techId: ID): Project
+    addTech(name: String!, projectId: ID!): Project
+    removeProject(projectId: ID!): Project
+    removeTech(projectId: ID!, techId: ID!): Project
   }
 `;
 

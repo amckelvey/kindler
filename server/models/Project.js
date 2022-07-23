@@ -13,7 +13,14 @@ const projectSchema = new Schema({
     type: String,
     required: true,
   },
-  tech: [techSchema],
+  tech: [
+    {
+      name: {
+        type: String,
+        trim: true,
+      },
+    },
+  ],
 });
 
 const Project = model("Project", projectSchema);
