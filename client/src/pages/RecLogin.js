@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { REC_LOGIN } from "../utils/mutations";
+import { Link } from "react-router-dom";
 import Auth from "../utils/auth";
 
 function Login(props) {
@@ -22,7 +23,7 @@ function Login(props) {
         variables: { email: formState.email, password: formState.password },
       });
 
-      const token = mutationResponse.data.login.token;
+      const token = mutationResponse.data.recLogin.token;
       Auth.login(token);
     } catch (err) {
       console.log(err);
@@ -48,6 +49,9 @@ function Login(props) {
         </div>
       </div>
       <br />
+      <div className="container my-1">
+        <Link to="/signuprec">← Go to Signup</Link>
+      </div>
       <form onSubmit={handleFormSubmit}>
         <input
           placeholder="email"

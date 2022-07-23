@@ -1,4 +1,5 @@
 import React from "react";
+import Auth from "../../utils/auth";
 
 const LogoutBtn = () => {
   const styles = {
@@ -18,7 +19,7 @@ const LogoutBtn = () => {
     },
   };
   return (
-    <button style={styles.button} onClick={() => alert("Logging out")}>
+    <button style={styles.button} onClick={() => Auth.logout()}>
       'logout' <span style={styles.whtSemiColon}>;</span>
     </button>
   );

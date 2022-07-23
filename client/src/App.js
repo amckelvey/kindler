@@ -66,12 +66,13 @@ function App() {
           </h1>
           <Routes>
             <Route path="/" element={<LandingPage />} />
-            {/* <Route path="/login-type" element={<DevRecLogin />} /> */}
+            {/* <Route path="/logintype" element={<DevRecLogin />} /> */}
             <Route path="/logindev" element={<DevLogin />} />
             <Route path="/loginrec" element={<RecLogin />} />
+            <Route path="/signupdev" element={<SignUpDev />} />
+            <Route path="/signuprec" element={<SignUpRec />} />
             {/* <Route path="/signup-type" element={<DevRec />} />
-            <Route path="/signup-dev" element={<SignUpDev />} />
-            <Route path="/signup-rec" element={<SignUpRec />} />
+        
             <Route path="/signup-dev-profile" element={<SignUpDevProfile />} />
             <Route path="/developers" element={<SignUpDevProfile />} />
             <Route
