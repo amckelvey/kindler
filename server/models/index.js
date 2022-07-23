@@ -1,4 +1,4 @@
 const Developer = require("./Developer");
 const Recruiter = require("./Recruiter");
-
-module.exports = { Developer, Recruiter };
+const Project = require("./Project");
+module.exports = { Developer, Recruiter, Project };

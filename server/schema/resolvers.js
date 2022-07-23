@@ -68,7 +68,7 @@ const resolvers = {
       return { token, user, role: "Developer" };
     },
     addProject: async (parent, { name, description, image, tech }, context) => {
-      if (context.developer) {
+      if (context.user) {
         const project = await Project.create({
           name,
           description,
@@ -77,19 +77,19 @@ const resolvers = {
         });
 
         await Developer.findOneAndUpdate(
-          { _id: context.developer._id },
-          { $addtoSet: { projects: project._id } }
+          { _id: context.user._id },
+          { $addToSet: { projects: project._id } }
         );
         return project;
       }
-      throw new Authenticationerror("You need to be logged in.");
+      throw new AuthenticationError("You need to be logged in.");
     },
     addTech: async (parent, { projectId, name }, context) => {
-      if (context.developer) {
+      if (context.user) {
         return Project.findOneAndUpdate(
           { _id: projectId },
           {
-            $addtoSet: {
+            $addToSet: {
               tech: { name },
             },
           },
@@ -99,14 +99,14 @@ const resolvers = {
       throw new AuthenticationError("You need to be logged in.");
     },
     removeProject: async (parent, { projectId }, context) => {
-      if (context.developer) {
+      if (context.user) {
         const project = await Project.findOneAndDelete({
           _id: projectId,
         });
 
         await Developer.findOneAndUpdate(
           {
-            _id: context.developer._id,
+            _id: context.user._id,
           },
           {
             $pull: { projects: project._id },
@@ -117,7 +117,7 @@ const resolvers = {
       }
     },
     removeTech: async (parent, { projectId, techId }, context) => {
-      if (context.developer) {
+      if (context.user) {
         return Project.findOneAndUpdate(
           {
             _id: projectId,
