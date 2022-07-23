@@ -34,9 +34,9 @@ const typeDefs = gql`
 
   type Query {
     developers: [Developer]
-    developer(name: String!): Developer
+    developer(email: String!): Developer
     recruiters: [Recruiter]
-    recruiter(name: String!): Recruiter
+    recruiter(email: String!): Recruiter
     tech: [Tech]
     projects: [Project]
   }
