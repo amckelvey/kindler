@@ -26,7 +26,9 @@ const LandingPage = () => {
     if (!Auth.loggedIn()) {
         return (
             <div>
-                < Hero />
+                <div className="sloganContainer" style={styles.sloganContainer}>
+                    <h2>&#123; #COMMIT TO YOUR RIGHT DEVELOPER &#125;</h2>
+                </div>
                 <br/>
                 <div style={styles.buttonContainer}>
                     <SignUpBtn style={styles.button}/>
