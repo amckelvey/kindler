@@ -10,10 +10,16 @@ const styles = {
         borderLeft: "solid 2px #7B7B7B",
         padding: "0 1em",
         margin: "10px 2em",
+
     },
 
     slogan: {
-        color: '#9CDCFB'
+        color: '#9CDCFB',
+
+        fontSize: "25px",
+        fontWeight: "300",
+        letterSpacing: "3px"
+
     },
 
     brackets: {
@@ -27,6 +33,7 @@ const styles = {
 
     button: {
         flex: "1",
+
     }
   }
 
