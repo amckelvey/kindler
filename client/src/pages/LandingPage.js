@@ -27,7 +27,9 @@ const LandingPage = () => {
         return (
             <div>
                 <div className="sloganContainer" style={styles.sloganContainer}>
-                    <h2>&#123; #COMMIT TO YOUR RIGHT DEVELOPER &#125;</h2>
+                    <div>
+                        <h2>&#123; #COMMIT TO YOUR RIGHT DEVELOPER &#125;</h2>
+                    </div>
                 </div>
                 <br/>
                 <div style={styles.buttonContainer}>
