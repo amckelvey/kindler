@@ -2,7 +2,14 @@ import React from "react";
 import Header from "./components/header";
 import Main from "./components/main";
 import Footer from "./components/footer";
+
 import LandingPage from "./pages/LandingPage";
+import DevRec from "./pages/DevOrRec";
+import SignUpDev from "./pages/SignUpDev";
+import SignUpRec from "./pages/SignUpRec";
+import SignUpDevProfile from "./pages/SignUpDevProfile";
+import Login from "./pages/Login";
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { setContext } from "@apollo/client/link/context";
 import {
@@ -53,7 +60,16 @@ function App() {
           </h1>
           <Routes>
             <Route path="/" element={<LandingPage />} />
-            <Route path="/login" element={<LandingPage />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup-type" element={<DevRec />} />
+            <Route path="/signup-dev" element={<SignUpDev />} />
+            <Route path="/signup-rec" element={<SignUpRec />} />
+            <Route path="/signup-dev-profile" element={<SignUpDevProfile />} />
+            <Route path="/developers" element={<SignUpDevProfile />} />
+            <Route
+              path="/:developerID/projects"
+              element={<SignUpDevProfile />}
+            />
           </Routes>
           <Footer />
         </div>
