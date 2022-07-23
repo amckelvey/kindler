@@ -26,13 +26,25 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+const styles = {
+  LogoBracket: {
+    color: "#179FF6",
+    
+  },
+  name: {
+    color: "#9CDCFB",
+    margin: "0 1em",
+
+  }
+}
+
 function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
           <Header />
-          <Main />
+          <h1 style={styles.name}><span style={styles.LogoBracket}>[</span> KINDLER <span style={styles.LogoBracket}>]</span></h1>
             <Routes>
               <Route 
                 path="/" 

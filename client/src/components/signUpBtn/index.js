@@ -6,4 +6,4 @@ const SignUpBtn = () => {
   );
 };
 
-export default HomSignUpBtne;
+export default SignUpBtn;
