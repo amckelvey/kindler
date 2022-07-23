@@ -6,29 +6,35 @@ import Auth from "../utils/auth";
 import { TypeOrFieldNameRegExp } from "@apollo/client/cache/inmemory/helpers";
 
 const styles = {
-  sloganContainer: {
-    borderLeft: "solid 2px #7B7B7B",
-    padding: "0 1em",
-    margin: "10px 2em",
-  },
+    sloganContainer: {
+        borderLeft: "solid 2px #7B7B7B",
+        padding: "0 1em",
+        margin: "10px 2em",
 
-  slogan: {
-    color: "#9CDCFB",
-  },
+    },
+
+    slogan: {
+        color: '#9CDCFB',
+
+        fontSize: "25px",
+        fontWeight: "300",
+        letterSpacing: "3px"
+
+    },
 
   brackets: {
     color: "#F2D700",
   },
 
-  buttonContainer: {
-    display: "flex",
-    justifyContent: "space-evenly",
-  },
+    button: {
+        flex: "1",
+
+    }
+  }
 
   button: {
     flex: "1",
-  },
-};
+  }
 
 const LandingPage = () => {
   if (Auth.loggedIn()) {
