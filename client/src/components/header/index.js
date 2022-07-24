@@ -27,22 +27,22 @@ export default function Header() {
     } else {
         return (
             <nav>
-            <div>
-                <button className='logo navbutton' onClick={() => alert("this is our home")}>[ &nbsp;]</button>
-            </div>
-            <div>
-                <button className='navbutton' onClick={() => alert("This is our website")}>Learn</button>
-            </div>
-            <div>
-                <button className='navbutton' onClick={() => alert("Stay safe")}>Safety</button>
-            </div>
-            <div>
-                <button className='navbutton' onClick={() => alert("Need help? Me too!!")}>Support</button>
-            </div>
-            <div>
-                < LogoutBtn />
-            </div>
-        </nav>
+                <div>
+                    <button className='logo navbutton' onClick={() => alert("this is our home")}>[ &nbsp;]</button>
+                </div>
+                <div>
+                    <button className='navbutton' onClick={() => alert("This is our website")}>Learn</button>
+                </div>
+                <div>
+                    <button className='navbutton' onClick={() => alert("Stay safe")}>Safety</button>
+                </div>
+                <div>
+                    <button className='navbutton' onClick={() => alert("Need help? Me too!!")}>Support</button>
+                </div>
+                <div className='logoutBtnDiv'>
+                    < LogoutBtn />
+                </div>
+            </nav>
         )
     }
 }
