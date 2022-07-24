@@ -53,6 +53,10 @@ const styles = {
     fontWeight: "300",
     letterSpacing: "15px",
   },
+
+  pageWrap: {
+    paddingBottom:"2.5rem",
+  }
 };
 
 function App() {
@@ -61,26 +65,28 @@ function App() {
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
           <Header />
-          <h1 style={styles.name}>
-            <span style={styles.LogoBracket}>[</span> KINDLER{" "}
-            <span style={styles.LogoBracket}>]</span>
-          </h1>
-          <Routes>
-            <Route path="/" element={<LandingPage />} />
-            {/* <Route path="/logintype" element={<DevRecLogin />} /> */}
-            <Route path="/logindev" element={<DevLogin />} />
-            <Route path="/loginrec" element={<RecLogin />} />
-            <Route path="/signupdev" element={<SignUpDev />} />
-            <Route path="/signuprec" element={<SignUpRec />} />
-            <Route path="/signuptype" element={<DevRecSignup />} />
-            <Route path="/logintype" element={<DevRecLogin />} />
-            {/* <Route path="/signup-dev-profile" element={<SignUpDevProfile />} />
-            <Route path="/developers" element={<SignUpDevProfile />} />
-            <Route
-              path="/:developerID/projects"
-              element={<SignUpDevProfile />}
-            /> */}
-          </Routes>
+          <div style={styles.pageWrap}>
+            <h1 style={styles.name}>
+              <span style={styles.LogoBracket}>[</span> KINDLER{" "}
+              <span style={styles.LogoBracket}>]</span>
+            </h1>
+            <Routes>
+              <Route path="/" element={<LandingPage />} />
+              {/* <Route path="/logintype" element={<DevRecLogin />} /> */}
+              <Route path="/logindev" element={<DevLogin />} />
+              <Route path="/loginrec" element={<RecLogin />} />
+              <Route path="/signupdev" element={<SignUpDev />} />
+              <Route path="/signuprec" element={<SignUpRec />} />
+              {/* <Route path="/signup-type" element={<DevRec />} />
+          
+              <Route path="/signup-dev-profile" element={<SignUpDevProfile />} />
+              <Route path="/developers" element={<SignUpDevProfile />} />
+              <Route
+                path="/:developerID/projects"
+                element={<SignUpDevProfile />}
+              /> */}
+            </Routes>
+          </div>
           <Footer />
         </div>
       </Router>
