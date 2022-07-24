@@ -20,7 +20,7 @@ const SignInBtn = () => {
   };
   return (
     <button style={styles.button}>
-      <Link to="/logindev">
+      <Link to="/logintype">
         'sign in' <span style={styles.whtSemiColon}>;</span>
       </Link>
     </button>
