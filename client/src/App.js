@@ -77,9 +77,9 @@ function App() {
               <Route path="/loginrec" element={<RecLogin />} />
               <Route path="/signupdev" element={<SignUpDev />} />
               <Route path="/signuprec" element={<SignUpRec />} />
-              {/* <Route path="/signup-type" element={<DevRec />} />
-          
-              <Route path="/signup-dev-profile" element={<SignUpDevProfile />} />
+              <Route path="/signuptype" element={<DevRecSignup />} />
+              <Route path="/logintype" element={<DevRecLogin />} />
+              {/* <Route path="/signup-dev-profile" element={<SignUpDevProfile />} />
               <Route path="/developers" element={<SignUpDevProfile />} />
               <Route
                 path="/:developerID/projects"
