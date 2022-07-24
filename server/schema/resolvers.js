@@ -31,6 +31,21 @@ const resolvers = {
       const token = signToken(developer);
       return { token, developer, role: "Developer" };
     },
+    addDevInfo: async (parent, { job_status, position, bio }, context) => {
+      if (context.user) {
+        return await Developer.findOneAndUpdate(
+          { _id: context.user._id },
+          {
+            $set: { job_status: job_status, position: position, bio: bio },
+          },
+          {
+            new: true,
+          }
+        );
+      } else {
+        throw new AuthenticationError("You need to be logged in.");
+      }
+    },
     addRecruiter: async (parent, args) => {
       const recruiter = await Recruiter.create(args);
       const token = signToken(recruiter);
@@ -81,7 +96,8 @@ const resolvers = {
 
         await Developer.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { projects: project._id } }
+          { $addToSet: { projects: project._id } },
+          { new: true }
         );
         return project;
       }
