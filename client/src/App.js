@@ -4,7 +4,8 @@ import Main from "./components/main";
 import Footer from "./components/footer";
 
 import LandingPage from "./pages/LandingPage";
-import DevRec from "./pages/DevOrRec";
+import DevRecSignup from "./pages/DevOrRecSignup";
+import DevRecLogin from "./pages/DevOrRecLogin";
 import SignUpDev from "./pages/SignUpDev";
 import SignUpRec from "./pages/SignUpRec";
 import SignUpDevProfile from "./pages/SignUpDevProfile";
