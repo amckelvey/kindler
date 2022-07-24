@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
 import Card from "../components/card";
-import Carousel from "../components/carousel";
+import Carousel from "../components/Carousel";
 
 function App() {
   let cards = [
