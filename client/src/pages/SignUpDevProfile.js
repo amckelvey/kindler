@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function SignUpDevProject() {
   const styles = {
@@ -16,13 +15,17 @@ function SignUpDevProject() {
       fontSize: "15px",
       letterSpacing: "2.5px",
       backgroundColor: "transparent",
-      width: "24vw",
-      height: "10vh",
       textDecoration: "none",
       paddingLeft: "10px",
       paddingRight: "10px",
     },
   };
+
+  const formSubmitHandler = (event) => {
+    event.preventDefault();
+    document.location.replace("/");
+  };
+
   return (
     <div className="sloganContainer" style={styles.LeftBorder}>
       <h2>&#123; #COMMIT TO YOUR RIGHT DEVELOPER &#125;</h2>
@@ -33,7 +36,7 @@ function SignUpDevProject() {
             const <span>myProfile &#40;</span>&#123;
           </h3>
           <div style={styles.LeftBorder}>
-            <form>
+            <form onSubmit={formSubmitHandler}>
               <div className="form-group">
                 <label htmlFor="exampleInputEmail1">name: </label>
                 <input
@@ -61,31 +64,22 @@ function SignUpDevProject() {
                 <textarea className="form-control" id="bioInput" />
               </div>
 
-              <button type="submit" className="btn btn-primary">
-                Submit
+              <div className="form-group">
+                <label htmlFor="imgInput">profileImage: </label>
+                <input
+                  type="file"
+                  className="form-control-file"
+                  id="imgInput"
+                />
+              </div>
+              <p>add a project</p>
+
+              <button type="submit" style={styles.button}>
+                click here
               </button>
             </form>
           </div>
           <h3> &#125;&#41;;</h3>
-
-          <p>upload your picture</p>
-          <div style={styles.LeftBorder}>
-            <form>
-              <div className="form-group">
-                <input
-                  type="file"
-                  className="form-control-file"
-                  id="exampleFormControlFile1"
-                />
-              </div>
-            </form>
-          </div>
-          <p>add a project</p>
-          <div style={styles.LeftBorder}>
-            <Link to="/" style={styles.button}>
-              click here
-            </Link>
-          </div>
         </div>
       </div>
     </div>
