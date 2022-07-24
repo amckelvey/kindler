@@ -13,7 +13,6 @@ const styles = {
 
   slogan: {
     color: "#9CDCFB",
-
     fontSize: "25px",
     fontWeight: "300",
     letterSpacing: "3px",
