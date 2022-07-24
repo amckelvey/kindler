@@ -8,7 +8,7 @@ import DevRecSignup from "./pages/DevOrRecSignup";
 import DevRecLogin from "./pages/DevOrRecLogin";
 import SignUpDev from "./pages/SignUpDev";
 import SignUpRec from "./pages/SignUpRec";
-import SignUpDevProfile from "./pages/SignUpDevProfile";
+import SignUpDevProject from "./pages/SignUpDevProfile";
 import DevLogin from "./pages/DevLogin";
 import RecLogin from "./pages/RecLogin";
 
@@ -55,8 +55,8 @@ const styles = {
   },
 
   pageWrap: {
-    paddingBottom:"2.5rem",
-  }
+    paddingBottom: "2.5rem",
+  },
 };
 
 function App() {
@@ -79,6 +79,10 @@ function App() {
               <Route path="/signuprec" element={<SignUpRec />} />
               <Route path="/signuptype" element={<DevRecSignup />} />
               <Route path="/logintype" element={<DevRecLogin />} />
+              <Route
+                path="/:developerId/projects"
+                element={<SignUpDevProject />}
+              />
               {/* <Route path="/signup-dev-profile" element={<SignUpDevProfile />} />
               <Route path="/developers" element={<SignUpDevProfile />} />
               <Route
