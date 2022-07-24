@@ -1,7 +1,7 @@
 import React from "react";
 import SignUpBtn from "../components/signUpBtn";
 import SignInBtn from "../components/signInBtn";
-import LogoutBtn from "../components/logoutBtn";
+import LogoutBtn from "../components/LogoutBtn";
 import Auth from "../utils/auth";
 
 const styles = {
