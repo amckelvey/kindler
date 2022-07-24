@@ -84,6 +84,7 @@ function App() {
                 path="/:developerId/projects"
                 element={<SignUpDevProject />}
               />
+              <Route path="/*" element={<LandingPage />} />
               {/* <Route path="/signup-dev-profile" element={<SignUpDevProfile />} />
               <Route path="/developers" element={<SignUpDevProfile />} />
               <Route
