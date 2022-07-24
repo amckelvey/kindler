@@ -114,10 +114,7 @@ function App() {
               <Route path="/*" element={<Developers />} />
               {/* <Route path="/signup-dev-profile" element={<SignUpDevProfile />} />
               <Route path="/developers" element={<SignUpDevProfile />} />
-              <Route
-                path="/:developerID/projects"
-                element={<SignUpDevProfile />}
-              /> */}
+              <Route */}
             </Routes>
           </div>
           <Footer />
