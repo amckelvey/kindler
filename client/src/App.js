@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./components/header";
 import Main from "./components/main";
 import Footer from "./components/footer";
-
+import Developers from "./pages/Developers";
 import LandingPage from "./pages/LandingPage";
 import DevRecSignup from "./pages/DevOrRecSignup";
 import DevRecLogin from "./pages/DevOrRecLogin";
@@ -79,6 +79,7 @@ function App() {
               <Route path="/signuprec" element={<SignUpRec />} />
               <Route path="/signuptype" element={<DevRecSignup />} />
               <Route path="/logintype" element={<DevRecLogin />} />
+              <Route path="/developers" element={<Developers />} />
               <Route
                 path="/:developerId/projects"
                 element={<SignUpDevProject />}
