@@ -10,9 +10,9 @@ export default function Footer() {
       <li className='list-inline-item'><a href='https://github.com/Lunirs' target='_blank'>Dan </a>
       </li>
       <li className='list-inline-item'><a href='https://github.com/lyf703331869' target='_blank'>Yafei Liu</a></li>
-      <li className='list-inline-item'><a href='https://github.com/amckelvey' target='_blank'></a>Andrew</li>
+      <li className='list-inline-item'><a href='https://github.com/amckelvey' target='_blank'></a>Andrew McKelvey</li>
       <li className='list-inline-item'><a href='https://github.com/shayosullivan' target='_blank'>Shay O'Sullivan</a></li>
-      <li className='list-inline-item'><a href='https://github.com/saukchung' target='_blank'></a>Brian</li>
+      <li className='list-inline-item'><a href='https://github.com/saukchung' target='_blank'></a>Brian Chung</li>
       <li className='list-inline-item'><a href='https://github.com/' target='_blank'></a>Tahsa</li>
     </ul>
         </ div>
