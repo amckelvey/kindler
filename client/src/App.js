@@ -11,7 +11,7 @@ import {
 import Header from "./components/header";
 import Main from "./components/main";
 import Footer from "./components/footer";
-import './index.css';
+import "./index.css";
 
 import Developers from "./pages/Developers";
 import LandingPage from "./pages/LandingPage";
@@ -22,7 +22,7 @@ import SignUpRec from "./pages/SignUpRec";
 import SignUpDevProfile from "./pages/SignUpDevProfile";
 import DevLogin from "./pages/DevLogin";
 import RecLogin from "./pages/RecLogin";
-import Deck from "./components/projects";
+import ReviewProjects from "./pages/ReviewProjects";
 
 import DevProfile from "./pages/SingleDevProfilePage";
 import AddProject from "./pages/AddProject";
@@ -53,7 +53,7 @@ const styles = {
     fontSize: "5vw",
     fontWeight: "light",
     fontFamily: "Source Code Pro, monospace",
-    marginTop: "3vh"
+    marginTop: "3vh",
   },
   name: {
     color: "#9CDCFB",
@@ -63,9 +63,8 @@ const styles = {
     letterSpacing: "15px",
     fontFamily: "Source Code Pro, monospace",
     marginTop: "3vh",
-    marginLeft:"2vh"
+    marginLeft: "2vh",
   },
-
 };
 
 function App() {
@@ -77,8 +76,9 @@ function App() {
             <Header />
             <div style={styles.pageWrap}>
               <h1 style={styles.name}>
-                <span style={styles.LogoBracket}>[</span>KINDLER<span style={styles.LogoBracket}>]</span>
-                <span className= 'blink'>|</span>
+                <span style={styles.LogoBracket}>[</span>KINDLER
+                <span style={styles.LogoBracket}>]</span>
+                <span className="blink">|</span>
               </h1>
               <Routes>
                 <Route path="/" element={<LandingPage />} />
@@ -89,7 +89,7 @@ function App() {
                 <Route path="/signuprec" element={<SignUpRec />} />
                 <Route path="/signuptype" element={<DevRecSignup />} />
                 <Route path="/logintype" element={<DevRecLogin />} />
-                <Route path="/projects" element={<Deck />} />
+                <Route path="/projects" element={<ReviewProjects />} />
 
                 <Route path="/*" element={<LandingPage />} />
               </Routes>

@@ -118,11 +118,10 @@ function AddProject() {
                   onChange={handleChange}
                 />
               </div>
-              <Link to={link}>
-                <button type="submit" style={styles.button}>
-                  submit
-                </button>
-              </Link>
+
+              <button type="submit" style={styles.button}>
+                submit
+              </button>
             </form>
           </div>
           <h3> &#125;&#41;;</h3>

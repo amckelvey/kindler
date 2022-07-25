@@ -1,34 +1,23 @@
 import React, { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
 import { useSprings, animated, to as interpolate } from "react-spring";
 import { useDrag } from "react-use-gesture";
-import Card from "../projectCard/index";
 import "./projects.css";
 
 const cards = [
   {
-    key: uuidv4(),
-    content: (
-      <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/convertplus_thumbnail.jpg" />
-    ),
+    content: "",
   },
   {
-    key: uuidv4(),
-    content: (
-      <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/acf_pro.png" />
-    ),
+    content: "",
   },
   {
-    key: uuidv4(),
-    content: (
-      <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/layer_slider_plugin_thumb.png" />
-    ),
+    content: "",
   },
   {
-    key: uuidv4(),
-    content: (
-      <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2016/08/slider_revolution-1.png" />
-    ),
+    content: "",
+  },
+  {
+    content: "",
   },
 ];
 const styles = {
@@ -71,7 +60,7 @@ const trans = (r, s) =>
     r / 10
   }deg) rotateZ(${r}deg) scale(${s})`;
 
-function Deck() {
+const Projects = ({ developers }) => {
   const [gone] = useState(() => new Set()); // The set flags all the cards that are flicked out
   const [props, set] = useSprings(cards.length, (i) => ({
     ...to(i),
@@ -119,10 +108,17 @@ function Deck() {
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
             volutpat.
           </p>
+          <button
+            onClick={() => {
+              console.log("Clicked");
+            }}
+          >
+            Click
+          </button>
         </div>
       </animated.div>
     </animated.div>
   ));
-}
+};
 
-export default Deck;
+export default Projects;
