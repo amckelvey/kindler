@@ -45,6 +45,22 @@ function DevProfile() {
       paddingRight: "10px",
       marginTop: "10px",
     },
+    card: {
+      maxWidth: '400px',
+      color: "#FFFFFF",
+      border: "2px solid #FFFFFF",
+      borderRadius: "30px",
+      fontSize: "15px",
+      letterSpacing: "2.5px",
+      backgroundColor: "transparent",
+      textDecoration: "none",
+      paddingLeft: "10px",
+      paddingRight: "10px",
+      paddingBottom: '5px',
+    },
+    textColor: {
+      color: "#649955",
+    },
   };
 
   const link = `/${dev._id}/edit`;
@@ -56,8 +72,6 @@ function DevProfile() {
     const { data } = await removeProject({
       variables: this.value,
     });
-
-    window.location.reload();
   }
 
   return (
@@ -97,16 +111,17 @@ function DevProfile() {
         </div>
         <h3>&#125;</h3>
         <h3>Projects &#123;</h3>
+        
         {dev.projects.map((project) => {
           return (
-            <div key={project._id}>
-              <h5>name: {project.name}</h5>
-              <h5>source code link: {project.source}</h5>
-              <h5>deployed link: {project.link}</h5>
-              <h5>description: {project.description}</h5>
-              <button value={project._id} onClick={clickHander}>
-                Delete Project
-              </button>
+            <div className="container">
+              <div className="card" style={styles.card}>
+                <h5 style={styles.textColor}>name: {project.name}</h5>
+                <h5 style={styles.textColor}>source code link: {project.source}</h5>
+                <h5 style={styles.textColor}>deployed link: {project.link}</h5>
+                <h5 style={styles.textColor}>description: {project.description}</h5>
+                <button>Delete Project</button>
+              </div>
             </div>
           );
         })}
