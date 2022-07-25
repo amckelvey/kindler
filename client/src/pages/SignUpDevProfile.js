@@ -1,6 +1,16 @@
-import React from "react";
-
+import React, { useState } from "react";
+import { ADD_DEVELOPER_DATA } from "../utils/mutations";
+import { useMutation } from "@apollo/client";
+import { Link } from "react-router-dom";
 function SignUpDevProject() {
+  const [formState, setFormState] = useState({
+    name: "",
+    jobStatus: "",
+    position: "",
+    bio: "",
+  });
+  const [addDevInfo] = useMutation(ADD_DEVELOPER_DATA);
+
   const styles = {
     LeftBorder: {
       borderLeft: "solid 2px #7B7B7B",
@@ -18,12 +28,31 @@ function SignUpDevProject() {
       textDecoration: "none",
       paddingLeft: "10px",
       paddingRight: "10px",
+      marginTop: "10px",
     },
   };
 
-  const formSubmitHandler = (event) => {
+  const formSubmitHandler = async (event) => {
     event.preventDefault();
-    document.location.replace("/");
+
+    try {
+      const { data } = await addDevInfo({
+        variables: { ...formState },
+      });
+      setFormState({ ...formState });
+      alert("Successfully Updated!");
+      document.location.reload();
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
   };
 
   return (
@@ -41,46 +70,75 @@ function SignUpDevProject() {
                 <label htmlFor="exampleInputEmail1">name: </label>
                 <input
                   type="name"
+                  name="name"
                   className="form-control"
                   id="nameInput"
+                  value={formState.name}
                   aria-describedby="emailHelp"
                   placeholder="name"
+                  onChange={handleChange}
                 />
               </div>
               <div className="form-group">
                 <label htmlFor="statusInput">status: </label>
-                <input type="text" className="form-control" id="statusInput" />
+                <select
+                  name="jobStatus"
+                  className="form-control"
+                  id="statusInput"
+                  value={formState.jobStatus}
+                  onChange={handleChange}
+                >
+                  <option>Select One</option>
+                  <option value="Actively Looking">Actively Looking</option>
+                  <option value="Casually Browsing">Casually Browsing</option>
+                  <option value="Not Open To Work">Not Open To Work</option>
+                </select>
               </div>
               <div className="form-group">
                 <label htmlFor="positionInput">position: </label>
-                <input
-                  type="text"
+                <select
+                  name="position"
                   className="form-control"
                   id="positionInput"
-                />
+                  value={formState.position}
+                  onChange={handleChange}
+                >
+                  <option>Select One</option>
+                  <option value="Software Engineer">Software Engineer</option>
+                  <option value="Senior Software Engineer">
+                    Senior Software Engineer
+                  </option>
+                  <option value="Front-End Developer">
+                    Front-End Developer
+                  </option>
+                  <option value="Back-End Developer">Back-End Developer</option>
+                  <option value="UX/UI Designer"> UX/UI Designer</option>
+                </select>
               </div>
               <div className="form-group">
                 <label htmlFor="bioInput">bio: </label>
-                <textarea className="form-control" id="bioInput" />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="imgInput">profileImage: </label>
-                <input
-                  type="file"
-                  className="form-control-file"
-                  id="imgInput"
+                <textarea
+                  className="form-control"
+                  id="bioInput"
+                  name="bio"
+                  value={formState.bio}
+                  onChange={handleChange}
                 />
               </div>
-              <p>add a project</p>
-
               <button type="submit" style={styles.button}>
-                click here
+                submit
               </button>
             </form>
           </div>
           <h3> &#125;&#41;;</h3>
         </div>
+        <h3>add a project &#123;</h3>
+        <div style={styles.LeftBorder}>
+          <Link to="" style={styles.button}>
+            click here!
+          </Link>
+        </div>
+        <h3>&#125;</h3>
       </div>
     </div>
   );
