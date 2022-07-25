@@ -54,7 +54,7 @@ function SignUpDevProfile() {
       });
       setFormState({ ...formState });
       alert("Successfully Updated!");
-      document.location.replace("/me");
+      document.location.assign("/me");
     } catch (err) {
       console.error(err);
     }
