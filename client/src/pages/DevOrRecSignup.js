@@ -55,75 +55,43 @@ function DevRecSignup() {
 
   return (
     <div>
-      <div>
-        <div className="sloganContainer" style={styles.LeftBorder}>
-          <div className="sloganContainer" style={styles.LeftBorder}>
-            <h2 style={styles.slogan}>
-              <h2>&#123; #COMMIT TO YOUR RIGHT DEVELOPER &#125;</h2>
-              <span style={styles.brackets}>&#123;</span> #COMMIT TO YOUR RIGHT
-              DEVELOPER <span style={styles.brackets}>&#125;</span>
-            </h2>
+      <div className="sloganContainer" style={styles.LeftBorder}>
+        <h2 style={styles.slogan}>
+          <span style={styles.brackets}>&#123;</span> #COMMIT TO YOUR RIGHT
+          DEVELOPER <span style={styles.brackets}>&#125;</span>
+        </h2>
+        <div style={styles.LeftBorder}>
+          <p>
+            <span style={styles.colorOra}>'sign up'</span>
+            <span>;</span>
+          </p>
+          <div style={styles.LeftBorder}>
+            <p>
+              <span style={styles.colorPurple}>if &#40; </span>
+              <span style={styles.colorLightBlue}>developer</span>
+              <span style={styles.colorPurple}> &#41; &#123; </span>
+            </p>
             <div style={styles.LeftBorder}>
+              <p>
+                click <span style={styles.colorYellow}>here</span>; &nbsp;
+                &nbsp;
+                <Link to="/signupdev" style={styles.button}>
+                  developer
+                </Link>
+              </p>
+            </div>
+            <div>
+              <p style={styles.colorPurple}>&#125; else &#123;</p>
               <div style={styles.LeftBorder}>
                 <p>
-                  <p>
-                    <span style={styles.colorOra}>'sign up'</span>
-                    'sign up'<span>;</span>
-                    <span>;</span>
-                  </p>
+                  click <span style={styles.colorYellow}>here</span>; &nbsp;
+                  &nbsp;
+                  <Link to="/signuprec" style={styles.button}>
+                    recruiter
+                  </Link>
                 </p>
-                <div style={styles.LeftBorder}>
-                  <div style={styles.LeftBorder}>
-                    <p>
-                      <p>
-                        <span style={styles.colorPurple}>if &#40; </span>
-                        if &#40; <span>developer</span> &#41; &#123;
-                        <span style={styles.colorLightBlue}>developer</span>
-                        <span style={styles.colorPurple}> &#41; &#123; </span>
-                      </p>
-                    </p>
-                    <div style={styles.LeftBorder}>
-                      <div style={styles.LeftBorder}>
-                        <p>
-                          <p>
-                            click <span style={styles.colorYellow}>here</span>;
-                            &nbsp; click <span>here</span>; &nbsp; &nbsp; &nbsp;
-                            <Link to="/signupdev" style={styles.button}>
-                              <Link to="/signupdev" style={styles.button}>
-                                developer developer
-                              </Link>
-                            </Link>
-                          </p>
-                        </p>
-                      </div>
-                    </div>
-                    <div>
-                      <div>
-                        <p style={styles.colorPurple}>&#125; else &#123;</p>
-                        <p>&#125; else &#123;</p>
-                        <div style={styles.LeftBorder}>
-                          <div style={styles.LeftBorder}>
-                            <p>
-                              <p>
-                                click{" "}
-                                <span style={styles.colorYellow}>here</span>;
-                                &nbsp; click <span>here</span>; &nbsp; &nbsp;
-                                &nbsp;
-                                <Link to="/signuprec" style={styles.button}>
-                                  <Link to="/signuprec" style={styles.button}>
-                                    recruiter recruiter
-                                  </Link>
-                                </Link>
-                              </p>
-                            </p>
-                          </div>
-                        </div>
-                        <span style={styles.colorPurple}>&#125;</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
+              <span style={styles.colorPurple}>&#125;</span>
             </div>
           </div>
         </div>
