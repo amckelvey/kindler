@@ -30,7 +30,7 @@ function AddProject() {
       });
       setFormState({ ...formState });
       alert("Successfully Added Project!");
-      document.location.replace(link);
+      document.location.assign(link);
     } catch (err) {
       console.error(err);
     }
