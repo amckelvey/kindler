@@ -106,8 +106,10 @@ function App() {
             </h1>
             <Routes>
               {/* <Route path="/logintype" element={<DevRecLogin />} /> */}
+
               <Route path="/developers" element={<Developers />} />
               <Route path="/:developerId/edit" element={<SignUpDevProfile />} />
+
               <Route path="/me" element={<DevProfile />} />
               <Route path="/*" element={<Developers />} />
               <Route path="/:developerId/projects" element={<AddProject />} />
