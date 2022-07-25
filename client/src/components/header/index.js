@@ -46,12 +46,9 @@ export default function Header() {
       <nav>
         <div className="navbar">
           <div>
-            <button
-              className="logo navbutton"
-              onClick={() => alert("this is our home")}
-            >
-              [ &nbsp;]
-            </button>
+            <Link to="/">
+              <button className="logo navbutton">[ &nbsp;]</button>
+            </Link>
           </div>
           <div>
             <button
@@ -73,6 +70,11 @@ export default function Header() {
             >
               Support
             </button>
+          </div>
+          <div>
+            <Link to="/me">
+              <button className="navbutton">Profile</button>
+            </Link>
           </div>
         </div>
         <div className="logoutBtnDiv">
