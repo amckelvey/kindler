@@ -1,8 +1,22 @@
 import React, { useState } from "react";
 import { ADD_DEVELOPER_DATA } from "../utils/mutations";
+import { QUERY_ME_DEV, QUERY_SINGLE_DEVELOPER } from "../utils/queries";
+import { useQuery } from "@apollo/client";
 import { useMutation } from "@apollo/client";
-import { Link } from "react-router-dom";
+import { Navigate, Link, useParams } from "react-router-dom";
+import Auth from "../utils/auth";
+
 function SignUpDevProfile() {
+  const { _id: userParam } = useParams();
+  const { loading, data } = useQuery(
+    userParam ? QUERY_SINGLE_DEVELOPER : QUERY_ME_DEV,
+    { variables: { _id: userParam } }
+  );
+
+  const dev = data?.meDev || data?.developer || {};
+
+  const link = `/${dev._id}/addproject`;
+
   const [formState, setFormState] = useState({
     name: "",
     jobStatus: "",
@@ -54,6 +68,17 @@ function SignUpDevProfile() {
       [name]: value,
     });
   };
+
+  if (Auth.loggedIn() && Auth.getProfile().data._id === userParam) {
+    return <Navigate to={link} />;
+  }
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (!dev?._id) {
+    return <h4>You need to be logged in to see this.</h4>;
+  }
 
   return (
     <div className="sloganContainer" style={styles.LeftBorder}>
@@ -136,7 +161,7 @@ function SignUpDevProfile() {
           <span>const</span> addProject &#123;
         </h3>
         <div style={styles.LeftBorder}>
-          <Link to="" style={styles.button}>
+          <Link to={link} style={styles.button}>
             click here!
           </Link>
         </div>

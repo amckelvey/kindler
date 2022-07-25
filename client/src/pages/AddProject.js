@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { ADD_PROJECT } from "../utils/mutations";
+import { QUERY_ME_DEV, QUERY_SINGLE_DEVELOPER } from "../utils/queries";
 import Auth from "../utils/auth";
 
 function AddProject() {
