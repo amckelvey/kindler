@@ -1,10 +1,10 @@
 import React from "react";
 import "./navMain.css";
 
-import LogoutBtn from "../LogoutBtn";
+import LogoutBtn from "../LogoutBtn"
+import Auth from '../../utils/auth'
 
-import { Link } from "react-router-dom";
-import Auth from "../../utils/auth";
+
 
 export default function Header() {
   if (!Auth.loggedIn()) {
