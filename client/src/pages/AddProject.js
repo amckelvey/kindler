@@ -3,7 +3,6 @@ import { Navigate, Link, useParams } from "react-router-dom";
 import { useMutation, useQuery } from "@apollo/client";
 import { ADD_PROJECT } from "../utils/mutations";
 import { QUERY_ME_DEV, QUERY_SINGLE_DEVELOPER } from "../utils/queries";
-import Auth from "../utils/auth";
 
 function AddProject() {
   const { _id: userParam } = useParams();
@@ -64,17 +63,6 @@ function AddProject() {
       marginTop: "10px",
     },
   };
-
-  if (Auth.loggedIn() && Auth.getProfile().data._id === userParam) {
-    return <Navigate to={link} />;
-  }
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (!dev?._id) {
-    return <h4>You need to be logged in to see this.</h4>;
-  }
 
   return (
     <div className="sloganContainer" style={styles.LeftBorder}>
