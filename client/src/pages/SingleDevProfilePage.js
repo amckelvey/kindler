@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import { Navigate, Link, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { QUERY_ME_DEV, QUERY_SINGLE_DEVELOPER } from "../utils/queries";
@@ -14,7 +13,6 @@ function DevProfile() {
 
   const dev = data?.meDev || data?.developer || {};
   console.log(dev);
-
   if (Auth.loggedIn() && Auth.getProfile().data._id === userParam) {
     return <Navigate to="/me" />;
   }
@@ -75,7 +73,7 @@ function DevProfile() {
               bio: <span>"{dev.bio}"</span>
             </p>
           </div>
-          <div style={styles.LeftBorder}></div>
+
           <h3> &#125;&#41;;</h3>
         </div>
         <h3>Edit Your Profile &#123;</h3>
@@ -84,6 +82,19 @@ function DevProfile() {
             click here!
           </Link>
         </div>
+        <h3>&#125;</h3>
+        <h3>Projects &#123;</h3>
+        {dev.projects.map((project) => {
+          return (
+            <div>
+              <h5>name: {project.name}</h5>
+              <h5>source code link: {project.source}</h5>
+              <h5>deployed link: {project.link}</h5>
+              <h5>description: {project.description}</h5>
+              <button>Delete Project</button>
+            </div>
+          );
+        })}
         <h3>&#125;</h3>
       </div>
     </div>

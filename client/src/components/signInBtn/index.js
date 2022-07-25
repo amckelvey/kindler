@@ -8,14 +8,15 @@ const SignInBtn = () => {
     },
     button: {
       color: "#CE9178",
-      border: "2px solid #FFFFFF",
+      border: "1px solid #FFFFFF",
       borderRadius: "30px",
-      fontSize: "2.5vw",
+      fontSize: "3vw",
       backgroundColor: "transparent",
-      width: "24vw",
-      height: "10vh",
+      width: "28vw",
+      height: "12vh",
       fontFamily: "Source Code Pro, monospace",
       letterSpacing: "2.5px",
+      marginTop: "10vh"
     },
     link: {
       textDecoration: "none",
