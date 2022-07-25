@@ -48,15 +48,17 @@ const client = new ApolloClient({
 const styles = {
   LogoBracket: {
     color: "#179FF6",
-    fontSize: "65px",
-    fontWeight: "300",
+    fontSize: "5vw",
+    fontWeight: "100",
+    fontFamily: "Source Code Pro, monospace",
   },
   name: {
     color: "#9CDCFB",
     margin: "0.1em 0 0 0.5em",
-    fontSize: "50px",
-    fontWeight: "300",
+    fontSize: "5vw",
+    fontWeight: "100",
     letterSpacing: "15px",
+    fontFamily: "Source Code Pro, monospace",
   },
 };
 
@@ -69,8 +71,7 @@ function App() {
             <Header />
             <div style={styles.pageWrap}>
               <h1 style={styles.name}>
-                <span style={styles.LogoBracket}>[</span> KINDLER{" "}
-                <span style={styles.LogoBracket}>]</span>
+                <span style={styles.LogoBracket}>[</span>KINDLER<span style={styles.LogoBracket}>]</span>
               </h1>
               <Routes>
                 <Route path="/" element={<LandingPage />} />
