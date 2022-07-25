@@ -1,5 +1,11 @@
 nav {
     display: flex;
+    justify-content: space-between;
+    background-color: #333333;
+}
+
+.navbar {
+    display: flex;
     align-items: center;
     gap: 15px;
     background-color: #333333;
@@ -42,7 +48,11 @@ nav {
 }
 /* Button styles end */
 
-
+.logoutBtnDiv {
+    display: flex;
+    align-items: center;
+    margin: 0 10px
+}
 
 .logo {
     color: #179FF6;

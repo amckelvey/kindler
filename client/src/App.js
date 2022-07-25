@@ -106,7 +106,7 @@ function App() {
             </h1>
             <Routes>
               {/* <Route path="/logintype" element={<DevRecLogin />} /> */}
-              <Route path="/developers" element={<Developers />} />
+              <Route path="/" element={<Developers />} />
               <Route
                 path="/:developerId/projects"
                 element={<SignUpDevProject />}
