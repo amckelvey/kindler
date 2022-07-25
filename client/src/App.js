@@ -110,7 +110,7 @@ function App() {
               <Route path="/:developerId/edit" element={<SignUpDevProfile />} />
               <Route path="/me" element={<DevProfile />} />
               <Route path="/*" element={<Developers />} />
-              <Route path="/:developerId/projects" element={<AddProject />} />
+              <Route path="/:developerId/addproject" element={<AddProject />} />
               {/* <Route path="/signup-dev-profile" element={<SignUpDevProfile />} />
               <Route path="/developers" element={<SignUpDevProfile />} />
               <Route */}
