@@ -10,10 +10,9 @@ Kindler is a streamlined way for software developers and recruiters to match wit
 
 
 ### Project Image: 
-``
-TODO
-``
-<br>
+
+![Profile Page](./assets/images/profile-page.png)
+
 
 ### Deployed URL:
 
@@ -39,11 +38,17 @@ The site is hosted on Heroku, so please allow a few moments for the app to spin 
 
 ### Team:
 - Daniel Hong
+  [Daniel's GitHub](https://github.com/Lunirs)
 - Andrew McKelvey
+  [Andrew's GitHub](https://github.com/amckelvey)
 - Brian Sa Uk Chung
+  [Brian's GitHub](https://github.com/saukchung)
 - Yafei Liu
+  [Yafei's GitHub](https://github.com/lyf703331869)
 - Shay O'Sullivan
+  [Shay's GitHub](https://github.com/shayosullivan)
 - Tasha Akemah
+  [Tasha's GitHub](https://github.com/taa2153)
 
 
 
