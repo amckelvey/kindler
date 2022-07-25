@@ -1,7 +1,7 @@
 import React from "react";
 import SignUpBtn from "../components/signUpBtn";
 import SignInBtn from "../components/signInBtn";
-import LogoutBtn from "../components/LogoutBtn";
+import LogoutBtn from "../components/logoutBtn";
 import Auth from "../utils/auth";
 
 const styles = {
@@ -13,6 +13,7 @@ const styles = {
 
   slogan: {
     color: "#9CDCFB",
+
     fontSize: "25px",
     fontWeight: "300",
     letterSpacing: "3px",
