@@ -160,7 +160,7 @@ function SignUpDev(props) {
         </form>
         <br />
         <div className="container my-1">
-          <Link to="/" style={styles.backLink}>
+          <Link to="/logindev" style={styles.backLink}>
             ← Already Signed Up?
           </Link>
         </div>
