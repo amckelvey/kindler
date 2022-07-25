@@ -46,7 +46,7 @@ function DevProfile() {
       marginTop: "10px",
     },
     card: {
-      maxWidth: '400px',
+      maxWidth: "400px",
       color: "#FFFFFF",
       border: "2px solid #FFFFFF",
       borderRadius: "30px",
@@ -56,7 +56,7 @@ function DevProfile() {
       textDecoration: "none",
       paddingLeft: "10px",
       paddingRight: "10px",
-      paddingBottom: '5px',
+      paddingBottom: "5px",
     },
     textColor: {
       color: "#649955",
@@ -111,15 +111,19 @@ function DevProfile() {
         </div>
         <h3>&#125;</h3>
         <h3>Projects &#123;</h3>
-        
+
         {dev.projects.map((project) => {
           return (
-            <div className="container">
+            <div className="container" key={project._id}>
               <div className="card" style={styles.card}>
                 <h5 style={styles.textColor}>name: {project.name}</h5>
-                <h5 style={styles.textColor}>source code link: {project.source}</h5>
+                <h5 style={styles.textColor}>
+                  source code link: {project.source}
+                </h5>
                 <h5 style={styles.textColor}>deployed link: {project.link}</h5>
-                <h5 style={styles.textColor}>description: {project.description}</h5>
+                <h5 style={styles.textColor}>
+                  description: {project.description}
+                </h5>
                 <button>Delete Project</button>
               </div>
             </div>
