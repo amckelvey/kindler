@@ -6,7 +6,6 @@ export const QUERY_DEVELOPERS = gql`
       _id
       name
       email
-      password
       job_status
       position
       projects {
@@ -30,7 +29,6 @@ export const QUERY_SINGLE_DEVELOPER = gql`
       _id
       name
       email
-      password
       job_status
       position
       bio
@@ -54,7 +52,6 @@ export const QUERY_SINGLE_RECRUITER = gql`
       _id
       name
       email
-      password
     }
   }
 `;
