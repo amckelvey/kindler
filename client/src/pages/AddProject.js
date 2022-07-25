@@ -104,8 +104,8 @@ function AddProject() {
                 <label htmlFor="bioInput">description: </label>
                 <textarea
                   className="form-control"
-                  id="bioInput"
-                  name="bio"
+                  id="descriptionInput"
+                  name="description"
                   value={formState.bio}
                   onChange={handleChange}
                 />
