@@ -22,8 +22,7 @@ import SignUpDevProject from "./pages/SignUpDevProfile";
 import DevLogin from "./pages/DevLogin";
 import RecLogin from "./pages/RecLogin";
 
-import Auth from './utils/auth'
-
+import Auth from "./utils/auth";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -67,32 +66,37 @@ function App() {
   if (!Auth.loggedIn()) {
     return (
       <ApolloProvider client={client}>
-      <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
-          <Header />
-          <div style={styles.pageWrap}>
-            <h1 style={styles.name}>
-              <span style={styles.LogoBracket}>[</span> KINDLER{" "}
-              <span style={styles.LogoBracket}>]</span>
-            </h1>
-            <Routes>
-              <Route path="/" element={<LandingPage />} />
-              {/* <Route path="/logintype" element={<DevRecLogin />} /> */}
-              <Route path="/logindev" element={<DevLogin />} />
-              <Route path="/loginrec" element={<RecLogin />} />
-              <Route path="/signupdev" element={<SignUpDev />} />
-              <Route path="/signuprec" element={<SignUpRec />} />
-              <Route path="/signuptype" element={<DevRecSignup />} />
-              <Route path="/logintype" element={<DevRecLogin />} />
-              <Route path="/*" element={<LandingPage />} />
-            </Routes>
+        <Router>
+          <div className="flex-column justify-flex-start min-100-vh">
+            <Header />
+            <div style={styles.pageWrap}>
+              <h1 style={styles.name}>
+                <span style={styles.LogoBracket}>[</span> KINDLER{" "}
+                <span style={styles.LogoBracket}>]</span>
+              </h1>
+              <Routes>
+                <Route path="/" element={<LandingPage />} />
+                {/* <Route path="/logintype" element={<DevRecLogin />} /> */}
+                <Route path="/logindev" element={<DevLogin />} />
+                <Route path="/loginrec" element={<RecLogin />} />
+                <Route path="/signupdev" element={<SignUpDev />} />
+                <Route path="/signuprec" element={<SignUpRec />} />
+                <Route path="/signuptype" element={<DevRecSignup />} />
+                <Route path="/logintype" element={<DevRecLogin />} />
+
+                <Route path="/*" element={<LandingPage />} />
+              </Routes>
+            </div>
+            <Footer />
           </div>
-          <Footer />
-        </div>
-      </Router>
-    </ApolloProvider>
-    )
+        </Router>
+      </ApolloProvider>
+    );
   }
+  console.log(Auth.getProfile());
+  // get profile gives me user's id. maybe i can use query to get that 1 user and see if he is developer or recruiter.
+  // depending on the two i can render different pages
+  //match pages for devs and carousel for recruiters
   return (
     <ApolloProvider client={client}>
       <Router>
