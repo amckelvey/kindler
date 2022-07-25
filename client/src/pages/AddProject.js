@@ -67,7 +67,7 @@ function AddProject() {
             const <span>myProject &#40;</span>&#123;
           </h3>
           <div style={styles.LeftBorder}>
-            <form>
+            <form onSubmit={formSubmitHandler}>
               <div className="form-group">
                 <label htmlFor="nameInput">name: </label>
                 <input
