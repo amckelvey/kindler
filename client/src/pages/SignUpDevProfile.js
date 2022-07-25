@@ -137,15 +137,23 @@ function SignUpDevProfile() {
                   onChange={handleChange}
                 />
               </div>
-              <Link to="/me">
-                <button type="submit" style={styles.button}>
-                  submit
-                </button>
-              </Link>
+
+              <button type="submit" style={styles.button}>
+                submit
+              </button>
             </form>
           </div>
           <h3> &#125;&#41;;</h3>
         </div>
+        <h3>
+          <span>const</span> returnToProfile &#123;
+        </h3>
+        <div style={styles.LeftBorder}>
+          <Link to="/me" style={styles.button}>
+            click here!
+          </Link>
+        </div>
+        <h3>&#125;</h3>
         <h3>
           <span>const</span> addProject &#123;
         </h3>
