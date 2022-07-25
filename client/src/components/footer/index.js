@@ -72,6 +72,7 @@ export default function Footer() {
     }
 
     return (
+<<<<<<< HEAD
         <div className='footer' style={styles.footerContainer}>
         <div className= 'col'style={styles.col}>
             <h5 style={styles.h5}> <span style={styles.curlyBrackYellow}>&#123;</span>'KINDLER 2022'<span style={styles.curlyBrackYellow}>&#125;</span> <span style={styles.whtSemiColon}>;</span> </h5>
@@ -85,6 +86,8 @@ export default function Footer() {
             </ul>
         </div>
     
+=======
+>>>>>>> 8f14816ea278ad6da4e4bc5acfa250857b1e07cf
         <div className= 'col' style={styles.col}>
             <h5 style={styles.h5}> <span style={styles.curlyBrackYellow}>&#123;</span>'CREATOR'<span style={styles.curlyBrackYellow}>&#125;</span> <span style={styles.whtSemiColon}>;</span> </h5>
             <ul className='list-inline' style={styles.ul}>
@@ -92,12 +95,15 @@ export default function Footer() {
                 <li className='list-inline-item' style={styles.listInlineItem}><a style={styles.a} href='https://github.com/lyf703331869' >Yafei Liu </a> <span style={styles.whtSemiColon}>;</span></li>
                 <li className='list-inline-item' style={styles.listInlineItem}><a style={styles.a} href='https://github.com/amckelvey' >Andrew Mckelvey </a> <span style={styles.whtSemiColon}>;</span></li>
                 <li className='list-inline-item' style={styles.listInlineItem}><a style={styles.a} href='https://github.com/shayosullivan' >Shay O'Sullivan</a> <span style={styles.whtSemiColon}>;</span></li>
-                <li className='list-inline-item' style={styles.listInlineItem}><a style={styles.a} href='https://github.com/saukchung' >Brian</a> <span style={styles.whtSemiColon}>;</span></li>
+                <li className='list-inline-item' style={styles.listInlineItem}><a style={styles.a} href='https://github.com/saukchung' >Brian Sa Uk Chung</a> <span style={styles.whtSemiColon}>;</span></li>
                 <li className='list-inline-item' style={styles.listInlineItem}><a style={styles.a} href='https://github.com/taa2153'>Tasha Akemah</a><span style={styles.whtSemiColon}>;</span></li>
             </ul>
         </div>
+<<<<<<< HEAD
     
         </ div>
+=======
+>>>>>>> 8f14816ea278ad6da4e4bc5acfa250857b1e07cf
     )
 }
 
