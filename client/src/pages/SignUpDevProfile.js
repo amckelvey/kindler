@@ -132,7 +132,9 @@ function SignUpDevProfile() {
           </div>
           <h3> &#125;&#41;;</h3>
         </div>
-        <h3>add a project &#123;</h3>
+        <h3>
+          <span>const</span> addProject &#123;
+        </h3>
         <div style={styles.LeftBorder}>
           <Link to="" style={styles.button}>
             click here!
