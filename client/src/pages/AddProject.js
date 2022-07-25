@@ -13,4 +13,11 @@ function AddProject() {
   });
 
   const [addProject] = useMutation(ADD_PROJECT);
+  return (
+    <div>
+      <h1>hi</h1>
+    </div>
+  );
 }
+
+export default AddProject;
