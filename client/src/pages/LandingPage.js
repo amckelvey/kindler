@@ -7,7 +7,7 @@ import Auth from "../utils/auth";
 const styles = {
   sloganContainer: {
     borderLeft: "solid 1px #7B7B7B",
-    padding: "0 1em",
+    padding: "0 2em",
     margin: "10px 4em",
     marginBottom: "8vw"
 
@@ -17,7 +17,7 @@ const styles = {
     color: "#9CDCFB",
     fontFamily: "Source Code Pro, monospace",
     fontSize: "3vw",
-    fontWeight: "300",
+    fontWeight: "100",
     letterSpacing: "3px",
   },
 
