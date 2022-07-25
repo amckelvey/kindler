@@ -18,7 +18,7 @@ import DevRecSignup from "./pages/DevOrRecSignup";
 import DevRecLogin from "./pages/DevOrRecLogin";
 import SignUpDev from "./pages/SignUpDev";
 import SignUpRec from "./pages/SignUpRec";
-import SignUpDevProject from "./pages/SignUpDevProfile";
+import SignUpDevProfile from "./pages/SignUpDevProfile";
 import DevLogin from "./pages/DevLogin";
 import RecLogin from "./pages/RecLogin";
 
@@ -55,10 +55,6 @@ const styles = {
     fontSize: "50px",
     fontWeight: "300",
     letterSpacing: "15px",
-  },
-
-  pageWrap: {
-    paddingBottom: "2.5rem",
   },
 };
 
