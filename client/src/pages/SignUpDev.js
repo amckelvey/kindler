@@ -45,7 +45,6 @@ const styles = {
     textDecoration: "none",
     paddingLeft: "10px",
     paddingRight: "10px",
-    paddingBottom: "5px",
   },
 
   inputDiv: {
