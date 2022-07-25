@@ -67,6 +67,11 @@ const styles = {
     paddingLeft: "10px",
     paddingRight: "10px",
   },
+
+  backLink: {
+    paddingLeft: "20px",
+    color: "#9CDCFB",
+  }
 };
 
 function SignUpRec(props) {
@@ -116,6 +121,7 @@ function SignUpRec(props) {
           </div>
         </div>
       </div>
+
       <div className="container">
         <form onSubmit={handleFormSubmit}>
           <div className="flex-row space-between my-2" style={styles.inputDiv}>
@@ -154,6 +160,10 @@ function SignUpRec(props) {
             </button>
           </div>
         </form>
+      </div>
+      <br />
+      <div className="container my-1">
+        <Link to="/loginrec" style={styles.backLink}>← Go to Sign-in</Link>
       </div>
     </div>
   );
