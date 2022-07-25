@@ -13,6 +13,14 @@ function AddProject() {
   });
 
   const [addProject] = useMutation(ADD_PROJECT);
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
   return (
     <div>
       <h1>hi</h1>
