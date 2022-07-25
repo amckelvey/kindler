@@ -41,7 +41,7 @@ function SignUpDevProject() {
       });
       setFormState({ ...formState });
       alert("Successfully Updated!");
-      document.location.reload();
+      document.location.replace("/me");
     } catch (err) {
       console.error(err);
     }
