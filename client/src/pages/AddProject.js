@@ -22,7 +22,7 @@ function AddProject() {
       });
       setFormState({ ...formState });
       alert("Successfully Added Project!");
-      document.location.reload();
+      document.location.redirect("/me");
     } catch (err) {
       console.error(err);
     }
