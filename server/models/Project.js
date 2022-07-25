@@ -9,9 +9,12 @@ const projectSchema = new Schema({
     type: String,
     required: true,
   },
-  image: {
+  source: {
     type: String,
     required: true,
+  },
+  link: {
+    type: String,
   },
   tech: [
     {

@@ -80,6 +80,15 @@ export const QUERY_ME_DEV = gql`
       job_status
       position
       bio
+      projects {
+        _id
+        name
+        description
+        tech {
+          _id
+          name
+        }
+      }
     }
   }
 `;

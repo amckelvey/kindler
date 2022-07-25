@@ -37,12 +37,23 @@ export const ADD_RECRUITER = gql`
 `;
 
 export const ADD_PROJECT = gql`
-  mutation addProject($name: String!, $description: String!, $image: String!) {
-    addProject(name: $name, description: $description, image: $image) {
+  mutation AddProject(
+    $name: String!
+    $description: String!
+    $source: String!
+    $link: String!
+  ) {
+    addProject(
+      name: $name
+      description: $description
+      source: $source
+      link: $link
+    ) {
       _id
       name
       description
-      image
+      source
+      link
       tech {
         _id
         name

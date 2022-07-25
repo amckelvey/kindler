@@ -28,7 +28,8 @@ const typeDefs = gql`
     _id: ID!
     name: String!
     description: String!
-    image: String!
+    source: String!
+    link: String!
     tech: [Tech]!
   }
 
@@ -50,19 +51,21 @@ const typeDefs = gql`
 
   type Mutation {
     addDev(name: String!, email: String!, password: String!): Auth
-<<<<<<< HEAD
-=======
     addDevInfo(
       name: String!
       job_status: String!
       position: String!
       bio: String!
     ): Developer
->>>>>>> 0d4bd3abab444d080d4c4845ef8e1493566c1b85
     addRecruiter(name: String!, email: String!, password: String!): Auth
     recLogin(email: String!, password: String!): Auth
     devLogin(email: String!, password: String!): Auth
-    addProject(name: String!, description: String!, image: String!): Project
+    addProject(
+      name: String!
+      description: String!
+      source: String!
+      link: String!
+    ): Project
     addTech(name: String!, projectId: ID!): Project
     removeProject(projectId: ID!): Project
     removeTech(projectId: ID!, techId: ID!): Project
