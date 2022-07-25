@@ -16,7 +16,7 @@ const SignInBtn = () => {
       height: "12vh",
       fontFamily: "Source Code Pro, monospace",
       letterSpacing: "2.5px",
-      marginTop: "10vh"
+      marginTop: "8vh"
     },
     link: {
       textDecoration: "none",

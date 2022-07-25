@@ -49,8 +49,9 @@ const styles = {
   LogoBracket: {
     color: "#179FF6",
     fontSize: "5vw",
-    fontWeight: "100",
+    fontWeight: "light",
     fontFamily: "Source Code Pro, monospace",
+    marginTop: "3vh"
   },
   name: {
     color: "#9CDCFB",
@@ -59,6 +60,8 @@ const styles = {
     fontWeight: "100",
     letterSpacing: "15px",
     fontFamily: "Source Code Pro, monospace",
+    marginTop: "3vh",
+    marginLeft:"2vh"
   },
 };
 
