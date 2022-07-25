@@ -67,6 +67,10 @@ const styles = {
     paddingLeft: "10px",
     paddingRight: "10px",
   },
+  backLink: {
+    paddingLeft: "20px",
+    color: "#9CDCFB",
+  }
 };
 
 function SignUpDev(props) {
@@ -154,6 +158,12 @@ function SignUpDev(props) {
             </button>
           </div>
         </form>
+        <br />
+        <div className="container my-1">
+          <Link to="/" style={styles.backLink}>
+            ← Already Signed Up?
+          </Link>
+        </div>
       </div>
     </div>
   );

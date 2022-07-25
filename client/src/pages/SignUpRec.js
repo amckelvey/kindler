@@ -163,7 +163,7 @@ function SignUpRec(props) {
       </div>
       <br />
       <div className="container my-1">
-        <Link to="/loginrec" style={styles.backLink}>← Go to Sign-in</Link>
+        <Link to="/loginrec" style={styles.backLink}>← Already Signed Up?</Link>
       </div>
     </div>
   );
