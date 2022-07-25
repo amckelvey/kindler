@@ -28,7 +28,8 @@ const typeDefs = gql`
     _id: ID!
     name: String!
     description: String!
-    image: String!
+    source: String!
+    link: String!
     tech: [Tech]!
   }
 
@@ -40,6 +41,7 @@ const typeDefs = gql`
     tech: [Tech]
     projects: [Project]
     project(projectId: ID!): Project
+    meDev: Developer
   }
 
   type Auth {
@@ -58,7 +60,12 @@ const typeDefs = gql`
     addRecruiter(name: String!, email: String!, password: String!): Auth
     recLogin(email: String!, password: String!): Auth
     devLogin(email: String!, password: String!): Auth
-    addProject(name: String!, description: String!, image: String!): Project
+    addProject(
+      name: String!
+      description: String!
+      source: String!
+      link: String!
+    ): Project
     addTech(name: String!, projectId: ID!): Project
     removeProject(projectId: ID!): Project
     removeTech(projectId: ID!, techId: ID!): Project

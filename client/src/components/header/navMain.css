@@ -1,6 +1,11 @@
 nav {
+<<<<<<< HEAD
   display: flex;
   background-color: #333333;
+=======
+    display: flex;
+    background-color: #333333;
+>>>>>>> c5478d1f80dbd1388e177720401f8fb6df051a4a
 }
 
 .navbar {
@@ -8,7 +13,10 @@ nav {
   align-items: center;
   gap: 15px;
   background-color: #333333;
+<<<<<<< HEAD
   flex: 1;
+=======
+>>>>>>> c5478d1f80dbd1388e177720401f8fb6df051a4a
 }
 
 /* Buttons styles start */

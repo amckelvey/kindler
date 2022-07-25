@@ -16,14 +16,10 @@ const SignUpBtn = () => {
       width: "24vw",
       height: "10vh",
     },
-    link: {
-      textDecoration: "none",
-      color: "#CE9178",
-    },
   };
   return (
     <button style={styles.button}>
-      <Link style={styles.link} to="/signuptype">
+      <Link to="/signuptype">
         'sign up' <span style={styles.whtSemiColon}>;</span>
       </Link>
     </button>

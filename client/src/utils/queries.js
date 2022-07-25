@@ -6,14 +6,14 @@ export const QUERY_DEVELOPERS = gql`
       _id
       name
       email
-      password
       job_status
       position
       projects {
         _id
         name
         description
-        image
+        source
+        link
         tech {
           _id
           name
@@ -30,7 +30,6 @@ export const QUERY_SINGLE_DEVELOPER = gql`
       _id
       name
       email
-      password
       job_status
       position
       bio
@@ -38,7 +37,8 @@ export const QUERY_SINGLE_DEVELOPER = gql`
         _id
         name
         description
-        image
+        source
+        link
         tech {
           _id
           name
@@ -54,7 +54,6 @@ export const QUERY_SINGLE_RECRUITER = gql`
       _id
       name
       email
-      password
     }
   }
 `;
@@ -65,10 +64,35 @@ export const QUERY_SINGLE_PROJECT = gql`
       _id
       name
       description
-      image
+      source
+      link
       tech {
         _id
         name
+      }
+    }
+  }
+`;
+
+export const QUERY_ME_DEV = gql`
+  query MeDev {
+    meDev {
+      _id
+      name
+      email
+      job_status
+      position
+      bio
+      projects {
+        _id
+        name
+        description
+        source
+        link
+        tech {
+          _id
+          name
+        }
       }
     }
   }
