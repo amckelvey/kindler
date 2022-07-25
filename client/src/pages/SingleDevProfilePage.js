@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Navigate, Link, useParams } from "react-router-dom";
-import { useQuery } from "@apollo/client";
+import { useMutation, useQuery } from "@apollo/client";
 import { QUERY_ME_DEV, QUERY_SINGLE_DEVELOPER } from "../utils/queries";
 import Auth from "../utils/auth";
-import { TypeOrFieldNameRegExp } from "@apollo/client/cache/inmemory/helpers";
+import { REMOVE_PROJECT } from "../utils/mutations";
 
 function DevProfile() {
   const { _id: userParam } = useParams();
@@ -12,6 +12,7 @@ function DevProfile() {
     { variables: { _id: userParam } }
   );
 
+  const [removeProject] = useMutation(REMOVE_PROJECT);
   const dev = data?.meDev || data?.developer || {};
   console.log(dev);
   if (Auth.loggedIn() && Auth.getProfile().data._id === userParam) {
@@ -63,6 +64,17 @@ function DevProfile() {
   };
 
   const link = `/${dev._id}/edit`;
+
+  async function clickHander(event) {
+    event.preventDefault();
+
+    console.log(this);
+    const { data } = await removeProject({
+      variables: this.value,
+    });
+
+    document.location.reload();
+  }
 
   return (
     <div className="sloganContainer" style={styles.LeftBorder}>

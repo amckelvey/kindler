@@ -1,16 +1,24 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { useMutation } from "@apollo/client";
+import { Navigate, Link, useParams } from "react-router-dom";
+import { useMutation, useQuery } from "@apollo/client";
 import { ADD_PROJECT } from "../utils/mutations";
+import { QUERY_ME_DEV, QUERY_SINGLE_DEVELOPER } from "../utils/queries";
 
 function AddProject() {
+  const { _id: userParam } = useParams();
+  const { loading, data } = useQuery(
+    userParam ? QUERY_SINGLE_DEVELOPER : QUERY_ME_DEV,
+    { variables: { _id: userParam } }
+  );
+  const dev = data?.meDev || data?.developer || {};
+
+  const link = `/${dev._id}/addproject`;
   const [formState, setFormState] = useState({
     name: "",
     description: "",
     source: "",
     link: "",
   });
-
   const [addProject] = useMutation(ADD_PROJECT);
 
   const formSubmitHandler = async (event) => {
@@ -22,7 +30,7 @@ function AddProject() {
       });
       setFormState({ ...formState });
       alert("Successfully Added Project!");
-      document.location.reload();
+      document.location.assign(link);
     } catch (err) {
       console.error(err);
     }
@@ -55,6 +63,7 @@ function AddProject() {
       marginTop: "10px",
     },
   };
+
   return (
     <div className="sloganContainer" style={styles.LeftBorder}>
       <h2>&#123; #COMMIT TO YOUR RIGHT DEVELOPER &#125;</h2>

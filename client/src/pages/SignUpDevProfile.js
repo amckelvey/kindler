@@ -4,7 +4,6 @@ import { QUERY_ME_DEV, QUERY_SINGLE_DEVELOPER } from "../utils/queries";
 import { useQuery } from "@apollo/client";
 import { useMutation } from "@apollo/client";
 import { Navigate, Link, useParams } from "react-router-dom";
-import Auth from "../utils/auth";
 
 function SignUpDevProfile() {
   const { _id: userParam } = useParams();
@@ -55,7 +54,7 @@ function SignUpDevProfile() {
       });
       setFormState({ ...formState });
       alert("Successfully Updated!");
-      document.location.replace("/me");
+      document.location.assign("/me");
     } catch (err) {
       console.error(err);
     }
@@ -68,17 +67,6 @@ function SignUpDevProfile() {
       [name]: value,
     });
   };
-
-  if (Auth.loggedIn() && Auth.getProfile().data._id === userParam) {
-    return <Navigate to={link} />;
-  }
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (!dev?._id) {
-    return <h4>You need to be logged in to see this.</h4>;
-  }
 
   return (
     <div className="sloganContainer" style={styles.LeftBorder}>
