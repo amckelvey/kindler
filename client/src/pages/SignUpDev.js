@@ -112,9 +112,9 @@ function SignUpDev(props) {
           </div>
         </div>
       </div>
-      <div className="container" style={styles.inputDiv}>
+      <div className="container">
         <form onSubmit={handleFormSubmit}>
-          <div className="flex-row space-between my-2">
+          <div className="flex-row space-between my-2" style={styles.inputDiv}>
             <input
               style={styles.input}
               placeholder="name"
@@ -124,7 +124,7 @@ function SignUpDev(props) {
               onChange={handleChange}
             />
           </div>
-          <div className="flex-row space-between my-2">
+          <div className="flex-row space-between my-2" style={styles.inputDiv}>
             <input
               style={styles.input}
               placeholder="email"
@@ -134,7 +134,7 @@ function SignUpDev(props) {
               onChange={handleChange}
             />
           </div>
-          <div className="flex-row space-between my-2">
+          <div className="flex-row space-between my-2" style={styles.inputDiv}>
             <input
               style={styles.input}
               placeholder="password"
