@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ADD_DEVELOPER_DATA } from "../utils/mutations";
 import { useMutation } from "@apollo/client";
-
+import { Link } from "react-router-dom";
 function SignUpDevProject() {
   const [formState, setFormState] = useState({
     name: "",
@@ -28,6 +28,7 @@ function SignUpDevProject() {
       textDecoration: "none",
       paddingLeft: "10px",
       paddingRight: "10px",
+      marginTop: "10px",
     },
   };
 
@@ -110,24 +111,20 @@ function SignUpDevProject() {
                   onChange={handleChange}
                 />
               </div>
-
-              {/* <div className="form-group">
-                <label htmlFor="imgInput">profileImage: </label>
-                <input
-                  type="file"
-                  className="form-control-file"
-                  id="imgInput"
-                />
-              </div> */}
-              <p>add a project</p>
-
               <button type="submit" style={styles.button}>
-                click here
+                submit
               </button>
             </form>
           </div>
           <h3> &#125;&#41;;</h3>
         </div>
+        <h3>add a project &#123;</h3>
+        <div style={styles.LeftBorder}>
+          <Link to="" style={styles.button}>
+            click here!
+          </Link>
+        </div>
+        <h3>&#125;</h3>
       </div>
     </div>
   );
