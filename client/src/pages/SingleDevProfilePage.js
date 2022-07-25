@@ -84,6 +84,16 @@ function DevProfile() {
         </div>
         <h3>&#125;</h3>
         <h3>Projects &#123;</h3>
+        {dev.projects.map((project) => {
+          return (
+            <div>
+              <h5>name: {project.name}</h5>
+              <h5>source code link: {project.source}</h5>
+              <h5>deployed link: {project.link}</h5>
+              <h5>description: {project.description}</h5>
+            </div>
+          );
+        })}
         <h3>&#125;</h3>
       </div>
     </div>
