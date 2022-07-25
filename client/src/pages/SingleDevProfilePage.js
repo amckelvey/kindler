@@ -13,7 +13,6 @@ function DevProfile() {
   );
 
   const dev = data?.meDev || data?.developer || {};
-  console.log(dev);
 
   if (Auth.loggedIn() && Auth.getProfile().data._id === userParam) {
     return <Navigate to="/me" />;
