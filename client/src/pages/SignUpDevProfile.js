@@ -81,25 +81,39 @@ function SignUpDevProject() {
               </div>
               <div className="form-group">
                 <label htmlFor="statusInput">status: </label>
-                <input
-                  type="text"
+                <select
                   name="jobStatus"
                   className="form-control"
                   id="statusInput"
                   value={formState.jobStatus}
                   onChange={handleChange}
-                />
+                >
+                  <option>Select One</option>
+                  <option value="Actively Looking">Actively Looking</option>
+                  <option value="Casually Browsing">Casually Browsing</option>
+                  <option value="Not Open To Work">Not Open To Work</option>
+                </select>
               </div>
               <div className="form-group">
                 <label htmlFor="positionInput">position: </label>
-                <input
-                  type="text"
+                <select
                   name="position"
                   className="form-control"
                   id="positionInput"
                   value={formState.position}
                   onChange={handleChange}
-                />
+                >
+                  <option>Select One</option>
+                  <option value="Software Engineer">Software Engineer</option>
+                  <option value="Senior Software Engineer">
+                    Senior Software Engineer
+                  </option>
+                  <option value="Front-End Developer">
+                    Front-End Developer
+                  </option>
+                  <option value="Back-End Developer">Back-End Developer</option>
+                  <option value="UX/UI Designer"> UX/UI Designer</option>
+                </select>
               </div>
               <div className="form-group">
                 <label htmlFor="bioInput">bio: </label>
