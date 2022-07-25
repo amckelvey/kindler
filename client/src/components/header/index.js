@@ -1,5 +1,5 @@
 import React from "react";
-import "./navMain.css";
+// import "./navMain.css";
 import { Link } from "react-router-dom";
 import LogoutBtn from "../LogoutBtn";
 import Auth from "../../utils/auth";
