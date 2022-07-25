@@ -93,3 +93,16 @@ export const REMOVE_TECH = gql`
     }
   }
 `;
+
+export const ADD_DEVELOPER_DATA = gql`
+  mutation AddDevInfo($jobStatus: String!, $position: String!, $bio: String!) {
+    addDevInfo(job_status: $jobStatus, position: $position, bio: $bio) {
+      _id
+      name
+      email
+      job_status
+      position
+      bio
+    }
+  }
+`;
