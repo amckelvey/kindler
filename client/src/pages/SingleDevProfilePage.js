@@ -91,6 +91,7 @@ function DevProfile() {
               <h5>source code link: {project.source}</h5>
               <h5>deployed link: {project.link}</h5>
               <h5>description: {project.description}</h5>
+              <button>Delete Project</button>
             </div>
           );
         })}
