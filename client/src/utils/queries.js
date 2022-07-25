@@ -73,3 +73,17 @@ export const QUERY_SINGLE_PROJECT = gql`
     }
   }
 `;
+
+export const QUERY_ME_DEV = gql`
+  query MeDev {
+    meDev {
+      _id
+      name
+      email
+      password
+      job_status
+      position
+      bio
+    }
+  }
+`;
