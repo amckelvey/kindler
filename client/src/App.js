@@ -21,6 +21,7 @@ import SignUpRec from "./pages/SignUpRec";
 import SignUpDevProfile from "./pages/SignUpDevProfile";
 import DevLogin from "./pages/DevLogin";
 import RecLogin from "./pages/RecLogin";
+import Deck from "./components/projects";
 import DevProfile from "./pages/SingleDevProfilePage";
 import AddProject from "./pages/AddProject";
 import Auth from "./utils/auth";
@@ -80,6 +81,7 @@ function App() {
                 <Route path="/signuprec" element={<SignUpRec />} />
                 <Route path="/signuptype" element={<DevRecSignup />} />
                 <Route path="/logintype" element={<DevRecLogin />} />
+                <Route path="/projects" element={<Deck />} />
 
                 <Route path="/*" element={<LandingPage />} />
               </Routes>
