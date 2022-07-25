@@ -11,6 +11,7 @@ import {
 import Header from "./components/header";
 import Main from "./components/main";
 import Footer from "./components/footer";
+import './index.css';
 
 import Developers from "./pages/Developers";
 import LandingPage from "./pages/LandingPage";
@@ -63,6 +64,7 @@ const styles = {
     marginTop: "3vh",
     marginLeft:"2vh"
   },
+
 };
 
 function App() {
@@ -75,6 +77,7 @@ function App() {
             <div style={styles.pageWrap}>
               <h1 style={styles.name}>
                 <span style={styles.LogoBracket}>[</span>KINDLER<span style={styles.LogoBracket}>]</span>
+                <span className= 'blink'>|</span>
               </h1>
               <Routes>
                 <Route path="/" element={<LandingPage />} />
