@@ -5,7 +5,7 @@ const LogoutBtn = () => {
   const styles = {
     whtSemiColon: {
       color: "#FFFFFF",
-      fontWeight: "bolder",
+      
     },
     button: {
       color: "#CE9178",
