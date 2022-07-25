@@ -45,10 +45,14 @@ const styles = {
     textDecoration: "none",
     paddingLeft: "10px",
     paddingRight: "10px",
-    paddingBottom: "5px",
   },
 
   inputDiv: {
+    paddingBottom: "5px",
+    paddingLeft: "20px",
+  },
+
+  buttonDiv: {
     paddingLeft: "20px",
   },
 
@@ -108,7 +112,7 @@ function SignUpDev(props) {
             'sign up'<span style={styles.semiColon}>&#59;</span>
           </h2>
           <div className="container" style={styles.container}>
-            <h2 style={styles.textColor}>// CREATE NEW ACCOUNT //</h2>
+            <h2 style={styles.textColor}>// create new developer account //</h2>
           </div>
         </div>
       </div>
@@ -144,7 +148,7 @@ function SignUpDev(props) {
               onChange={handleChange}
             />
           </div>
-          <div className="flex-row flex-end">
+          <div className="flex-row flex-end" style={styles.buttonDiv}>
             <button type="submit" style={styles.button}>
               Submit
             </button>
