@@ -102,13 +102,18 @@ const resolvers = {
 
       return { token, user, role: "Developer" };
     },
-    addProject: async (parent, { name, description, image, tech }, context) => {
+    addProject: async (
+      parent,
+      { name, description, tech, source, link },
+      context
+    ) => {
       if (context.user) {
         const project = await Project.create({
           name,
           description,
-          image,
           tech,
+          source,
+          link,
         });
 
         await Developer.findOneAndUpdate(

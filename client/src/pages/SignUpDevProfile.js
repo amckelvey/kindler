@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ADD_DEVELOPER_DATA } from "../utils/mutations";
 import { useMutation } from "@apollo/client";
 import { Link } from "react-router-dom";
-function SignUpDevProject() {
+function SignUpDevProfile() {
   const [formState, setFormState] = useState({
     name: "",
     jobStatus: "",
@@ -144,4 +144,4 @@ function SignUpDevProject() {
   );
 }
 
-export default SignUpDevProject;
+export default SignUpDevProfile;

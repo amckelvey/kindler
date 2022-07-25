@@ -47,7 +47,7 @@ function DevProfile() {
     },
   };
 
-  const link = `/${dev._id}/projects`;
+  const link = `/${dev._id}/edit`;
 
   return (
     <div className="sloganContainer" style={styles.LeftBorder}>

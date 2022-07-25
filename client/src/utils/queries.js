@@ -12,7 +12,8 @@ export const QUERY_DEVELOPERS = gql`
         _id
         name
         description
-        image
+        source
+        link
         tech {
           _id
           name
@@ -36,7 +37,8 @@ export const QUERY_SINGLE_DEVELOPER = gql`
         _id
         name
         description
-        image
+        source
+        link
         tech {
           _id
           name
@@ -62,7 +64,8 @@ export const QUERY_SINGLE_PROJECT = gql`
       _id
       name
       description
-      image
+      source
+      link
       tech {
         _id
         name
@@ -80,6 +83,17 @@ export const QUERY_ME_DEV = gql`
       job_status
       position
       bio
+      projects {
+        _id
+        name
+        description
+        source
+        link
+        tech {
+          _id
+          name
+        }
+      }
     }
   }
 `;

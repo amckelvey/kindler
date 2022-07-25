@@ -22,7 +22,7 @@ import SignUpDevProject from "./pages/SignUpDevProfile";
 import DevLogin from "./pages/DevLogin";
 import RecLogin from "./pages/RecLogin";
 import DevProfile from "./pages/SingleDevProfilePage";
-
+import AddProject from "./pages/AddProject";
 import Auth from "./utils/auth";
 
 const httpLink = createHttpLink({
@@ -106,13 +106,13 @@ function App() {
             </h1>
             <Routes>
               {/* <Route path="/logintype" element={<DevRecLogin />} /> */}
-              <Route path="/" element={<Developers />} />
-              <Route
-                path="/:developerId/projects"
-                element={<SignUpDevProject />}
-              />
+
+              <Route path="/developers" element={<Developers />} />
+              <Route path="/:developerId/edit" element={<SignUpDevProfile />} />
+
               <Route path="/me" element={<DevProfile />} />
               <Route path="/*" element={<Developers />} />
+              <Route path="/:developerId/addproject" element={<AddProject />} />
               {/* <Route path="/signup-dev-profile" element={<SignUpDevProfile />} />
               <Route path="/developers" element={<SignUpDevProfile />} />
               <Route */}
