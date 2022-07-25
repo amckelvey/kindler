@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import { ADD_DEVELOPER_DATA } from "../utils/mutations";
+import { useMutation } from "@apollo/client";
 
 function SignUpDevProject() {
+  const [formState, setFormState] = useState({
+    name: "",
+    jobStatus: "",
+    position: "",
+    bio: "",
+  });
+  const [addDevInfo] = useMutation(ADD_DEVELOPER_DATA);
+
   const styles = {
     LeftBorder: {
       borderLeft: "solid 2px #7B7B7B",
@@ -21,9 +31,27 @@ function SignUpDevProject() {
     },
   };
 
-  const formSubmitHandler = (event) => {
+  const formSubmitHandler = async (event) => {
     event.preventDefault();
-    document.location.replace("/");
+
+    try {
+      const { data } = await addDevInfo({
+        variables: { ...formState },
+      });
+      setFormState({ ...formState });
+      alert("Successfully Updated!");
+      document.location.reload();
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
   };
 
   return (
@@ -41,37 +69,56 @@ function SignUpDevProject() {
                 <label htmlFor="exampleInputEmail1">name: </label>
                 <input
                   type="name"
+                  name="name"
                   className="form-control"
                   id="nameInput"
+                  value={formState.name}
                   aria-describedby="emailHelp"
                   placeholder="name"
+                  onChange={handleChange}
                 />
               </div>
               <div className="form-group">
                 <label htmlFor="statusInput">status: </label>
-                <input type="text" className="form-control" id="statusInput" />
+                <input
+                  type="text"
+                  name="jobStatus"
+                  className="form-control"
+                  id="statusInput"
+                  value={formState.jobStatus}
+                  onChange={handleChange}
+                />
               </div>
               <div className="form-group">
                 <label htmlFor="positionInput">position: </label>
                 <input
                   type="text"
+                  name="position"
                   className="form-control"
                   id="positionInput"
+                  value={formState.position}
+                  onChange={handleChange}
                 />
               </div>
               <div className="form-group">
                 <label htmlFor="bioInput">bio: </label>
-                <textarea className="form-control" id="bioInput" />
+                <textarea
+                  className="form-control"
+                  id="bioInput"
+                  name="bio"
+                  value={formState.bio}
+                  onChange={handleChange}
+                />
               </div>
 
-              <div className="form-group">
+              {/* <div className="form-group">
                 <label htmlFor="imgInput">profileImage: </label>
                 <input
                   type="file"
                   className="form-control-file"
                   id="imgInput"
                 />
-              </div>
+              </div> */}
               <p>add a project</p>
 
               <button type="submit" style={styles.button}>

@@ -31,12 +31,21 @@ const resolvers = {
       const token = signToken(developer);
       return { token, developer, role: "Developer" };
     },
-    addDevInfo: async (parent, { job_status, position, bio }, context) => {
+    addDevInfo: async (
+      parent,
+      { name, job_status, position, bio },
+      context
+    ) => {
       if (context.user) {
         return await Developer.findOneAndUpdate(
           { _id: context.user._id },
           {
-            $set: { job_status: job_status, position: position, bio: bio },
+            $set: {
+              name: name,
+              job_status: job_status,
+              position: position,
+              bio: bio,
+            },
           },
           {
             new: true,
