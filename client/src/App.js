@@ -22,7 +22,7 @@ import SignUpDevProfile from "./pages/SignUpDevProfile";
 import DevLogin from "./pages/DevLogin";
 import RecLogin from "./pages/RecLogin";
 import DevProfile from "./pages/SingleDevProfilePage";
-
+import AddProject from "./pages/AddProject";
 import Auth from "./utils/auth";
 
 const httpLink = createHttpLink({
