@@ -9,28 +9,30 @@ export default function Footer() {
             fontFamily: "Source Code Pro, monospace",
             letterSpacing: "2.5px",
             borderTop: "3px solid #B6B4B4",
-            justify: "center",
+            justifyContent: "left",
             marginTop: "200px",
+            paddingLeft: "3vw"
     
         },
     
         listInlineItem: {
             display: "flex",
             flexDirection: "row",
-            
             alignContent: "left",
             flexGrow: "1",
             color: "#CE9178",
             border: "1px solid #FFFFFF",
-            borderRadius: "20px",
+            borderRadius: "18px",
             fontSize: "15px",
             letterSpacing: "2.5px",
             backgroundColor: "transparent",
-            width: "240px",
-            height: "4vh",
+            width: "22vw",
+            height: "3.5vh",
             fontFamily: "Source Code Pro, monospace",
             paddingLeft: "10px",
-            paddingTop: "3px",
+            padding: "1.5vh",
+            margin: "1vw",
+            justifyContent:"center"
             
         },
     
@@ -42,11 +44,12 @@ export default function Footer() {
         },
     
         col:{
-            width: "350px",
+            width: "30vw",
             height: "auto",
             float: "left",
             boxSizing: "border-box",
-            padding: "0px 20px 20px 20px",
+            padding: "2vw",
+            margin:"1vw"
     
         },
     
