@@ -13,8 +13,8 @@ const styles = {
 
   slogan: {
     color: "#9CDCFB",
-
-    fontSize: "25px",
+    fontFamily: "Source Code Pro, monospace",
+    fontSize: "3vh",
     fontWeight: "300",
     letterSpacing: "3px",
   },
