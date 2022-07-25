@@ -11,7 +11,7 @@ const LogoutBtn = () => {
       color: "#CE9178",
       border: "2px solid #FFFFFF",
       borderRadius: "30px",
-      fontSize: "1.5vw",
+      fontSize: "16px",
       letterSpacing: "2.5px",
       backgroundColor: "transparent",
       width: "120px",

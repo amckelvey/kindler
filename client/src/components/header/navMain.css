@@ -15,7 +15,6 @@ nav {
 /* Buttons styles start */
 .navbutton {
     display: inline-block;
-    
     border: none;
     padding: 1rem 2rem;
     margin: 0;
@@ -52,6 +51,7 @@ nav {
 .logoutBtnDiv {
     display: flex;
     align-items: center;
+    margin: 0 10px
 }
 
 .logo {
