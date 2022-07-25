@@ -5,68 +5,66 @@ import Auth from "../../utils/auth";
 
 const styles = {
   navbarstyle: {
-      width: "100%",
-      height: "4.5vw",
-      display: "flex",
-      fontFamily: "Source Code Pro, monospace",
-      letterSpacing: "2.5px",
-      justifyContent: "left",
-      paddingLeft: "3vw",
-      background: "#333333",
-
+    width: "100%",
+    height: "4.5vw",
+    display: "flex",
+    fontFamily: "Source Code Pro, monospace",
+    letterSpacing: "2.5px",
+    justifyContent: "left",
+    paddingLeft: "3vw",
+    background: "#333333",
   },
 
   iconBracket: {
-    color:"#179FF6",
-    fontSize:"2vw",
-    fontFamily:"Source Code Pro, monospace",
+    color: "#179FF6",
+    fontSize: "2vw",
+    fontFamily: "Source Code Pro, monospace",
     justifyContent: "space-around",
     alignContent: "center",
     background: "transparent",
     border: "none",
     padding: "1vw",
-
   },
 
-  navbarbutton:{
-    color:"#C586C0",
-    fontSize:"1.2vw",
-    fontFamily:"Source Code Pro, monospace",
+  navbarbutton: {
+    color: "#C586C0",
+    fontSize: "1.2vw",
+    fontFamily: "Source Code Pro, monospace",
     justifyContent: "space-around",
     alignContent: "center",
     background: "transparent",
     border: "none",
     padding: "1vw",
     paddingLeft: "4vw",
-    fontWeight:"100",
-    marginTop:"0.5vw"
+    fontWeight: "100",
+    marginTop: "0.5vw",
   },
 
   whtSemiColon: {
     color: "#FFFFFF",
-    fontSize:"1.2vw",
-    fontWeight:"100",
-
+    fontSize: "1.2vw",
+    fontWeight: "100",
   },
-
-
-
-}
+};
 
 export default function Header() {
   if (!Auth.loggedIn()) {
     return (
       <nav className="navbar" style={styles.navbarstyle}>
         <div>
-          <button style={styles.iconBracket}
-            className="logo navbutton"
-            onClick={() => alert("this is our home")}
-          >
-            [&nbsp;]
-          </button>
+          <Link to="/">
+            <button
+              style={styles.iconBracket}
+              className="logo navbutton"
+              
+            >
+              [&nbsp;]
+            </button>
+          </Link>
         </div>
         <div>
-          <button style={styles.navbarbutton}
+          <button
+            style={styles.navbarbutton}
             className="navbutton"
             onClick={() => alert("This is our website")}
           >
@@ -74,13 +72,17 @@ export default function Header() {
           </button>
         </div>
         <div>
-          <button style={styles.navbarbutton}
-          className="navbutton" onClick={() => alert("Stay safe")}>
+          <button
+            style={styles.navbarbutton}
+            className="navbutton"
+            onClick={() => alert("Stay safe")}
+          >
             Safety<span style={styles.whtSemiColon}>;</span>
           </button>
         </div>
         <div>
-          <button style={styles.navbarbutton}
+          <button
+            style={styles.navbarbutton}
             className="navbutton"
             onClick={() => alert("Need help? Me too!!")}
           >
