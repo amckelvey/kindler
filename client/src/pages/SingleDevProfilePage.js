@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Navigate, Link, useParams } from "react-router-dom";
-import { useQuery } from "@apollo/client";
+import { useMutation, useQuery } from "@apollo/client";
 import { QUERY_ME_DEV, QUERY_SINGLE_DEVELOPER } from "../utils/queries";
 import Auth from "../utils/auth";
+import { REMOVE_PROJECT } from "../utils/mutations";
 
 function DevProfile() {
   const { _id: userParam } = useParams();
@@ -11,6 +12,7 @@ function DevProfile() {
     { variables: { _id: userParam } }
   );
 
+  const [removeProject] = useMutation(REMOVE_PROJECT);
   const dev = data?.meDev || data?.developer || {};
   console.log(dev);
   if (Auth.loggedIn() && Auth.getProfile().data._id === userParam) {
@@ -46,6 +48,17 @@ function DevProfile() {
   };
 
   const link = `/${dev._id}/edit`;
+
+  async function clickHander(event) {
+    event.preventDefault();
+
+    console.log(this);
+    const { data } = await removeProject({
+      variables: this.value,
+    });
+
+    document.location.reload();
+  }
 
   return (
     <div className="sloganContainer" style={styles.LeftBorder}>
@@ -86,12 +99,14 @@ function DevProfile() {
         <h3>Projects &#123;</h3>
         {dev.projects.map((project) => {
           return (
-            <div>
+            <div key={project._id}>
               <h5>name: {project.name}</h5>
               <h5>source code link: {project.source}</h5>
               <h5>deployed link: {project.link}</h5>
               <h5>description: {project.description}</h5>
-              <button>Delete Project</button>
+              <button value={project._id} onClick={clickHander}>
+                Delete Project
+              </button>
             </div>
           );
         })}
