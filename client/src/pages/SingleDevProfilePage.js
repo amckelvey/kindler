@@ -57,7 +57,7 @@ function DevProfile() {
       variables: this.value,
     });
 
-    document.location.reload();
+    window.location.reload();
   }
 
   return (
