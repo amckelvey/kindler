@@ -54,7 +54,6 @@ function SignUpDevProfile() {
       });
       setFormState({ ...formState });
       alert("Successfully Updated!");
-      window.location.assign("/me");
     } catch (err) {
       console.error(err);
     }
@@ -138,9 +137,11 @@ function SignUpDevProfile() {
                   onChange={handleChange}
                 />
               </div>
-              <button type="submit" style={styles.button}>
-                submit
-              </button>
+              <Link to="/me">
+                <button type="submit" style={styles.button}>
+                  submit
+                </button>
+              </Link>
             </form>
           </div>
           <h3> &#125;&#41;;</h3>
