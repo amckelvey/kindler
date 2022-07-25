@@ -25,6 +25,44 @@ const styles = {
   h2: {
     color: "#CE9178",
   },
+
+  textColor: {
+    color: "#649955",
+  },
+
+  semiColon: {
+    color: "white",
+  },
+
+  input: {
+    width: "350px",
+    color: "#FFFFFF",
+    border: "2px solid #FFFFFF",
+    borderRadius: "30px",
+    fontSize: "15px",
+    letterSpacing: "2.5px",
+    backgroundColor: "transparent",
+    textDecoration: "none",
+    paddingLeft: "10px",
+    paddingRight: "10px",
+    paddingBottom: "5px",
+  },
+
+  inputDiv: {
+    paddingLeft: "20px",
+  },
+
+  button: {
+    color: "#FFFFFF",
+    border: "2px solid #FFFFFF",
+    borderRadius: "30px",
+    fontSize: "15px",
+    letterSpacing: "2.5px",
+    backgroundColor: "transparent",
+    textDecoration: "none",
+    paddingLeft: "10px",
+    paddingRight: "10px",
+  },
 };
 
 function SignUpDev(props) {
@@ -66,45 +104,52 @@ function SignUpDev(props) {
           </h2>
         </div>
         <div className="container" style={styles.container}>
-          <h2 style={styles.h2}>'sign up'</h2>
+          <h2 style={styles.h2}>
+            'sign up'<span style={styles.semiColon}>&#59;</span>
+          </h2>
           <div className="container" style={styles.container}>
-            <form onSubmit={handleFormSubmit}>
-              <div className="flex-row space-between my-2">
-                <label htmlFor="name">Name:</label>
-                <input
-                  placeholder="Name"
-                  name="name"
-                  type="name"
-                  id="name"
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="flex-row space-between my-2">
-                <label htmlFor="email">Email:</label>
-                <input
-                  placeholder="youremail@test.com"
-                  name="email"
-                  type="email"
-                  id="email"
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="flex-row space-between my-2">
-                <label htmlFor="password">Password:</label>
-                <input
-                  placeholder="******"
-                  name="password"
-                  type="password"
-                  id="password"
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="flex-row flex-end">
-                <button type="submit">Submit</button>
-              </div>
-            </form>
+            <h2 style={styles.textColor}>// CREATE NEW ACCOUNT //</h2>
           </div>
         </div>
+      </div>
+      <div className="container" style={styles.inputDiv}>
+        <form onSubmit={handleFormSubmit}>
+          <div className="flex-row space-between my-2">
+            <input
+              style={styles.input}
+              placeholder="name"
+              name="name"
+              type="name"
+              id="name"
+              onChange={handleChange}
+            />
+          </div>
+          <div className="flex-row space-between my-2">
+            <input
+              style={styles.input}
+              placeholder="email"
+              name="email"
+              type="email"
+              id="email"
+              onChange={handleChange}
+            />
+          </div>
+          <div className="flex-row space-between my-2">
+            <input
+              style={styles.input}
+              placeholder="password"
+              name="password"
+              type="password"
+              id="password"
+              onChange={handleChange}
+            />
+          </div>
+          <div className="flex-row flex-end">
+            <button type="submit" style={styles.button}>
+              Submit
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );
