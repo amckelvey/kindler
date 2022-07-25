@@ -40,6 +40,7 @@ const typeDefs = gql`
     tech: [Tech]
     projects: [Project]
     project(projectId: ID!): Project
+    meDev: Developer
   }
 
   type Auth {

@@ -23,6 +23,14 @@ const resolvers = {
     project: async (parent, { projectId }) => {
       return Project.findOne({ _id: projectId });
     },
+    meDev: async (parent, args, context) => {
+      if (context.user) {
+        return Developer.findOne({ _id: context.user._id }).populate(
+          "projects"
+        );
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
   },
 
   Mutation: {
