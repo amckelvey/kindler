@@ -80,7 +80,6 @@ export const QUERY_ME_DEV = gql`
       _id
       name
       email
-      password
       job_status
       position
       bio
