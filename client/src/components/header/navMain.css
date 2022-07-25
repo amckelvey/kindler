@@ -1,5 +1,11 @@
 nav {
     display: flex;
+    justify-content: space-between;
+    background-color: #333333;
+}
+
+.navbar {
+    display: flex;
     align-items: center;
     gap: 15px;
     background-color: #333333;
@@ -9,6 +15,7 @@ nav {
 /* Buttons styles start */
 .navbutton {
     display: inline-block;
+    
     border: none;
     padding: 1rem 2rem;
     margin: 0;
@@ -42,7 +49,10 @@ nav {
 }
 /* Button styles end */
 
-
+.logoutBtnDiv {
+    display: flex;
+    align-items: center;
+}
 
 .logo {
     color: #179FF6;
