@@ -10,15 +10,15 @@ export default function Footer() {
             letterSpacing: "2.5px",
             borderTop: "3px solid #B6B4B4",
             justify: "center",
+            marginTop: "200px",
     
         },
     
         listInlineItem: {
             display: "flex",
             flexDirection: "row",
-            justifyContent: "space-around",
-            alignItems: "center",
-            alignContent: "center",
+            
+            alignContent: "left",
             flexGrow: "1",
             color: "#CE9178",
             border: "1px solid #FFFFFF",
@@ -26,12 +26,12 @@ export default function Footer() {
             fontSize: "15px",
             letterSpacing: "2.5px",
             backgroundColor: "transparent",
-            width: "190px",
+            width: "240px",
             height: "4vh",
             fontFamily: "Source Code Pro, monospace",
             paddingLeft: "10px",
             paddingTop: "3px",
-            justifyText: "center",
+            
         },
     
         h5: {
@@ -42,7 +42,7 @@ export default function Footer() {
         },
     
         col:{
-            width: "300px",
+            width: "350px",
             height: "auto",
             float: "left",
             boxSizing: "border-box",
@@ -72,7 +72,6 @@ export default function Footer() {
     }
 
     return (
-<<<<<<< HEAD
         <div className='footer' style={styles.footerContainer}>
         <div className= 'col'style={styles.col}>
             <h5 style={styles.h5}> <span style={styles.curlyBrackYellow}>&#123;</span>'KINDLER 2022'<span style={styles.curlyBrackYellow}>&#125;</span> <span style={styles.whtSemiColon}>;</span> </h5>
@@ -86,8 +85,6 @@ export default function Footer() {
             </ul>
         </div>
     
-=======
->>>>>>> 8f14816ea278ad6da4e4bc5acfa250857b1e07cf
         <div className= 'col' style={styles.col}>
             <h5 style={styles.h5}> <span style={styles.curlyBrackYellow}>&#123;</span>'CREATOR'<span style={styles.curlyBrackYellow}>&#125;</span> <span style={styles.whtSemiColon}>;</span> </h5>
             <ul className='list-inline' style={styles.ul}>
@@ -99,11 +96,8 @@ export default function Footer() {
                 <li className='list-inline-item' style={styles.listInlineItem}><a style={styles.a} href='https://github.com/taa2153'>Tasha Akemah</a><span style={styles.whtSemiColon}>;</span></li>
             </ul>
         </div>
-<<<<<<< HEAD
     
         </ div>
-=======
->>>>>>> 8f14816ea278ad6da4e4bc5acfa250857b1e07cf
     )
 }
 
