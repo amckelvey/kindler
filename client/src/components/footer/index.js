@@ -28,7 +28,7 @@ export default function Footer() {
                 <li className='list-inline-item'><a href='https://github.com/amckelvey' >Andrew</a></li>
                 <li className='list-inline-item'><a href='https://github.com/shayosullivan' >Shay O'Sullivan</a></li>
                 <li className='list-inline-item'><a href='https://github.com/saukchung' >Brian</a></li>
-                <li className='list-inline-item'><a href='https://github.com/'>Tahsa</a></li>
+                <li className='list-inline-item'><a href='https://github.com/taa2153'>Tahsa</a></li>
             </ul>
         </ div>
     )
