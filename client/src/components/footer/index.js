@@ -1,10 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-
-
-=======
 import './footer.css'
->>>>>>> c5478d1f80dbd1388e177720401f8fb6df051a4a
 export default function Footer() {
     const styles = {
         footerContainer: {
@@ -76,30 +71,6 @@ export default function Footer() {
     }
 
     return (
-        <div className='footer' style={styles.footerContainer}>
-<<<<<<< HEAD
-        <div className= 'col'style={styles.col}>
-            <h5 style={styles.h5}> <span style={styles.curlyBrackYellow}>&#123;</span>'KINDLER 2022'<span style={styles.curlyBrackYellow}>&#125;</span> <span style={styles.whtSemiColon}>;</span> </h5>
-            <ul className='list-inline' style={styles.ul}>
-                <li className='list-inline-item' style={styles.listInlineItem}>About <span style={styles.whtSemiColon}>;</span></li>
-                <li className='list-inline-item' style={styles.listInlineItem}>Mission<span style={styles.whtSemiColon}>;</span> </li>
-                <li className='list-inline-item' style={styles.listInlineItem}>Services <span style={styles.whtSemiColon}>;</span></li>
-                <li className='list-inline-item' style={styles.listInlineItem}>Media<span style={styles.whtSemiColon}>;</span></li>
-                <li className='list-inline-item' style={styles.listInlineItem}>Contact <span style={styles.whtSemiColon}>;</span></li>
-                <li className='list-inline-item' style={styles.listInlineItem}>Github<span style={styles.whtSemiColon}>;</span></li>
-=======
-            <span>© 2022 Kindler, Inc.</span>
-            <ul className='list-inline' style={styles.footerLinksCont}>
-                <li className='list-inline-item'><a href='https://github.com/Lunirs' >Dan Hong</a></li>
-                <li className='list-inline-item'><a href='https://github.com/lyf703331869' >Yafei Liu</a></li>
-                <li className='list-inline-item'><a href='https://github.com/amckelvey' >Andrew McKelvey</a></li>
-                <li className='list-inline-item'><a href='https://github.com/shayosullivan' >Shay O'Sullivan</a></li>
-                <li className='list-inline-item'><a href='https://github.com/saukchung' >Brian Chung</a></li>
-                <li className='list-inline-item'><a href='https://github.com/taa2153'>Tahsa Akemah</a></li>
->>>>>>> c5478d1f80dbd1388e177720401f8fb6df051a4a
-            </ul>
-        </div>
-
         <div className= 'col' style={styles.col}>
             <h5 style={styles.h5}> <span style={styles.curlyBrackYellow}>&#123;</span>'CREATOR'<span style={styles.curlyBrackYellow}>&#125;</span> <span style={styles.whtSemiColon}>;</span> </h5>
             <ul className='list-inline' style={styles.ul}>
@@ -107,12 +78,9 @@ export default function Footer() {
                 <li className='list-inline-item' style={styles.listInlineItem}><a style={styles.a} href='https://github.com/lyf703331869' >Yafei Liu </a> <span style={styles.whtSemiColon}>;</span></li>
                 <li className='list-inline-item' style={styles.listInlineItem}><a style={styles.a} href='https://github.com/amckelvey' >Andrew Mckelvey </a> <span style={styles.whtSemiColon}>;</span></li>
                 <li className='list-inline-item' style={styles.listInlineItem}><a style={styles.a} href='https://github.com/shayosullivan' >Shay O'Sullivan</a> <span style={styles.whtSemiColon}>;</span></li>
-                <li className='list-inline-item' style={styles.listInlineItem}><a style={styles.a} href='https://github.com/saukchung' >Brian</a> <span style={styles.whtSemiColon}>;</span></li>
+                <li className='list-inline-item' style={styles.listInlineItem}><a style={styles.a} href='https://github.com/saukchung' >Brian Sa Uk Chung</a> <span style={styles.whtSemiColon}>;</span></li>
                 <li className='list-inline-item' style={styles.listInlineItem}><a style={styles.a} href='https://github.com/taa2153'>Tasha Akemah</a><span style={styles.whtSemiColon}>;</span></li>
             </ul>
         </div>
-
-
-        </ div>
     )
 }
