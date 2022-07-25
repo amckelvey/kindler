@@ -2,11 +2,15 @@
 
 nav {
     display: flex;
-    align-items: center;
-    gap: 15px;
     background-color: #333333;
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #333333;
+}
 
 /* Buttons styles start */
 .navbutton {
@@ -32,23 +36,27 @@ nav {
 
 .navbutton:hover,
 .navbutton:focus {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .navbutton:focus {
-    outline: 1px solid #fff;
-    outline-offset: -4px;
-    font-weight: bold;
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+  font-weight: bold;
 }
 
 .navbutton:active {
-    transform: scale(0.99);
-    font-weight: bold;
+  transform: scale(0.99);
+  font-weight: bold;
 }
 /* Button styles end */
 
-
+.logoutBtnDiv {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
 
 .logo {
-    color: #179FF6;
+  color: #179ff6;
 }

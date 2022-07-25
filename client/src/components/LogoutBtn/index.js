@@ -11,12 +11,12 @@ const LogoutBtn = () => {
       color: "#CE9178",
       border: "2px solid #FFFFFF",
       borderRadius: "30px",
-      fontSize: "20px",
+      fontSize: "16px",
       letterSpacing: "2.5px",
       backgroundColor: "transparent",
-      width: "20vw",
-      height: "4vh",
-      fontFamily: "Source Code Pro, monospace",
+      width: "120px",
+      height: "30px",
+      fontWeight: "bolder",
     },
   };
   return (

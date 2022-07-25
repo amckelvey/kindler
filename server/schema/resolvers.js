@@ -23,6 +23,14 @@ const resolvers = {
     project: async (parent, { projectId }) => {
       return Project.findOne({ _id: projectId });
     },
+    meDev: async (parent, args, context) => {
+      if (context.user) {
+        return Developer.findOne({ _id: context.user._id }).populate(
+          "projects"
+        );
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
   },
 
   Mutation: {
@@ -94,13 +102,18 @@ const resolvers = {
 
       return { token, user, role: "Developer" };
     },
-    addProject: async (parent, { name, description, image, tech }, context) => {
+    addProject: async (
+      parent,
+      { name, description, tech, source, link },
+      context
+    ) => {
       if (context.user) {
         const project = await Project.create({
           name,
           description,
-          image,
           tech,
+          source,
+          link,
         });
 
         await Developer.findOneAndUpdate(
