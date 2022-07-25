@@ -16,7 +16,7 @@ const LogoutBtn = () => {
       backgroundColor: "transparent",
       width: "120px",
       height: "30px",
-      fontWeight: "bolder"
+      fontWeight: "bolder",
     },
   };
   return (
