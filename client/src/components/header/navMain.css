@@ -12,20 +12,22 @@ nav {
 .navbutton {
     display: inline-block;
     border: none;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     margin: 0;
     text-decoration: none;
     color: #A8A8A8;
     background-color: #333333;
-    font-size: 30px;
+    font-size: 24px;
     line-height: 1;
     cursor: pointer;
     text-align: center;
     transition: background 250ms ease-in-out, transform 150ms ease;
-    font-family: 'Encode Sans', sans-serif;
-    font-weight:100;
+    font-family:  'Source Code Pro', monospace;
+    font-weight:lighter;
+    letter-spacing: 2.5px;
     -webkit-appearance: none;
     -moz-appearance: none;
+    flex: 1;
 }
 
 .navbutton:hover,
