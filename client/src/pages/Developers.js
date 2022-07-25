@@ -39,9 +39,9 @@ function App() {
     <div className="">
       <Carousel
         cards={cards}
-        height="400px"
-        width="100%"
-        margin="150px auto"
+        height="450px"
+        width="80%"
+        margin="80px auto"
         offset={2}
         showArrows={true}
       />
