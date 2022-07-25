@@ -1,17 +1,61 @@
 import React, { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import { useSprings, animated, to as interpolate } from "react-spring";
 import { useDrag } from "react-use-gesture";
+import Card from "../projectCard/index";
 import "./projects.css";
 
 const cards = [
-  "https://upload.wikimedia.org/wikipedia/en/f/f5/RWS_Tarot_08_Strength.jpg",
-  "https://upload.wikimedia.org/wikipedia/en/5/53/RWS_Tarot_16_Tower.jpg",
-  "https://upload.wikimedia.org/wikipedia/en/9/9b/RWS_Tarot_07_Chariot.jpg",
-  "https://upload.wikimedia.org/wikipedia/en/d/db/RWS_Tarot_06_Lovers.jpg",
-  "https://upload.wikimedia.org/wikipedia/en/thumb/8/88/RWS_Tarot_02_High_Priestess.jpg/690px-RWS_Tarot_02_High_Priestess.jpg",
-  "https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg",
+  {
+    key: uuidv4(),
+    content: (
+      <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/convertplus_thumbnail.jpg" />
+    ),
+  },
+  {
+    key: uuidv4(),
+    content: (
+      <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/acf_pro.png" />
+    ),
+  },
+  {
+    key: uuidv4(),
+    content: (
+      <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/layer_slider_plugin_thumb.png" />
+    ),
+  },
+  {
+    key: uuidv4(),
+    content: (
+      <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2016/08/slider_revolution-1.png" />
+    ),
+  },
 ];
+const styles = {
+  card: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    backgroundColor: "#333333",
+    width: "25rem",
+    height: "fit-content",
+    padding: "0 2rem 2rem 2rem",
+    borderRadius: "10px",
+  },
 
+  h2: {
+    margin: "0",
+    marginTop: "1rem",
+    color: "#9CDCFB",
+  },
+
+  p: {
+    margin: "0",
+    marginTop: "0.5rem",
+    marginBottom: "1.5rem",
+    color: "#CE9178",
+  },
+};
 // These two are just helpers, they curate spring data, values that are later being interpolated into css
 const to = (i) => ({
   x: 0,
@@ -66,9 +110,17 @@ function Deck() {
         className="project"
         style={{
           transform: interpolate([rot, scale], trans),
-          backgroundImage: `url(${cards[i]})`,
         }}
-      />
+      >
+        <div style={styles.card}>
+          <h2 style={styles.h2}>Name</h2>
+          <p style={styles.p}>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+            volutpat.
+          </p>
+        </div>
+      </animated.div>
     </animated.div>
   ));
 }
