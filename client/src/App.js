@@ -84,7 +84,6 @@ function App() {
               <Route path="/signuprec" element={<SignUpRec />} />
               <Route path="/signuptype" element={<DevRecSignup />} />
               <Route path="/logintype" element={<DevRecLogin />} />
-
               <Route path="/*" element={<LandingPage />} />
             </Routes>
           </div>

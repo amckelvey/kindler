@@ -7,7 +7,7 @@
     "start": "node server --ignore client",
     "build": "cd client && npm run build",
     "develop": "concurrently \"cd server && npm run start\" \"cd client && npm run start\"",
-    "install": "cd server && npm i && cd ../client && npm i",
+    "install": "cd server && npm i && cd ../client && npm i --force",
     "seed": "cd server && npm run seed"
   },
   "repository": {
