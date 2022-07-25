@@ -72,8 +72,6 @@ function DevProfile() {
     const { data } = await removeProject({
       variables: this.value,
     });
-
-    window.location.reload();
   }
 
   return (

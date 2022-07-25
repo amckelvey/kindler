@@ -30,7 +30,6 @@ function AddProject() {
       });
       setFormState({ ...formState });
       alert("Successfully Added Project!");
-      document.location.assign(link);
     } catch (err) {
       console.error(err);
     }
@@ -119,9 +118,11 @@ function AddProject() {
                   onChange={handleChange}
                 />
               </div>
-              <button type="submit" style={styles.button}>
-                submit
-              </button>
+              <Link to={link}>
+                <button type="submit" style={styles.button}>
+                  submit
+                </button>
+              </Link>
             </form>
           </div>
           <h3> &#125;&#41;;</h3>
