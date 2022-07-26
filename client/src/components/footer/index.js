@@ -5,33 +5,23 @@ export default function Footer() {
     footerContainer: {
       width: "98%",
       height: "2.5rem",
-      display: "flex",
+      display: "inline-block",
       fontFamily: "Source Code Pro, monospace",
       letterSpacing: "2.5px",
-      borderTop: "3px solid #B6B4B4",
+      borderTop: "1px solid #B6B4B4",
       justifyContent: "left",
-      marginTop: "200px",
+      margin: "50px",
+      
       paddingLeft: "3vw",
+      padding: "20px"
+      
+
     },
 
     listInlineItem: {
-      display: "flex",
-      flexDirection: "row",
-      alignContent: "left",
-      flexGrow: "1",
-      color: "#CE9178",
-      border: "1px solid #FFFFFF",
-      borderRadius: "18px",
-      fontSize: "15px",
-      letterSpacing: "2.5px",
-      backgroundColor: "transparent",
-      width: "24vw",
-      height: "6vh",
-      fontFamily: "Source Code Pro, monospace",
-      paddingLeft: "10px",
-      
-      margin: "1vw",
-      justifyContent: "center",
+    display: "inline-block"
+
+
     },
 
     h5: {
@@ -51,7 +41,7 @@ export default function Footer() {
     },
 
     ul: {
-      listStyleType: "none",
+      listStyleType: "row",
       margin: "0",
       paddingLeft: "10px",
       borderLeft: "1px solid #686868",
@@ -59,6 +49,8 @@ export default function Footer() {
 
     a: {
       color: "#CE9178",
+  
+    
     },
 
     whtSemiColon: {
@@ -68,40 +60,25 @@ export default function Footer() {
     curlyBrackYellow: {
       color: "#F2D700",
     },
+    LeftBorder: {
+      borderLeft: "solid 1px #7B7B7B",
+      padding: "0",
+      margin: "5px 1em",
+      color: "white",
+    },
   };
 
   return (
+  
     <div className="footer" style={styles.footerContainer}>
-      <div className="col" style={styles.col}>
+      <div className="footer" style={styles.LeftBorder}>
         <h5 style={styles.h5}>
-          {" "}
-          <span style={styles.curlyBrackYellow}>&#123;</span>'KINDLER 2022'
-          <span style={styles.curlyBrackYellow}>&#125;</span>{" "}
-          <span style={styles.whtSemiColon}>;</span>{" "}
-        </h5>
-        <ul className="list-inline" style={styles.ul}>
-          <li className="list-inline-item" style={styles.listInlineItem}>
-            About <span style={styles.whtSemiColon}>;</span>
-          </li>
-          <li className="list-inline-item" style={styles.listInlineItem}>
-            Mission<span style={styles.whtSemiColon}>;</span>{" "}
-          </li>
-          <li className="list-inline-item" style={styles.listInlineItem}>
-            Services <span style={styles.whtSemiColon}>;</span>
-          </li>
-          <li className="list-inline-item" style={styles.listInlineItem}>
-            Media<span style={styles.whtSemiColon}>;</span>
-          </li>
-          <li className="list-inline-item" style={styles.listInlineItem}>
-            Contact <span style={styles.whtSemiColon}>;</span>
-          </li>
-          <li className="list-inline-item" style={styles.listInlineItem}>
-            Github<span style={styles.whtSemiColon}>;</span>
-          </li>
-        </ul>
-      </div>
-
-      <div className="col" style={styles.col}>
+              {" "}
+              <span style={styles.curlyBrackYellow}>&#123;</span>'KINDLER 2022'
+              <span style={styles.curlyBrackYellow}>&#125;</span>{" "}
+              <span style={styles.whtSemiColon}>;</span>{" "}
+            </h5>
+       <div className="footer" style={styles.LeftBorder}>
         <h5 style={styles.h5}>
           {" "}
           <span style={styles.curlyBrackYellow}>&#123;</span>'CREATOR'
@@ -109,44 +86,47 @@ export default function Footer() {
           <span style={styles.whtSemiColon}>;</span>{" "}
         </h5>
         <ul className="list-inline" style={styles.ul}>
+        <span style={styles.curlyBrackYellow}>[</span>
           <li className="list-inline-item" style={styles.listInlineItem}>
             <a style={styles.a} href="https://github.com/Lunirs">
-              Daniel Hong{" "}
-            </a>{" "}
-            <span style={styles.whtSemiColon}>;</span>
+              Dan
+            </a>
+            <span style={styles.whtSemiColon}>,</span>
           </li>
           <li className="list-inline-item" style={styles.listInlineItem}>
             <a style={styles.a} href="https://github.com/lyf703331869">
-              Yafei Liu{" "}
-            </a>{" "}
-            <span style={styles.whtSemiColon}>;</span>
+              Yafei
+            </a>
+            <span style={styles.whtSemiColon}>,</span>
           </li>
           <li className="list-inline-item" style={styles.listInlineItem}>
             <a style={styles.a} href="https://github.com/amckelvey">
-              Andrew Mckelvey{" "}
-            </a>{" "}
-            <span style={styles.whtSemiColon}>;</span>
+              Andrew
+            </a>
+            <span style={styles.whtSemiColon}>,</span>
           </li>
           <li className="list-inline-item" style={styles.listInlineItem}>
             <a style={styles.a} href="https://github.com/shayosullivan">
-              Shay O'Sullivan
-            </a>{" "}
-            <span style={styles.whtSemiColon}>;</span>
+              Shay
+            </a>
+            <span style={styles.whtSemiColon}>,</span>
           </li>
           <li className="list-inline-item" style={styles.listInlineItem}>
             <a style={styles.a} href="https://github.com/saukchung">
-              Brian Sa Uk Chung
-            </a>{" "}
-            <span style={styles.whtSemiColon}>;</span>
+              Brian
+            </a>
+            <span style={styles.whtSemiColon}>,</span>
           </li>
           <li className="list-inline-item" style={styles.listInlineItem}>
             <a style={styles.a} href="https://github.com/taa2153">
-              Tasha Akemah
+              Tasha
             </a>
-            <span style={styles.whtSemiColon}>;</span>
+            <span style={styles.whtSemiColon}>,</span>
           </li>
+          <span style={styles.curlyBrackYellow}>]</span>
         </ul>
       </div>
+    </div>
     </div>
   );
 }
