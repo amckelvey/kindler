@@ -130,7 +130,7 @@ function SignUpDev(props) {
         </div>
         <div className="container" style={styles.container}>
           <p style={styles.colorOra}>
-            'sign up'<span style={styles.semiColon}>&#59;</span>
+            'sign-up'<span style={styles.semiColon}>&#59;</span>
           </p>
           <div className="container" style={styles.container}>
             <p style={styles.textColor}>// create new developer account //</p>
@@ -163,14 +163,14 @@ function SignUpDev(props) {
               id="password"
               onChange={handleChange}
             />
-          <div style={{display: "flex", justifyContent: "center" }}>
+          <div style={{display: "flex", justifyContent: "center", width: "20px", padding: "0 40%"}}>
             <button type="submit" style={styles.button}>
               Submit
             </button>
           </div>
         </form>
         <br />
-        <div className="container my-1">
+        <div>
           <Link to="/logindev" style={styles.backLink}>
             ← Already Signed Up?
           </Link>

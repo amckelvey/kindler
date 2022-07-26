@@ -66,6 +66,9 @@ const styles = {
     marginTop: "3vh",
     marginLeft: "2vh",
   },
+  pageWrap: {
+    height: "90vh"
+  }
 };
 
 function App() {

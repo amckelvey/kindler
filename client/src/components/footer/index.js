@@ -4,13 +4,11 @@ export default function Footer() {
   const styles = {
     footerContainer: {
       width: "98%",
-      height: "2.5rem",
       display: "flex",
       fontFamily: "Source Code Pro, monospace",
       letterSpacing: "2.5px",
       borderTop: "3px solid #B6B4B4",
       justifyContent: "left",
-      marginTop: "200px",
       paddingLeft: "3vw",
     },
 

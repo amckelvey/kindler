@@ -51,13 +51,12 @@ const styles = {
     textDecoration: "none",
     padding: "2px 10px",
     margin: "10px 0",
-    display: "block"
   },
 
   inputDiv: {
     paddingBottom: "5px",
     paddingLeft: "20px",
-    height: "100px",
+    height: "90px",
     display: "flex",
     justifyContent: "center",
   },
@@ -81,6 +80,7 @@ const styles = {
     textDecoration: "none",
     paddingLeft: "10px",
     paddingRight: "10px",
+    fontFamily: "Source Code Pro, monospace",
     flex: "1"
   },
   
@@ -91,7 +91,7 @@ const styles = {
   backLink: {
     paddingLeft: "20px",
     color: "#9CDCFB",
-  }
+  },
 };
 
 function Login(props) {
@@ -142,7 +142,7 @@ function Login(props) {
       </div>
       <br />
       <div style={styles.inputDiv}>
-        <form onSubmit={handleFormSubmit}>
+        <form onSubmit={handleFormSubmit} style={styles.formstyle}>
           <input
             style={styles.input}
             placeholder="email"
@@ -159,9 +159,11 @@ function Login(props) {
             id="pwd"
             onChange={handleChange}
           />
-          <div style={{display: "flex", flexDirection: "column"}}>
+          <div style={{display: "flex", justifyContent: "center", width: "20px", padding: "0 40%"}}>
             {error ? <p style={styles.p}>The login information is not correct</p> : null}
-            <button type="submit" style={styles.button}>Submit</button>
+            <button type="submit" style={styles.button}>
+              Submit
+            </button>
           </div>
         </form>
       </div>
