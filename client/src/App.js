@@ -114,7 +114,7 @@ function App() {
           <div style={styles.pageWrap}>
             <h1 style={styles.name}>
               <span style={styles.LogoBracket}>[</span> KINDLER{" "}
-              <span style={styles.LogoBracket}>]</span>
+              <span style={styles.LogoBracket}>]</span> <span className="blink">|</span>
             </h1>
             <Routes>
               {/* <Route path="/logintype" element={<DevRecLogin />} /> */}
