@@ -9,6 +9,7 @@ const styles = {
     borderLeft: "solid 2px #7B7B7B",
     padding: "0 1em",
     margin: "10px 2em",
+    fontFamily: "Source Code Pro, monospace",
   },
 
   slogan: {
@@ -16,14 +17,17 @@ const styles = {
     fontSize: "25px",
     fontWeight: "300",
     letterSpacing: "3px",
+    fontFamily: "Source Code Pro, monospace",
   },
 
   brackets: {
     color: "#F2D700",
+    fontFamily: "Source Code Pro, monospace",
   },
 
   h2: {
     color: "#CE9178",
+    fontFamily: "Source Code Pro, monospace",
   },
 
   textColor: {
