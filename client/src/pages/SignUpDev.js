@@ -129,7 +129,7 @@ function SignUpDev(props) {
           </h2>
         </div>
         <div className="container" style={styles.container}>
-          <p style={styles.h2}>
+          <p style={styles.colorOra}>
             'sign up'<span style={styles.semiColon}>&#59;</span>
           </p>
           <div className="container" style={styles.container}>

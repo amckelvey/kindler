@@ -80,6 +80,9 @@ const styles = {
     flex: "1"
   },
   
+  p: {
+    color: "white"
+  },
 
   backLink: {
     paddingLeft: "20px",

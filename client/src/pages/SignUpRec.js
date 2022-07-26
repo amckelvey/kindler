@@ -130,8 +130,8 @@ function SignUpRec(props) {
           </h2>
         </div>
         <div className="container" style={styles.container}>
-          <p style={styles.h2}>
-            'sign up'<span style={styles.semiColon}>&#59;</span>
+          <p style={styles.colorOra}>
+            'sign-up'<span style={styles.semiColon}>&#59;</span>
           </p>
           <div className="container" style={styles.container}>
             <p style={styles.textColor}>// create new recruiter account //</p>
