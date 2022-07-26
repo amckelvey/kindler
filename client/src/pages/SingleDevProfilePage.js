@@ -36,6 +36,7 @@ function DevProfile() {
       padding: "0 1em",
       margin: "10px 2em",
       color: "white",
+      
     },
     button: {
       color: "#FFFFFF",
@@ -48,6 +49,7 @@ function DevProfile() {
       paddingLeft: "10px",
       paddingRight: "10px",
       marginTop: "10px",
+      fontFamily: "Source Code Pro, monospace",
     },
     card: {
       maxWidth: "400px",
