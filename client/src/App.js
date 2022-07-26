@@ -121,7 +121,7 @@ function App() {
 
               <Route path="/developers" element={<DevCarousel />} />
               <Route path="/:developerId/edit" element={<SignUpDevProfile />} />
-
+              <Route path="/support" element={<Support />} />
               <Route path="/me" element={<DevProfile />} />
               <Route path="/*" element={<DevCarousel />} />
               <Route path="/:developerId/addproject" element={<AddProject />} />
