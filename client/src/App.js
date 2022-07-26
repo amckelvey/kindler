@@ -13,6 +13,7 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import "./index.css";
 
+import Support from "./pages/support";
 import DevCarousel from "./pages/Developers";
 import LandingPage from "./pages/LandingPage";
 import DevRecSignup from "./pages/DevOrRecSignup";
@@ -73,7 +74,7 @@ function App() {
       <ApolloProvider client={client}>
         <Router>
           <div className="flex-column justify-flex-start min-100-vh">
-            <Header/>
+            <Header />
             <div style={styles.pageWrap}>
               <h1 style={styles.name}>
                 <span style={styles.LogoBracket}>[</span>KINDLER
@@ -90,6 +91,7 @@ function App() {
                 <Route path="/signuptype" element={<DevRecSignup />} />
                 <Route path="/logintype" element={<DevRecLogin />} />
                 <Route path="/projects" element={<ReviewProjects />} />
+                <Route path="/support" element={<Support />} />
 
                 <Route path="/*" element={<LandingPage />} />
               </Routes>

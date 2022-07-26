@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
-import Button from "../cardBtn/index";
+import ContactBtn from "../cardBtn/contactBtnIndex";
+import ProjectBtn from "../cardBtn/projectBtnIndex";
 
-function Card({ imagen, name, position, job_status, bio }) {
+function Card({ imagen, name, position, job_status, bio, email, _id }) {
   const styles = {
     card: {
       display: "flex",
@@ -39,6 +40,12 @@ function Card({ imagen, name, position, job_status, bio }) {
       justifyContent: "space-between",
       alignItems: "center",
     },
+
+    contact: {
+      display: "none",
+      backgroundColor: "#333333",
+      color: "#CE9178",
+    },
   };
   const [show, setShown] = useState(false);
 
@@ -48,6 +55,10 @@ function Card({ imagen, name, position, job_status, bio }) {
       ? "0 20px 25px rgb(0 0 0 / 25%)"
       : "0 2px 10px rgb(0 0 0 / 8%)",
   });
+
+  const devProjectClickHandler = async (event) => {
+    event.preventDefault();
+  };
 
   return (
     <animated.div
@@ -62,8 +73,12 @@ function Card({ imagen, name, position, job_status, bio }) {
         </h2>
         <p style={styles.p}>{bio}</p>
         <div style={styles.btnn}>
-          <Button text="Contact" />
-          <Button text="Project" />
+          <ContactBtn text="Contact" id={_id} />
+          <ProjectBtn text="Project" onClick={devProjectClickHandler} />
+        </div>
+        <div id={_id} style={styles.contact}>
+          <br></br>
+          Contact email: {email}
         </div>
       </div>
     </animated.div>
