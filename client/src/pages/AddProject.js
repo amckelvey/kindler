@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Navigate, Link, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useMutation, useQuery } from "@apollo/client";
 import { ADD_PROJECT } from "../utils/mutations";
 import { QUERY_ME_DEV, QUERY_SINGLE_DEVELOPER } from "../utils/queries";
@@ -12,7 +12,7 @@ function AddProject() {
   );
   const dev = data?.meDev || data?.developer || {};
 
-  const link = `/${dev._id}/addproject`;
+  // const link = `/${dev._id}/addproject`;
   const [formState, setFormState] = useState({
     name: "",
     description: "",

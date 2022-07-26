@@ -2,11 +2,7 @@ import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
 import Button from "../cardBtn/index";
 
-<<<<<<< HEAD
-function Card({ developers, imagen }) {
-=======
 function Card({ imagen, name, position, job_status, bio }) {
->>>>>>> a2e82bf7ff5527e06f638361b82be6a809d6fbee
   const styles = {
     card: {
       display: "flex",
@@ -60,21 +56,11 @@ function Card({ imagen, name, position, job_status, bio }) {
       onMouseLeave={() => setShown(false)}
     >
       <div style={styles.card}>
-<<<<<<< HEAD
-        <img style={styles.img} alt="" />
-        <h2 style={styles.h2}>{developers.name}</h2>
-        <p style={styles.p}>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-          volutpat.
-        </p>
-=======
         <img style={styles.img} src={imagen} alt="" />
         <h2 style={styles.h2}>
           {name}, {position}, {job_status}
         </h2>
         <p style={styles.p}>{bio}</p>
->>>>>>> a2e82bf7ff5527e06f638361b82be6a809d6fbee
         <div style={styles.btnn}>
           <Button text="Contact" />
           <Button text="Project" />

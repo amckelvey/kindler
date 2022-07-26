@@ -9,7 +9,7 @@ import {
 } from "@apollo/client";
 
 import Header from "./components/header";
-import Main from "./components/main";
+
 import Footer from "./components/footer";
 import "./index.css";
 
@@ -100,7 +100,7 @@ function App() {
       </ApolloProvider>
     );
   }
-  console.log(Auth.getProfile());
+
   // get profile gives me user's id. maybe i can use query to get that 1 user and see if he is developer or recruiter.
   // depending on the two i can render different pages
   //match pages for devs and carousel for recruiters
