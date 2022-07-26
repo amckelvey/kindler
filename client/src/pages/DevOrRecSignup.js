@@ -74,9 +74,9 @@ function DevRecSignup() {
           </p>
           <div style={styles.LeftBorder}>
             <p>
-              <span style={styles.colorPurple}>if &#40; </span>
-              <span style={styles.colorLightBlue}>developer</span>
-              <span style={styles.colorPurple}> &#41; &#123; </span>
+              <span style={styles.colorPurple}>if &#40;</span>
+              <span style={styles.colorLightBlue}>developer<span style={styles.colorPurple}>&#41; &#123; </span></span>
+
             </p>
             <div style={styles.LeftBorder}>
               <p>
@@ -88,7 +88,7 @@ function DevRecSignup() {
               </p>
             </div>
             <div>
-              <p style={styles.colorPurple}>&#125; else &#123;</p>
+              <p style={styles.colorPurple}>&#125; else&#123;</p>
               <div style={styles.LeftBorder}>
                 <p>
                   click <span style={styles.colorYellow}>here</span>; &nbsp;

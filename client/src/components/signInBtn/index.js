@@ -26,7 +26,7 @@ const SignInBtn = () => {
   return (
     <button style={styles.button}>
       <Link style={styles.link} to="/logintype">
-        'sign in' <span style={styles.whtSemiColon}>;</span>
+        'signIn'<span style={styles.whtSemiColon}>;</span>
       </Link>
     </button>
   );
