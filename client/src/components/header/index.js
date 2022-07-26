@@ -45,88 +45,60 @@ const styles = {
     fontSize: "1.2vw",
     fontWeight: "100",
   },
+
+  logoutbutton: {
+    fontFamily: "Source Code Pro, monospace",
+    margin: "1em",
+    background: "transparent",
+    border: "none",
+    marginTop: "0.5vw",
+  },
 };
 
 export default function Header() {
-  if (!Auth.loggedIn()) {
-    return (
-      <nav className="navbar" style={styles.navbarstyle}>
-        <div>
-          <Link to="/">
-            <button style={styles.iconBracket} className="logo navbutton">
-              [&nbsp;]
-            </button>
-          </Link>
-        </div>
-        <div>
-          <button
-            style={styles.navbarbutton}
-            className="navbutton"
-            onClick={() => alert("This is our website")}
-          >
-            Learn<span style={styles.whtSemiColon}>;</span>
-          </button>
-        </div>
-        <div>
-          <button
-            style={styles.navbarbutton}
-            className="navbutton"
-            onClick={() => alert("Stay safe")}
-          >
-            Safety<span style={styles.whtSemiColon}>;</span>
-          </button>
-        </div>
-        <div>
-          <button
-            style={styles.navbarbutton}
-            className="navbutton"
-            onClick={() => alert("Need help? Me too!!")}
-          >
-            Support<span style={styles.whtSemiColon}>;</span>
-          </button>
-        </div>
-      </nav>
-    );
-  } else {
-    return (
-      <nav>
-        <div className="navbar">
-          <div>
-            <Link to="/">
-              <button className="logo navbutton">[ &nbsp;]</button>
-            </Link>
-          </div>
-          <div>
-            <button
-              className="navbutton"
-              onClick={() => alert("This is our website")}
-            >
-              Learn
-            </button>
-          </div>
-          <div>
-            <button className="navbutton" onClick={() => alert("Stay safe")}>
-              Safety
-            </button>
-          </div>
-          <div>
-            <button
-              className="navbutton"
-              onClick={() => alert("Need help? Me too!!")}
-            >
-              Support
-            </button>
-          </div>
+  return (
+    <nav className="navbar" style={styles.navbarstyle}>
+      <div>
+        <Link to="/">
+          <button style={styles.iconBracket}>[&nbsp;]</button>
+        </Link>
+      </div>
+      <div>
+        <button
+          style={styles.navbarbutton}
+          onClick={() => alert("This is our website")}
+        >
+          Learn<span style={styles.whtSemiColon}>;</span>
+        </button>
+      </div>
+      <div>
+        <button style={styles.navbarbutton} onClick={() => alert("Stay safe")}>
+          Safety<span style={styles.whtSemiColon}>;</span>
+        </button>
+      </div>
+      <div>
+        <button
+          style={styles.navbarbutton}
+          onClick={() => alert("Need help? Me too!!")}
+        >
+          Support<span style={styles.whtSemiColon}>;</span>
+        </button>
+      </div>
+      {Auth.loggedIn() ? (
+        <>
           <div>
             <Link to="/me">
-              <button className="navbutton">Profile</button>
+              <button style={styles.navbarbutton}>Profile</button>
             </Link>
           </div>
-        </div>
-        <div className="logoutBtnDiv">
-          <LogoutBtn />
-        </div>
-      </nav>
-    );
-  }
+
+          <div className="logoutBtnDiv" style={styles.logoutbutton}>
+            <LogoutBtn />
+          </div>
+        </>
+      ) : (
+        <></>
+      )}
+    </nav>
+  );
 }

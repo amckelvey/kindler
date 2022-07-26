@@ -1,4 +1,3 @@
-import { v4 as uuidv4 } from "uuid";
 import Card from "../components/card";
 import Carroussel from "../components/carousel";
 import { QUERY_DEVELOPERS } from "../utils/queries";
@@ -8,7 +7,7 @@ function DevCarousel() {
   const { loading, data } = useQuery(QUERY_DEVELOPERS);
 
   const devs = data?.developers || [];
-  console.log(devs);
+
   const mappedDev = devs.map((dev) => {
     return {
       key: dev._id,
@@ -23,20 +22,23 @@ function DevCarousel() {
       ),
     };
   });
-  console.log(mappedDev);
+
   let cards = mappedDev;
-  console.log(cards);
 
   return (
     <div className="">
-      <Carroussel
-        cards={cards}
-        height="450px"
-        width="80%"
-        margin="80px auto"
-        offset={2}
-        showArrows={true}
-      />
+      {loading ? (
+        <div>Loading...</div>
+      ) : (
+        <Carroussel
+          cards={cards}
+          height="450px"
+          width="80%"
+          margin="80px auto"
+          offset={2}
+          showArrows={true}
+        />
+      )}
     </div>
   );
 }

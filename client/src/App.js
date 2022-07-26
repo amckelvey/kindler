@@ -9,7 +9,7 @@ import {
 } from "@apollo/client";
 
 import Header from "./components/header";
-import Main from "./components/main";
+
 import Footer from "./components/footer";
 import "./index.css";
 
@@ -22,7 +22,8 @@ import SignUpRec from "./pages/SignUpRec";
 import SignUpDevProfile from "./pages/SignUpDevProfile";
 import DevLogin from "./pages/DevLogin";
 import RecLogin from "./pages/RecLogin";
-import Deck from "./components/projects";
+import ReviewProjects from "./pages/ReviewProjects";
+
 import DevProfile from "./pages/SingleDevProfilePage";
 import AddProject from "./pages/AddProject";
 import Auth from "./utils/auth";
@@ -88,7 +89,7 @@ function App() {
                 <Route path="/signuprec" element={<SignUpRec />} />
                 <Route path="/signuptype" element={<DevRecSignup />} />
                 <Route path="/logintype" element={<DevRecLogin />} />
-                <Route path="/projects" element={<Deck />} />
+                <Route path="/projects" element={<ReviewProjects />} />
 
                 <Route path="/*" element={<LandingPage />} />
               </Routes>
@@ -99,7 +100,7 @@ function App() {
       </ApolloProvider>
     );
   }
-  console.log(Auth.getProfile());
+
   // get profile gives me user's id. maybe i can use query to get that 1 user and see if he is developer or recruiter.
   // depending on the two i can render different pages
   //match pages for devs and carousel for recruiters
