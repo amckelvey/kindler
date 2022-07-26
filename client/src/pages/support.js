@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 const FORM_ENDPOINT = ""; 
 
-const ContactForm = () => {
+const Support = () => {
   const [submitted, setSubmitted] = useState(false);
   const handleSubmit = () => {
     setTimeout(() => {
@@ -65,4 +65,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default Support;
