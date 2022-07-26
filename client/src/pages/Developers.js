@@ -56,7 +56,7 @@ function DevCarousel() {
               updateDev={setCurrentDev}
             />
             <div>
-              <DevProject dev={devs[currentDev]} num={currentDev} />
+              <DevProject dev={devs[currentDev]} />
             </div>
           </>
         )}

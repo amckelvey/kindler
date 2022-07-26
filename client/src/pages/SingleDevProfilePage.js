@@ -16,11 +16,10 @@ function DevProfile() {
     refetchQueries: [{ query: QUERY_ME_DEV }, "meDev"],
   });
   const dev = data?.meDev || data?.developer || {};
-
+  console.log(dev);
   if (Auth.loggedIn() && Auth.getProfile().data._id === userParam) {
     return <Navigate to="/me" />;
   }
-
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -29,14 +28,12 @@ function DevProfile() {
     return <h4>You need to be logged in to see this.</h4>;
   }
 
-  console.log(dev);
   const styles = {
     LeftBorder: {
       borderLeft: "solid 2px #7B7B7B",
       padding: "0 1em",
       margin: "10px 2em",
       color: "white",
-      
     },
     button: {
       color: "#FFFFFF",
@@ -49,7 +46,6 @@ function DevProfile() {
       paddingLeft: "10px",
       paddingRight: "10px",
       marginTop: "10px",
-      fontFamily: "Source Code Pro, monospace",
     },
     card: {
       maxWidth: "400px",
