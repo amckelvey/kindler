@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
 import Button from "../cardBtn/index";
 import "./card.css";
-function Card({ imagen, name, position, job_status, bio, email }) {
+function Card({ imagen, name, position, job_status, bio, email, _id }) {
   const styles = {
     card: {
       display: "flex",
@@ -64,6 +64,11 @@ function Card({ imagen, name, position, job_status, bio, email }) {
       }
     });
   };
+
+  const devProjectClickHandler = async (event) => {
+    event.preventDefault();
+  };
+
   return (
     <animated.div
       style={props3}
@@ -81,7 +86,7 @@ function Card({ imagen, name, position, job_status, bio, email }) {
         </p>
         <div style={styles.btnn}>
           <Button text="Contact" onClick={contactClickHandler} />
-          <Button text="Project" onClick={contactClickHandler} />
+          <Button text="Project" onClick={devProjectClickHandler} />
         </div>
       </div>
     </animated.div>
