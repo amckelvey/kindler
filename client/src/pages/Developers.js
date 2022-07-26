@@ -4,7 +4,7 @@ import Carroussel from "../components/carousel";
 import { QUERY_DEVELOPERS } from "../utils/queries";
 import { useQuery } from "@apollo/client";
 
-function App() {
+function DevCarousel() {
   const { loading, data } = useQuery(QUERY_DEVELOPERS);
 
   const devs = data?.developers || [];
@@ -41,4 +41,4 @@ function App() {
   );
 }
 
-export default App;
+export default DevCarousel;
