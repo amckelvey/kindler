@@ -14,13 +14,14 @@ const styles = {
   slogan: {
     color: "#9CDCFB",
     fontSize: "25px",
-    fontWeight: "300",
+    fontWeight: "100",
     letterSpacing: "3px",
     fontFamily: "Source Code Pro, monospace",
   },
 
   brackets: {
     color: "#F2D700",
+    fontFamily: "Source Code Pro, monospace",
   },
 
   h2: {
@@ -30,6 +31,7 @@ const styles = {
 
   textColor: {
     color: "#649955",
+    fontFamily: "Source Code Pro, monospace",
   },
 
   semiColon: {
@@ -54,6 +56,7 @@ const styles = {
   inputDiv: {
     paddingBottom: "5px",
     paddingLeft: "20px",
+    fontFamily: "Source Code Pro, monospace",
   },
 
   buttonDiv: {
@@ -70,6 +73,7 @@ const styles = {
     textDecoration: "none",
     paddingLeft: "10px",
     paddingRight: "10px",
+    fontFamily: "Source Code Pro, monospace",
   },
   backLink: {
     paddingLeft: "20px",
