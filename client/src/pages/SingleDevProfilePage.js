@@ -113,7 +113,6 @@ function DevProfile() {
         <h3>Projects &#123;</h3>
 
         {dev.projects.map((project) => {
-          let id = project._id;
           return (
             <div className="container" key={project._id}>
               <div className="card" style={styles.card}>
@@ -129,7 +128,7 @@ function DevProfile() {
                   onClick={() => {
                     removeProject({
                       variables: {
-                        projectId: id,
+                        projectId: project._id,
                       },
                     });
                   }}
