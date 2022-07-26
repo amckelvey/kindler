@@ -73,7 +73,7 @@ function App() {
       <ApolloProvider client={client}>
         <Router>
           <div className="flex-column justify-flex-start min-100-vh">
-            <Header />
+            <Header/>
             <div style={styles.pageWrap}>
               <h1 style={styles.name}>
                 <span style={styles.LogoBracket}>[</span>KINDLER

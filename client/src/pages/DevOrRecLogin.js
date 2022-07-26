@@ -9,6 +9,8 @@ function DevRecLogin() {
       margin: "10px 2em",
       letterSpacing: "3px",
       color: "white",
+      fontFamily: "Source Code Pro, monospace",
+
     },
 
     slogan: {
@@ -16,26 +18,32 @@ function DevRecLogin() {
       fontSize: "25px",
       fontWeight: "300",
       letterSpacing: "3px",
+      fontFamily: "Source Code Pro, monospace",
     },
 
     brackets: {
       color: "#F2D700",
+      fontFamily: "Source Code Pro, monospace",
     },
 
     colorOra: {
       color: "#CE9178",
+      fontFamily: "Source Code Pro, monospace",
     },
 
     colorYellow: {
       color: "#F2D700",
+      fontFamily: "Source Code Pro, monospace",
     },
 
     colorLightBlue: {
       color: "#9CDCFB",
+      fontFamily: "Source Code Pro, monospace",
     },
 
     colorPurple: {
       color: "#C586C0",
+      fontFamily: "Source Code Pro, monospace",
     },
     button: {
       color: "#FFFFFF",
@@ -49,6 +57,7 @@ function DevRecLogin() {
       textDecoration: "none",
       paddingLeft: "10px",
       paddingRight: "10px",
+      fontFamily: "Source Code Pro, monospace",
     },
   };
   return (
