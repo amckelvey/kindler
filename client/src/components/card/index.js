@@ -10,8 +10,8 @@ function Card({ imagen, name, position, job_status, bio, email, _id, i }) {
       flexDirection: "column",
       justifyContent: "center",
       backgroundColor: "#333333",
-      width: "15rem",
-      height: "fit-content",
+      width: "12rem",
+      height: "24rem",
       padding: "0 2rem 2rem 2rem",
       borderRadius: "10px",
     },
@@ -46,7 +46,7 @@ function Card({ imagen, name, position, job_status, bio, email, _id, i }) {
     },
 
     container: {
-      display: "block",
+      margin: "2em auto",
     },
     empty: {
       minHeight: "200px",
@@ -62,6 +62,7 @@ function Card({ imagen, name, position, job_status, bio, email, _id, i }) {
   });
 
   return (
+    
     <animated.div
       style={props3}
       onMouseEnter={() => setShown(true)}
@@ -83,6 +84,7 @@ function Card({ imagen, name, position, job_status, bio, email, _id, i }) {
         </div>
       </div>
     </animated.div>
+    
   );
 }
 
