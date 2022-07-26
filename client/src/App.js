@@ -11,9 +11,9 @@ import {
 import Header from "./components/header";
 import Main from "./components/main";
 import Footer from "./components/footer";
-import './index.css';
+import "./index.css";
 
-import Developers from "./pages/Developers";
+import DevCarousel from "./pages/Developers";
 import LandingPage from "./pages/LandingPage";
 import DevRecSignup from "./pages/DevOrRecSignup";
 import DevRecLogin from "./pages/DevOrRecLogin";
@@ -52,7 +52,7 @@ const styles = {
     fontSize: "5vw",
     fontWeight: "light",
     fontFamily: "Source Code Pro, monospace",
-    marginTop: "3vh"
+    marginTop: "3vh",
   },
   name: {
     color: "#9CDCFB",
@@ -62,9 +62,8 @@ const styles = {
     letterSpacing: "15px",
     fontFamily: "Source Code Pro, monospace",
     marginTop: "3vh",
-    marginLeft:"2vh"
+    marginLeft: "2vh",
   },
-
 };
 
 function App() {
@@ -76,8 +75,9 @@ function App() {
             <Header />
             <div style={styles.pageWrap}>
               <h1 style={styles.name}>
-                <span style={styles.LogoBracket}>[</span>KINDLER<span style={styles.LogoBracket}>]</span>
-                <span className= 'blink'>|</span>
+                <span style={styles.LogoBracket}>[</span>KINDLER
+                <span style={styles.LogoBracket}>]</span>
+                <span className="blink">|</span>
               </h1>
               <Routes>
                 <Route path="/" element={<LandingPage />} />
@@ -116,11 +116,11 @@ function App() {
             <Routes>
               {/* <Route path="/logintype" element={<DevRecLogin />} /> */}
 
-              <Route path="/developers" element={<Developers />} />
+              <Route path="/developers" element={<DevCarousel />} />
               <Route path="/:developerId/edit" element={<SignUpDevProfile />} />
 
               <Route path="/me" element={<DevProfile />} />
-              <Route path="/*" element={<Developers />} />
+              <Route path="/*" element={<DevCarousel />} />
               <Route path="/:developerId/addproject" element={<AddProject />} />
               {/* <Route path="/signup-dev-profile" element={<SignUpDevProfile />} />
               <Route path="/developers" element={<SignUpDevProfile />} />
