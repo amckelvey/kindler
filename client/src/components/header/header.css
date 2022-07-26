@@ -88,7 +88,7 @@
     font-family: Source Code Pro, monospace;
    
     background: transparent;
-    border: none;
+   
     margin: 5px;
     margin-top: 20px;
   }
@@ -118,7 +118,8 @@
       margin-top: 20px;
       margin-right: 5px;
     }
-.label {
+    
+    .label {
       display: inline-block;
       width: 50px;
       height: 50px;
@@ -149,7 +150,7 @@
       display: block;
       width: 100%;
     }
-    .navigation  #nav-check:not(:checked)  .navbar {
+    .navigation  #nav-check:checked  .navbar {
       height: 0px;
     }
     .navigation  #nav-check:checked  .navbar {
@@ -157,3 +158,4 @@
       overflow-y: auto;
     }
   }
+  

@@ -15,75 +15,6 @@ export default function Header() {
           </Link>
         </div>
 
-{/* const styles = {
-  navbarstyle: {
-    width: "100%",
-    height: "4.5vh",
-    display: "flex",
-    fontFamily: "Source Code Pro, monospace",
-    letterSpacing: "2.5px",
-    justifyContent: "left",
-    background: "#333333",
-  },
-
-  iconBracket: {
-    color: "#179FF6",
-    fontSize: "1em",
-    fontFamily: "Source Code Pro, monospace",
-    justifyContent: "space-around",
-    alignContent: "center",
-    background: "transparent",
-    border: "none",
-  },
-
-  navbarbutton: {
-    color: "#C586C0",
-    fontSize: '1em',
-    fontFamily: "Source Code Pro, monospace",
-    justifyContent: "space-around",
-    alignContent: "center",
-    background: "transparent",
-    border: "none",
-    padding: "2vh 15px",
-    fontWeight: "100",
-  },
-  
-  mainbuttons: {
-    display: "flex",
-    flex: "1",
-    alignItems: "center"
-  },
-
-  userbuttons: {
-    display: "flex",
-    alignItems: "center",
-    marginRight: "10px"
-  },
-
-  userbutton: {
-    color: "#CE9178",
-    border: "2px solid #FFFFFF",
-    borderRadius: "30px",
-    fontSize: "16px",
-    letterSpacing: "2.5px",
-    backgroundColor: "transparent",
-    width: "120px",
-    height: "30px",
-    fontWeight: "bolder",
-  },
-
-  profilebutton: {
-    color: "#CE9178",
-    border: "none",
-    borderRadius: "30px",
-    fontSize: "16px",
-    letterSpacing: "2.5px",
-    backgroundColor: "transparent",
-    width: "120px",
-    height: "30px",
-    fontWeight: "bolder",
-  }, */}
-
         <div class= "nav-btn">
           <label for="nav-check">
             <span></span>
@@ -132,6 +63,7 @@ export default function Header() {
               <></>
             )}
     </div>
+    
     
 /*
   logoutbutton: {
@@ -191,3 +123,5 @@ export default function Header() {
 */
   );
 }
+
+

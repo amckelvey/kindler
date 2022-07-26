@@ -29,7 +29,7 @@ export default function Footer() {
       height: "3.5vh",
       fontFamily: "Source Code Pro, monospace",
       paddingLeft: "10px",
-      padding: "1.5vh",
+      
       margin: "1vw",
       justifyContent: "center",
     },
