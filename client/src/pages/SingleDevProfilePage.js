@@ -12,7 +12,9 @@ function DevProfile() {
     { variables: { _id: userParam } }
   );
 
-  const [removeProject] = useMutation(REMOVE_PROJECT);
+  const [removeProject] = useMutation(REMOVE_PROJECT, {
+    refetchQueries: [{ query: QUERY_ME_DEV }, "meDev"],
+  });
   const dev = data?.meDev || data?.developer || {};
   console.log(dev);
   if (Auth.loggedIn() && Auth.getProfile().data._id === userParam) {
@@ -65,14 +67,12 @@ function DevProfile() {
 
   const link = `/${dev._id}/edit`;
 
-  async function clickHander(event) {
-    event.preventDefault();
-
-    console.log(this);
-    const { data } = await removeProject({
-      variables: this.value,
-    });
-  }
+  // async function clickHander(event) {
+  //   event.preventDefault();
+  //   const { data } = await removeProject({
+  //     variables: id,
+  //   });
+  // }
 
   return (
     <div className="sloganContainer" style={styles.LeftBorder}>
@@ -113,6 +113,7 @@ function DevProfile() {
         <h3>Projects &#123;</h3>
 
         {dev.projects.map((project) => {
+          let id = project._id;
           return (
             <div className="container" key={project._id}>
               <div className="card" style={styles.card}>
@@ -124,7 +125,17 @@ function DevProfile() {
                 <h5 style={styles.textColor}>
                   description: {project.description}
                 </h5>
-                <button>Delete Project</button>
+                <button
+                  onClick={() => {
+                    removeProject({
+                      variables: {
+                        projectId: id,
+                      },
+                    });
+                  }}
+                >
+                  Delete Project
+                </button>
               </div>
             </div>
           );

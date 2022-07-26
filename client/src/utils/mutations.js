@@ -67,7 +67,6 @@ export const ADD_TECH = gql`
       _id
       name
       description
-      image
       tech {
         _id
         name
@@ -82,7 +81,6 @@ export const REMOVE_PROJECT = gql`
       _id
       name
       description
-      image
       tech {
         _id
         name
@@ -96,7 +94,6 @@ export const REMOVE_TECH = gql`
       _id
       name
       description
-      image
       tech {
         _id
         name
