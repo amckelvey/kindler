@@ -10,7 +10,7 @@ export default function Footer() {
       letterSpacing: "2.5px",
       borderTop: "1px solid #B6B4B4",
       justifyContent: "left",
-      margin: "50px",
+      marginTop: "100px",
       
       paddingLeft: "3vw",
       padding: "20px"
