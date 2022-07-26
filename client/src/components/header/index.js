@@ -53,11 +53,7 @@ export default function Header() {
       <nav className="navbar" style={styles.navbarstyle}>
         <div>
           <Link to="/">
-            <button
-              style={styles.iconBracket}
-              className="logo navbutton"
-              
-            >
+            <button style={styles.iconBracket} className="logo navbutton">
               [&nbsp;]
             </button>
           </Link>
