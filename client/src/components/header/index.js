@@ -15,7 +15,6 @@ export default function Header() {
           </Link>
         </div>
 
-
         <div class= "nav-btn">
           <label for="nav-check">
             <span></span>
