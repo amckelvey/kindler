@@ -4,7 +4,15 @@ import { config } from "react-spring";
 
 export default function Carroussel(props) {
   const table = props.cards.map((element, index) => {
-    return { ...element, onClick: () => setGoToSlide(index) };
+    return {
+      ...element,
+      onClick: () => {
+        // update the current dev
+        props.updateDev(index);
+        // got to the next slide
+        setGoToSlide(index);
+      },
+    };
   });
 
   const [offsetRadius, setOffsetRadius] = useState(2);
@@ -16,6 +24,10 @@ export default function Carroussel(props) {
     setOffsetRadius(props.offset);
     setShowArrows(props.showArrows);
   }, [props.offset, props.showArrows]);
+
+  useEffect(() => {
+    setGoToSlide(props.currentDev);
+  }, []);
 
   return (
     <div style={{ width: "70%", height: props.height, margin: props.margin }}>

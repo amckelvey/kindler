@@ -10,7 +10,7 @@ function Card({ imagen, name, position, job_status, bio, email, _id }) {
       flexDirection: "column",
       justifyContent: "center",
       backgroundColor: "#333333",
-      width: "25rem",
+      width: "15rem",
       height: "fit-content",
       padding: "0 2rem 2rem 2rem",
       borderRadius: "10px",
@@ -18,7 +18,7 @@ function Card({ imagen, name, position, job_status, bio, email, _id }) {
 
     img: {
       marginTop: "-10%",
-      width: "100%",
+      width: "20%",
       borderRadius: "20px",
     },
 
@@ -30,8 +30,6 @@ function Card({ imagen, name, position, job_status, bio, email, _id }) {
 
     p: {
       margin: "0",
-      marginTop: "0.5rem",
-      marginBottom: "1.5rem",
       color: "#CE9178",
     },
 
@@ -45,6 +43,13 @@ function Card({ imagen, name, position, job_status, bio, email, _id }) {
       display: "none",
       backgroundColor: "#333333",
       color: "#CE9178",
+    },
+
+    container: {
+      display: "block",
+    },
+    empty: {
+      minHeight: "200px",
     },
   };
   const [show, setShown] = useState(false);
@@ -67,10 +72,10 @@ function Card({ imagen, name, position, job_status, bio, email, _id }) {
       onMouseLeave={() => setShown(false)}
     >
       <div style={styles.card}>
-        <img style={styles.img} src={imagen} alt="" />
-        <h2 style={styles.h2}>
-          {name}, {position}, {job_status}
-        </h2>
+        <img style={styles.img} src={imagen} alt="default profile pic" />
+        <h2 style={styles.h2}>{name}</h2>
+        <p style={styles.p}>Position: {position}</p>
+        <p style={styles.p}>Job Status: {job_status}</p>
         <p style={styles.p}>{bio}</p>
         <div style={styles.btnn}>
           <ContactBtn text="Contact" id={_id} />
