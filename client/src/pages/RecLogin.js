@@ -9,6 +9,7 @@ const styles = {
     borderLeft: "solid 2px #7B7B7B",
     padding: "0 1em",
     margin: "10px 2em",
+    fontFamily: "Source Code Pro, monospace",
   },
 
   slogan: {
@@ -16,18 +17,22 @@ const styles = {
     fontSize: "25px",
     fontWeight: "300",
     letterSpacing: "3px",
+    fontFamily: "Source Code Pro, monospace",
   },
 
   brackets: {
     color: "#F2D700",
+    fontFamily: "Source Code Pro, monospace",
   },
 
   h2: {
     color: "#CE9178",
+    fontFamily: "Source Code Pro, monospace",
   },
 
   textColor: {
     color: "#649955",
+    fontSize: "3vw"
   },
 
   semiColon: {
@@ -35,7 +40,7 @@ const styles = {
   },
 
   input: {
-    width: "350px",
+    width: "80vw",
     color: "#FFFFFF",
     border: "2px solid #FFFFFF",
     borderRadius: "30px",
@@ -45,11 +50,14 @@ const styles = {
     textDecoration: "none",
     paddingLeft: "10px",
     paddingRight: "10px",
+    display: "block"
   },
 
   inputDiv: {
     paddingBottom: "5px",
     paddingLeft: "20px",
+    display: "flex",
+    justifyContent: "center"
   },
 
   buttonDiv: {
@@ -66,6 +74,7 @@ const styles = {
     textDecoration: "none",
     paddingLeft: "10px",
     paddingRight: "10px",
+    flex: "1"
   },
   
   p: {
@@ -143,8 +152,10 @@ function Login(props) {
             id="pwd"
             onChange={handleChange}
           />
-          {error ? <p style={styles.p}>The login information is not correct</p> : null}
-          <button type="submit" style={styles.button}>Submit</button>
+          <div style={{display: "flex", flexDirection: "column"}}>
+            {error ? <p style={styles.p}>The login information is not correct</p> : null}
+            <button type="submit" style={styles.button}>Submit</button>
+          </div>
         </form>
       </div>
       <br />

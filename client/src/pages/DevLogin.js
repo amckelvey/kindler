@@ -32,6 +32,7 @@ const styles = {
 
   textColor: {
     color: "#649955",
+    fontSize: "3vw"
   },
 
   semiColon: {
