@@ -1,4 +1,4 @@
-function Button({ text, id }) {
+function ProjectBtn({ text, onClick }) {
   const styles = {
     btn: {
       backgroundColor: "#0094ff",
@@ -13,12 +13,7 @@ function Button({ text, id }) {
   };
 
   function Change() {
-    var container = document.getElementById(id);
-    if (container.style.display !== "none") {
-      container.style.display = "none";
-    } else {
-      container.style.display = "block";
-    }
+    console.log("Project Button Clicked");
   }
 
   return (
@@ -28,4 +23,4 @@ function Button({ text, id }) {
   );
 }
 
-export default Button;
+export default ProjectBtn;

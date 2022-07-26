@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import Auth from "../utils/auth";
 
 
 const FORM_ENDPOINT = ""; 
 
-const ContactForm = () => {
+const Support = () => {
   const [submitted, setSubmitted] = useState(false);
   const handleSubmit = () => {
     setTimeout(() => {
@@ -67,4 +65,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default Support;

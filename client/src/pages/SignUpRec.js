@@ -16,6 +16,7 @@ const styles = {
     fontSize: "25px",
     fontWeight: "300",
     letterSpacing: "3px",
+    fontFamily: "Source Code Pro, monospace",
   },
 
   brackets: {
@@ -24,6 +25,7 @@ const styles = {
 
   h2: {
     color: "#CE9178",
+    fontFamily: "Source Code Pro, monospace",
   },
 
   textColor: {
@@ -45,6 +47,7 @@ const styles = {
     textDecoration: "none",
     paddingLeft: "10px",
     paddingRight: "10px",
+    fontFamily: "Source Code Pro, monospace",
   },
 
   inputDiv: {
@@ -66,6 +69,7 @@ const styles = {
     textDecoration: "none",
     paddingLeft: "10px",
     paddingRight: "10px",
+    fontFamily: "Source Code Pro, monospace",
   },
 
   backLink: {
