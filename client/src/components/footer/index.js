@@ -3,7 +3,7 @@ import "./footer.css";
 export default function Footer() {
   const styles = {
     footerContainer: {
-      width: "100%",
+      width: "98%",
       height: "2.5rem",
       display: "flex",
       fontFamily: "Source Code Pro, monospace",
