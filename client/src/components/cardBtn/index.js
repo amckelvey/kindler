@@ -1,4 +1,4 @@
-function Button({ text }) {
+function Button({ text, onClick }) {
   const styles = {
     btn: {
       backgroundColor: "#0094ff",
@@ -11,7 +11,12 @@ function Button({ text }) {
       width: "7.5rem",
     },
   };
-  return <button style={styles.btn}>{text}</button>;
+
+  return (
+    <button style={styles.btn} onClick={onClick}>
+      {text}
+    </button>
+  );
 }
 
 export default Button;

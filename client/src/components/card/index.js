@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
 import Button from "../cardBtn/index";
-
-function Card({ imagen, name, position, job_status, bio }) {
+import "./card.css";
+function Card({ imagen, name, position, job_status, bio, email }) {
   const styles = {
     card: {
       display: "flex",
@@ -49,6 +49,22 @@ function Card({ imagen, name, position, job_status, bio }) {
       : "0 2px 10px rgb(0 0 0 / 8%)",
   });
 
+  const contactClickHandler = async (event) => {
+    event.preventDefault();
+
+    const contactEl = Array.from(document.querySelectorAll("#contact-toggle"));
+
+    contactEl.forEach((contact) => {
+      if (contact.getAttribute("class") === "hidden") {
+        console.log(contact.getAttribute("class"));
+        contact.removeAttribute("class");
+        contact.setAttribute("class", "visible");
+      } else {
+        contact.removeAttribute("class");
+        contact.setAttribute("class", "hidden");
+      }
+    });
+  };
   return (
     <animated.div
       style={props3}
@@ -61,9 +77,12 @@ function Card({ imagen, name, position, job_status, bio }) {
           {name}, {position}, {job_status}
         </h2>
         <p style={styles.p}>{bio}</p>
+        <p id="contact-toggle" className="hidden" style={styles.p}>
+          {email}
+        </p>
         <div style={styles.btnn}>
-          <Button text="Contact" />
-          <Button text="Project" />
+          <Button text="Contact" onClick={contactClickHandler} />
+          <Button text="Project" onClick={contactClickHandler} />
         </div>
       </div>
     </animated.div>

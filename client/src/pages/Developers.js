@@ -18,6 +18,7 @@ function DevCarousel() {
           position={dev.position}
           job_status={dev.job_status}
           bio={dev.bio}
+          email={dev.email}
         />
       ),
     };
