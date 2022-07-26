@@ -1,43 +1,18 @@
-import { v4 as uuidv4 } from "uuid";
 import Card from "../components/card";
-import Carousel from "../components/carousel";
-
-function App() {
-  let cards = [
-    {
-      key: uuidv4(),
-      content: (
-        <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/convertplus_thumbnail.jpg" />
-      ),
-    },
-    {
-      key: uuidv4(),
-      content: (
-        <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/acf_pro.png" />
-      ),
-    },
-    {
-      key: uuidv4(),
-      content: (
-        <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/layer_slider_plugin_thumb.png" />
-      ),
-    },
-    {
-      key: uuidv4(),
-      content: (
-        <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2016/08/slider_revolution-1.png" />
-      ),
-    },
-    {
-      key: uuidv4(),
-      content: (
-        <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2019/01/pwa_880_660.jpg" />
-      ),
-    },
-  ];
+import Carroussel from "../components/carousel";
+import { useQuery } from "@apollo/client";
+import { QUERY_DEVELOPERS } from "../utils/queries";
+let cards = [];
+function UserCards() {
+  const { data } = useQuery(QUERY_DEVELOPERS);
+  const developers = data?.developers || [];
+  for (let i = 0; i < developers.length; i++) {
+    console.log(developers);
+    // cards.push({ content: <Card developers={developers[i]} /> });
+  }
   return (
     <div className="">
-      <Carousel
+      <Carroussel
         cards={cards}
         height="450px"
         width="80%"
@@ -49,4 +24,4 @@ function App() {
   );
 }
 
-export default App;
+export default UserCards;

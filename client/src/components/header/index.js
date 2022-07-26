@@ -29,7 +29,6 @@ const styles = {
   navbarbutton: {
     color: "#C586C0",
     fontSize: "1.2vw",
-    minSize: "1vw",
     fontFamily: "Source Code Pro, monospace",
     justifyContent: "space-around",
     alignContent: "center",
