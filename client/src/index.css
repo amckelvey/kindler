@@ -12,7 +12,6 @@ body {
   background-color: #1e1e1e;
 }
 
-
 html {
   height: 100%;
 }
@@ -24,7 +23,7 @@ body {
 .blink {
   animation: blink-animation 1s steps(5, start) infinite;
   -webkit-animation: blink-animation 1s steps(5, start) infinite;
-  color:white;
+  color: white;
   font-weight: 100;
 }
 @keyframes blink-animation {
