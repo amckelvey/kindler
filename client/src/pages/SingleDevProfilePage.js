@@ -97,9 +97,65 @@ function DevProfile() {
       paddingLeft: "10px",
       paddingRight: "10px",
       paddingBottom: "5px",
+      fontFamily: "Source Code Pro, monospace",
     },
     textColor: {
       color: "#649955",
+    },
+
+    brackets: {
+      color: "#F2D700",
+      fontFamily: "Source Code Pro, monospace",
+      fontWeight: "lighter"
+    },
+
+    colorOra: {
+      color: "#CE9178",
+      fontFamily: "Source Code Pro, monospace",
+      fontWeight: "lighter"
+    },
+
+    colorYellow: {
+      color: "#F2D700",
+      fontFamily: "Source Code Pro, monospace",
+      fontWeight: "lighter"
+    },
+
+    colorLightBlue: {
+      color: "#9CDCFB",
+      fontFamily: "Source Code Pro, monospace",
+      fontWeight: "lighter"
+    },
+    colorBlue: {
+      color: "#179FF6",
+      fontFamily: "Source Code Pro, monospace",
+      fontWeight: "lighter"
+    },
+
+    colorPurple: {
+      color: "#C586C0",
+      fontFamily: "Source Code Pro, monospace",
+      fontWeight: "lighter"
+    },
+
+    colorGreen: {
+      color: "#649955",
+      fontFamily: "Source Code Pro, monospace",
+      fontWeight: "lighter"
+    },
+
+    slogan: {
+      color: "#9CDCFB",
+      fontSize: "25px",
+      fontWeight: "300",
+      letterSpacing: "3px",
+      fontFamily: "Source Code Pro, monospace",
+    },
+
+    whtSemiColon: {
+      color: "#FFFFFF",
+      fontWeight: "lighter",
+      fontFamily: "Source Code Pro, monospace",
     },
   };
 
@@ -114,45 +170,44 @@ function DevProfile() {
 
   return (
     <div className="sloganContainer" style={styles.LeftBorder}>
-      <h2 style={styles.slogan}>
-        <span style={styles.brackets}>&#123;</span> 
-        #COMMIT TO YOUR RIGHT DEVELOPER 
-        <span style={styles.brackets}>&#125;</span>
-      </h2>
+       <h2 style={styles.slogan}>
+          <span style={styles.brackets}>&#123;</span> #COMMIT TO YOUR RIGHT
+          DEVELOPER <span style={styles.brackets}>&#125;</span>
+        </h2>
       <div style={styles.LeftBorder}>
-        <h3 >// My Profile //</h3>
+        <h3 style={styles.colorGreen}>/My Profile/</h3>
         <div style={styles.LeftBorder}>
-          <h3>
-            const <span>myProfile &#40;</span>&#123;
+          <h3 style={styles.colorBlue}>
+            const <span style={styles.colorYellow}>myProfile<span style={styles.colorOra}>&#40;</span><span style={styles.colorBlue}>&#123;</span></span>
           </h3>
           <div style={styles.LeftBorder}>
-            <p>
-              name: <span>"{dev.name}"</span>
+            <p style={styles.colorLightBlue}>
+              name: <span>"{dev.name}"</span><span style={styles.whtSemiColon} >;</span>
             </p>
-            <p>
-              email: <span>"{dev.email}"</span>
+            <p style={styles.colorLightBlue}>
+              email: <span>"{dev.email}"</span> <span style={styles.whtSemiColon} >;</span>
             </p>
-            <p>
-              position: <span>"{dev.position}"</span>
+            <p style={styles.colorLightBlue}>
+              position: <span>"{dev.position}"</span> <span style={styles.whtSemiColon} >;</span>
             </p>
-            <p>
-              job_status: <span>"{dev.job_status}"</span>
+            <p style={styles.colorLightBlue}>
+              job_status: <span>"{dev.job_status}"</span> <span style={styles.whtSemiColon} >;</span>
             </p>
-            <p>
-              bio: <span>"{dev.bio}"</span>
+            <p style={styles.colorLightBlue}>
+              bio: <span>"{dev.bio}"</span> <span style={styles.whtSemiColon} >;</span>
             </p>
           </div>
 
-          <h3> &#125;&#41;;</h3>
+          <h3> <span style={styles.brackets}>&#125;</span><span style={styles.colorOra}>&#41;</span><span style={styles.whtSemiColon} >;</span></h3>
         </div>
-        <h3>Edit Your Profile &#123;</h3>
+        <h3 style={styles.colorPurple} >Edit Your Profile <span style={styles.brackets}>&#123;</span> </h3>
         <div style={styles.LeftBorder}>
           <Link to={link} style={styles.button}>
             click here!
           </Link>
         </div>
-        <h3>&#125;</h3>
-        <h3>Projects &#123;</h3>
+        <h3  style={styles.brackets} >&#125;</h3>
+        <h3 style={styles.colorPurple} >Projects <span style={styles.brackets}>&#123;</span> </h3>
 
         {dev.projects.map((project) => {
           return (
@@ -181,7 +236,7 @@ function DevProfile() {
             </div>
           );
         })}
-        <h3>&#125;</h3>
+        <h3  style={styles.brackets} >&#125;</h3>
       </div>
     </div>
   );
