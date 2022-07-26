@@ -1,43 +1,35 @@
 import { v4 as uuidv4 } from "uuid";
 import Card from "../components/card";
-import Carousel from "../components/carousel";
+import Carroussel from "../components/carousel";
+import { QUERY_DEVELOPERS } from "../utils/queries";
+import { useQuery } from "@apollo/client";
 
 function App() {
-  let cards = [
-    {
-      key: uuidv4(),
+  const { loading, data } = useQuery(QUERY_DEVELOPERS);
+
+  const devs = data?.developers || [];
+  console.log(devs);
+  const mappedDev = devs.map((dev) => {
+    return {
+      key: dev._id,
       content: (
-        <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/convertplus_thumbnail.jpg" />
+        <Card
+          imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/convertplus_thumbnail.jpg"
+          name={dev.name}
+          position={dev.position}
+          job_status={dev.job_status}
+          bio={dev.bio}
+        />
       ),
-    },
-    {
-      key: uuidv4(),
-      content: (
-        <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/acf_pro.png" />
-      ),
-    },
-    {
-      key: uuidv4(),
-      content: (
-        <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/layer_slider_plugin_thumb.png" />
-      ),
-    },
-    {
-      key: uuidv4(),
-      content: (
-        <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2016/08/slider_revolution-1.png" />
-      ),
-    },
-    {
-      key: uuidv4(),
-      content: (
-        <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2019/01/pwa_880_660.jpg" />
-      ),
-    },
-  ];
+    };
+  });
+  console.log(mappedDev);
+  let cards = mappedDev;
+  console.log(cards);
+
   return (
     <div className="">
-      <Carousel
+      <Carroussel
         cards={cards}
         height="450px"
         width="80%"
