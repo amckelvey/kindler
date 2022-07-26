@@ -24,12 +24,19 @@ function DevCarousel() {
           bio={dev.bio}
           email={dev.email}
           _id={dev._id}
+          style={{}}
         />
       ),
     };
   });
 
   let cards = mappedDev;
+
+  const styles = {
+    fit: {
+      height: "90vh",
+    },
+  };
 
   return (
     <>
