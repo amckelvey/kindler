@@ -20,6 +20,7 @@ function DevCarousel() {
           bio={dev.bio}
           email={dev.email}
           _id={dev._id}
+          style={{}}
         />
       ),
     };
@@ -27,8 +28,14 @@ function DevCarousel() {
 
   let cards = mappedDev;
 
+  const styles = {
+    fit: {
+      height: "90vh"
+    }
+  }
+
   return (
-    <div className="">
+    <div style={styles.fit}>
       {loading ? (
         <div>Loading...</div>
       ) : (
