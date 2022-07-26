@@ -13,6 +13,7 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import "./index.css";
 
+import Support from "./pages/Support";
 import DevCarousel from "./pages/Developers";
 import LandingPage from "./pages/LandingPage";
 import DevRecSignup from "./pages/DevOrRecSignup";
@@ -90,6 +91,7 @@ function App() {
                 <Route path="/signuptype" element={<DevRecSignup />} />
                 <Route path="/logintype" element={<DevRecLogin />} />
                 <Route path="/projects" element={<ReviewProjects />} />
+                <Route path="/support" element={<Support />} />
 
                 <Route path="/*" element={<LandingPage />} />
               </Routes>
