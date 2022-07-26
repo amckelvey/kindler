@@ -66,6 +66,10 @@ const styles = {
     marginTop: "3vh",
     marginLeft: "2vh",
   },
+  pageWrap: {
+    display: "flex",
+    flexDirection: "column"
+  }
 };
 
 function App() {
@@ -73,7 +77,7 @@ function App() {
     return (
       <ApolloProvider client={client}>
         <Router>
-          <div className="flex-column justify-flex-start min-100-vh">
+          <div className="flex-column justify-flex-start min-100-vh" style={{display: "flex"}}>
             <Header />
             <div style={styles.pageWrap}>
               <h1 style={styles.name}>
@@ -95,8 +99,8 @@ function App() {
 
                 <Route path="/*" element={<LandingPage />} />
               </Routes>
+              <Footer />
             </div>
-            <Footer />
           </div>
         </Router>
       </ApolloProvider>
