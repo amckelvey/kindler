@@ -4,6 +4,7 @@ import { QUERY_ME_DEV, QUERY_SINGLE_DEVELOPER } from "../utils/queries";
 import { useQuery } from "@apollo/client";
 import { useMutation } from "@apollo/client";
 import { Navigate, Link, useParams } from "react-router-dom";
+import Auth from "../utils/auth";
 
 function SignUpDevProfile() {
   const { _id: userParam } = useParams();
@@ -17,10 +18,10 @@ function SignUpDevProfile() {
   const link = `/${dev._id}/addproject`;
 
   const [formState, setFormState] = useState({
-    name: "",
-    jobStatus: "",
-    position: "",
-    bio: "",
+    name: dev.name,
+    jobStatus: dev.job_status,
+    position: dev.position,
+    bio: dev.bio,
   });
   const [addDevInfo] = useMutation(ADD_DEVELOPER_DATA);
 
@@ -66,7 +67,17 @@ function SignUpDevProfile() {
       [name]: value,
     });
   };
+  if (Auth.loggedIn() && Auth.getProfile().data._id === userParam) {
+    return <Navigate to="/me" />;
+  }
 
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (!dev?._id) {
+    return <h4>You need to be logged in to see this.</h4>;
+  }
   return (
     <div className="sloganContainer" style={styles.LeftBorder}>
       <h2>&#123; #COMMIT TO YOUR RIGHT DEVELOPER &#125;</h2>
