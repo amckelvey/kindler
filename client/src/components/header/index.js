@@ -14,8 +14,8 @@ export default function Header() {
             <button class="icon">[&nbsp;]</button>
           </Link>
         </div>
-/*
-const styles = {
+
+{/* const styles = {
   navbarstyle: {
     width: "100%",
     height: "4.5vh",
@@ -82,8 +82,7 @@ const styles = {
     width: "120px",
     height: "30px",
     fontWeight: "bolder",
-  },
-*/
+  }, */}
 
         <div class= "nav-btn">
           <label for="nav-check">
