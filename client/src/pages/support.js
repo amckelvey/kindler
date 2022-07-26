@@ -5,7 +5,8 @@ const FORM_ENDPOINT = "";
 
 const Support = () => {
   const [submitted, setSubmitted] = useState(false);
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
     setTimeout(() => {
       setSubmitted(true);
     }, 100);
@@ -22,10 +23,7 @@ const Support = () => {
 
   return (
     <form
-      action={FORM_ENDPOINT}
       onSubmit={handleSubmit}
-      method="POST"
-      target="_blank"
     >
       <div className="mb-3 pt-0">
         <input
