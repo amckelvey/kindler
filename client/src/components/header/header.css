@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  
+  .navigation {
+    height: 70px;
+    width: 100%;
+    background-color: #333333;
+    position: relative;
+    display: flex;
+    font-family: Source Code Pro, monospace;
+    letter-spacing: 2.5px;
+    
+    padding-left: 3vw,
+    
+  }
+  
+  .nav-header {
+    display: inline;
+  }
+  
+   .icon {
+    color: #179FF6;
+    font-size: 30px;
+    font-family: Source Code Pro, monospace;
+    justify-Content: space-around;
+    align-Content: center;
+    background-color: transparent;
+    border: none;
+    padding: 10px 10px 10px 10px;
+    margin: 5px;
+    display: inline-block;
+   
+  }
+  
+ .nav-btn {
+    display: none;
+  }
+  
+  .navbar {
+    display: inline;
+    float: right;
+    font-size: 35px;
+  }
+  
+.navbarbutton {
+    padding: 13px 30px 13px 30px;
+    text-decoration: none;
+    color: #C586C0;
+    font-Size: 28px;
+    font-Family: Source Code Pro, monospace;
+    justify-Content: space-around;
+    background: transparent;
+    border: none;
+    /*padding: 1vw;*/
+    /*padding-Left: 4vw;*/
+    font-Weight: 100;
+    /*margin-Top: 0.5vw;*/
+    display: inline;
+    float: right;
+   
+  }
+  
+   button:hover {
+    background-color: rgba(189, 189, 189, 0.3);
+    border: none;
+  }
+  
+   #nav-check {
+    display: none;
+  }
+
+
+    .whitesemi {
+    color: #FFFFFF;
+    font-size: 28px;
+    font-weight: 100;
+  }
+
+  .whitesemiprofile {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    
+  }
+  .logoutbutton {
+    font-family: Source Code Pro, monospace;
+   
+    background: transparent;
+    border: none;
+    margin: 5px;
+    margin-top: 20px;
+  }
+  
+  .profilebutton {
+    color: #CE9178;
+    border: 2px solid #FFFFFF;
+    border-radius: 30px;
+    font-size: 16px;
+    letter-spacing: 2.5px;
+    background-color: transparent;
+    width: 120px;
+    height: 30px;
+    font-weight: bolder;
+    margin: 5px;
+    margin-top: 20px;
+    justify-items:  right;
+  
+  }
+
+  @media (max-width:820px) {
+ .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      margin-top: 20px;
+      margin-right: 5px;
+    }
+.label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+
+   .navigation > .nav-btn > label:hover,.navigation  #nav-check:checked ~ .nav-btn > label {
+      background-color: #333333;
+    }
+     .navigation .nav-btn label  span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+     .navbar {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #333;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+     .navbar button {
+      display: block;
+      width: 100%;
+    }
+    .navigation  #nav-check:not(:checked)  .navbar {
+      height: 0px;
+    }
+    .navigation  #nav-check:checked  .navbar {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  }
