@@ -13,7 +13,7 @@ import Main from "./components/main";
 import Footer from "./components/footer";
 import "./index.css";
 
-import UserCards from "./pages/Developers";
+import DevCarousel from "./pages/Developers";
 import LandingPage from "./pages/LandingPage";
 import DevRecSignup from "./pages/DevOrRecSignup";
 import DevRecLogin from "./pages/DevOrRecLogin";
@@ -117,11 +117,11 @@ function App() {
             <Routes>
               {/* <Route path="/logintype" element={<DevRecLogin />} /> */}
 
-              <Route path="/developers" element={<UserCards />} />
+              <Route path="/developers" element={<DevCarousel />} />
               <Route path="/:developerId/edit" element={<SignUpDevProfile />} />
 
               <Route path="/me" element={<DevProfile />} />
-              <Route path="/*" element={<UserCards />} />
+              <Route path="/*" element={<DevCarousel />} />
               <Route path="/:developerId/addproject" element={<AddProject />} />
               {/* <Route path="/signup-dev-profile" element={<SignUpDevProfile />} />
               <Route path="/developers" element={<SignUpDevProfile />} />

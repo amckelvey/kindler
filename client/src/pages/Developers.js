@@ -1,15 +1,31 @@
 import Card from "../components/card";
 import Carroussel from "../components/carousel";
-import { useQuery } from "@apollo/client";
 import { QUERY_DEVELOPERS } from "../utils/queries";
-let cards = [];
-function UserCards() {
-  const { data } = useQuery(QUERY_DEVELOPERS);
-  const developers = data?.developers || [];
-  for (let i = 0; i < developers.length; i++) {
-    console.log(developers);
-    // cards.push({ content: <Card developers={developers[i]} /> });
-  }
+import { useQuery } from "@apollo/client";
+
+function DevCarousel() {
+  const { loading, data } = useQuery(QUERY_DEVELOPERS);
+
+  const devs = data?.developers || [];
+  console.log(devs);
+  const mappedDev = devs.map((dev) => {
+    return {
+      key: dev._id,
+      content: (
+        <Card
+          imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/convertplus_thumbnail.jpg"
+          name={dev.name}
+          position={dev.position}
+          job_status={dev.job_status}
+          bio={dev.bio}
+        />
+      ),
+    };
+  });
+  console.log(mappedDev);
+  let cards = mappedDev;
+  console.log(cards);
+
   return (
     <div className="">
       <Carroussel
@@ -24,4 +40,4 @@ function UserCards() {
   );
 }
 
-export default UserCards;
+export default DevCarousel;
