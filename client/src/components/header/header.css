@@ -126,7 +126,7 @@
       padding: 13px;
     }
 
-   .navigation > .nav-btn > label:hover,.navigation  #nav-check :checked ~ .nav-btn > label {
+   .navigation > .nav-btn > label:hover,.navigation  #nav-check:checked ~ .nav-btn > label {
       background-color: #333333;
     }
      .navigation .nav-btn label  span {
@@ -150,7 +150,7 @@
       display: block;
       width: 100%;
     }
-    .navigation  #nav-check:not(:checked)  .navbar {
+    .navigation  #nav-check:checked  .navbar {
       height: 0px;
     }
     .navigation  #nav-check:checked  .navbar {
@@ -158,3 +158,4 @@
       overflow-y: auto;
     }
   }
+  
