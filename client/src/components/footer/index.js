@@ -25,8 +25,8 @@ export default function Footer() {
       fontSize: "15px",
       letterSpacing: "2.5px",
       backgroundColor: "transparent",
-      width: "22vw",
-      height: "3.5vh",
+      width: "24vw",
+      height: "6vh",
       fontFamily: "Source Code Pro, monospace",
       paddingLeft: "10px",
       
