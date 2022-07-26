@@ -88,7 +88,7 @@
     font-family: Source Code Pro, monospace;
    
     background: transparent;
-    border: none;
+   
     margin: 5px;
     margin-top: 20px;
   }
@@ -126,7 +126,7 @@
       padding: 13px;
     }
 
-   .navigation > .nav-btn > label:hover,.navigation  #nav-check:checked ~ .nav-btn > label {
+   .navigation > .nav-btn > label:hover,.navigation  #nav-check :checked ~ .nav-btn > label {
       background-color: #333333;
     }
      .navigation .nav-btn label  span {
