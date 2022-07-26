@@ -1,4 +1,4 @@
-function Button({ text }) {
+function Button({ text, id }) {
   const styles = {
     btn: {
       backgroundColor: "#0094ff",
@@ -11,7 +11,21 @@ function Button({ text }) {
       width: "7.5rem",
     },
   };
-  return <button style={styles.btn}>{text}</button>;
+
+  function Change() {
+    var container = document.getElementById(id);
+    if (container.style.display !== "none") {
+      container.style.display = "none";
+    } else {
+      container.style.display = "block";
+    }
+  }
+
+  return (
+    <button onClick={Change} style={styles.btn}>
+      {text}
+    </button>
+  );
 }
 
 export default Button;

@@ -14,6 +14,8 @@ function DevCarousel() {
       content: (
         <Card
           imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/convertplus_thumbnail.jpg"
+          email={dev.email}
+          id={dev._id}
           name={dev.name}
           position={dev.position}
           job_status={dev.job_status}

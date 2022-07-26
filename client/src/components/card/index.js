@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
 import Button from "../cardBtn/index";
 
-function Card({ imagen, name, position, job_status, bio }) {
+function Card({ email, id, imagen, name, position, job_status, bio }) {
   const styles = {
     card: {
       display: "flex",
@@ -39,6 +39,12 @@ function Card({ imagen, name, position, job_status, bio }) {
       justifyContent: "space-between",
       alignItems: "center",
     },
+
+    contact: {
+      display: "none",
+      backgroundColor: "#333333",
+      color: "#CE9178",
+    },
   };
   const [show, setShown] = useState(false);
 
@@ -62,8 +68,12 @@ function Card({ imagen, name, position, job_status, bio }) {
         </h2>
         <p style={styles.p}>{bio}</p>
         <div style={styles.btnn}>
-          <Button text="Contact" />
-          <Button text="Project" />
+          <Button text="Contact" id={id} />
+          <Button text="Project" id={id} />
+        </div>
+        <div id={id} style={styles.contact}>
+          <br></br>
+          Contact email: {email}
         </div>
       </div>
     </animated.div>
