@@ -3,7 +3,7 @@ import { useSpring, animated } from "react-spring";
 import ContactBtn from "../cardBtn/contactBtnIndex";
 import ProjectBtn from "../cardBtn/projectBtnIndex";
 
-function Card({ imagen, name, position, job_status, bio, email, _id }) {
+function Card({ imagen, name, position, job_status, bio, email, _id, i }) {
   const styles = {
     card: {
       display: "flex",
@@ -61,10 +61,6 @@ function Card({ imagen, name, position, job_status, bio, email, _id }) {
       : "0 2px 10px rgb(0 0 0 / 8%)",
   });
 
-  const devProjectClickHandler = async (event) => {
-    event.preventDefault();
-  };
-
   return (
     <animated.div
       style={props3}
@@ -79,7 +75,7 @@ function Card({ imagen, name, position, job_status, bio, email, _id }) {
         <p style={styles.p}>{bio}</p>
         <div style={styles.btnn}>
           <ContactBtn text="Contact" id={_id} />
-          <ProjectBtn text="Project" onClick={devProjectClickHandler} />
+          <ProjectBtn text="Project" id={i} />
         </div>
         <div id={_id} style={styles.contact}>
           <br></br>

@@ -12,7 +12,7 @@ function DevCarousel() {
   const devs = data?.developers || [];
   const [currentDev, setCurrentDev] = useState(0);
 
-  const mappedDev = devs.map((dev) => {
+  const mappedDev = devs.map((dev, i) => {
     return {
       key: dev._id,
       content: (
@@ -25,6 +25,7 @@ function DevCarousel() {
           email={dev.email}
           _id={dev._id}
           style={{}}
+          i={i}
         />
       ),
     };
@@ -35,6 +36,9 @@ function DevCarousel() {
   const styles = {
     fit: {
       height: "90vh",
+    },
+    projects: {
+      display: "none",
     },
   };
 
@@ -55,8 +59,8 @@ function DevCarousel() {
               currentDev={currentDev}
               updateDev={setCurrentDev}
             />
-            <div>
-              <DevProject dev={devs[currentDev]} num={currentDev} />
+            <div id={currentDev} style={styles.projects}>
+              <DevProject dev={devs[currentDev]} />
             </div>
           </>
         )}
