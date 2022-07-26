@@ -32,6 +32,7 @@ const styles = {
 
   textColor: {
     color: "#649955",
+    fontSize: "3vw"
   },
 
   semiColon: {
@@ -39,7 +40,7 @@ const styles = {
   },
 
   input: {
-    width: "350px",
+    width: "80vw",
     color: "#FFFFFF",
     border: "2px solid #FFFFFF",
     borderRadius: "30px",
@@ -49,15 +50,15 @@ const styles = {
     textDecoration: "none",
     paddingLeft: "10px",
     paddingRight: "10px",
+    display: "block"
   },
 
   inputDiv: {
     paddingBottom: "5px",
     paddingLeft: "20px",
-  },
+    display: "flex",
+    justifyContent: "center"
 
-  buttonDiv: {
-    paddingLeft: "20px",
   },
 
   button: {
@@ -70,11 +71,13 @@ const styles = {
     textDecoration: "none",
     paddingLeft: "10px",
     paddingRight: "10px",
+    flex: "1"
   },
 
   p: {
     color: "#FFFFFF",
   },
+
 
   backLink: {
     paddingLeft: "20px",
@@ -130,7 +133,7 @@ function Login(props) {
       </div>
       <br />
       <div style={styles.inputDiv}>
-        <form onSubmit={handleFormSubmit}>
+        <form onSubmit={handleFormSubmit} style={styles.formstyle}>
           <input
             style={styles.input}
             placeholder="email"
@@ -147,8 +150,11 @@ function Login(props) {
             id="pwd"
             onChange={handleChange}
           />
-          {error ? <p style={styles.p}>The login information is not correct</p> : null}
-          <button type="submit" style={styles.button}>Submit</button>
+          <div style={{display: "flex", flexDirection: "column"}}>
+            {error ? 
+            <p style={styles.p}>The login information is not correct</p> : null}
+            <button type="submit" style={styles.button}>Submit</button>
+          </div>
         </form>
       </div>
       <br />
