@@ -56,7 +56,6 @@ function Card({ imagen, name, position, job_status, bio, email }) {
 
     contactEl.forEach((contact) => {
       if (contact.getAttribute("class") === "hidden") {
-        console.log(contact.getAttribute("class"));
         contact.removeAttribute("class");
         contact.setAttribute("class", "visible");
       } else {
