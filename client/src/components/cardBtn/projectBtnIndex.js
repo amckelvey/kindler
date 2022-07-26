@@ -13,11 +13,12 @@ function ProjectBtn({ text, id }) {
   };
 
   function Change() {
-    var container = document.getElementById(id);
+    const container = document.getElementById(id);
     if (container.style.display !== "none") {
       container.style.display = "none";
     } else {
       container.style.display = "block";
+      alert("Scroll down to see the projects!");
     }
   }
   return (
