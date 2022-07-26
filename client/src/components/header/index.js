@@ -109,12 +109,12 @@ export default function Header() {
           </button>
         </div>
         <div className="hider">
-          <button
+          <Link to="/support"
             style={styles.navbarbutton}
-            onClick={() => alert("Need help? Me too!!")}
+          
           >
             Support<span style={styles.whtSemiColon}>;</span>
-          </button>
+          </Link>
         </div>
       </div>
       {Auth.loggedIn() ? (
