@@ -9,7 +9,7 @@ const LogoutBtn = () => {
     },
     button: {
       color: "#CE9178",
-      border: "2px solid #FFFFFF",
+      border: "none",
       borderRadius: "30px",
       fontSize: "16px",
       letterSpacing: "2.5px",
