@@ -114,14 +114,14 @@ function App() {
           <div style={styles.pageWrap}>
             <h1 style={styles.name}>
               <span style={styles.LogoBracket}>[</span> KINDLER{" "}
-              <span style={styles.LogoBracket}>]</span>
+              <span style={styles.LogoBracket}>]</span> <span className="blink">|</span>
             </h1>
             <Routes>
               {/* <Route path="/logintype" element={<DevRecLogin />} /> */}
 
               <Route path="/developers" element={<DevCarousel />} />
               <Route path="/:developerId/edit" element={<SignUpDevProfile />} />
-
+              <Route path="/support" element={<Support />} />
               <Route path="/me" element={<DevProfile />} />
               <Route path="/*" element={<DevCarousel />} />
               <Route path="/:developerId/addproject" element={<AddProject />} />

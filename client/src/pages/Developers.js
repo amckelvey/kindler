@@ -55,7 +55,7 @@ function DevCarousel() {
               width="80%"
               margin="80px auto"
               offset={2}
-              showArrows={true}
+              showArrows={false}
               currentDev={currentDev}
               updateDev={setCurrentDev}
             />
