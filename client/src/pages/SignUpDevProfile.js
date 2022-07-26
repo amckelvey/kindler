@@ -18,10 +18,10 @@ function SignUpDevProfile() {
   const link = `/${dev._id}/addproject`;
 
   const [formState, setFormState] = useState({
-    name: "",
-    jobStatus: "",
-    position: "",
-    bio: "",
+    name: dev.name,
+    jobStatus: dev.job_status,
+    position: dev.position,
+    bio: dev.bio,
   });
   const [addDevInfo] = useMutation(ADD_DEVELOPER_DATA);
 
@@ -56,7 +56,6 @@ function SignUpDevProfile() {
       });
       setFormState({ ...formState });
       alert("Successfully Updated!");
-      document.location.replace("/me");
     } catch (err) {
       console.error(err);
     }
@@ -69,10 +68,10 @@ function SignUpDevProfile() {
       [name]: value,
     });
   };
-
   if (Auth.loggedIn() && Auth.getProfile().data._id === userParam) {
-    return <Navigate to={link} />;
+    return <Navigate to="/me" />;
   }
+
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -80,7 +79,6 @@ function SignUpDevProfile() {
   if (!dev?._id) {
     return <h4>You need to be logged in to see this.</h4>;
   }
-
   return (
     <div className="sloganContainer" style={styles.LeftBorder}>
       <h2>&#123; #COMMIT TO YOUR RIGHT DEVELOPER &#125;</h2>
@@ -151,6 +149,7 @@ function SignUpDevProfile() {
                   onChange={handleChange}
                 />
               </div>
+
               <button type="submit" style={styles.button}>
                 submit
               </button>
@@ -158,6 +157,15 @@ function SignUpDevProfile() {
           </div>
           <h3> &#125;&#41;;</h3>
         </div>
+        <h3>
+          <span>const</span> returnToProfile &#123;
+        </h3>
+        <div style={styles.LeftBorder}>
+          <Link to="/me" style={styles.button}>
+            click here!
+          </Link>
+        </div>
+        <h3>&#125;</h3>
         <h3>
           <span>const</span> addProject &#123;
         </h3>

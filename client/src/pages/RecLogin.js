@@ -4,15 +4,81 @@ import { REC_LOGIN } from "../utils/mutations";
 import { Link } from "react-router-dom";
 import Auth from "../utils/auth";
 
-function Login(props) {
-  const styles = {
-    LeftBorder: {
-      borderLeft: "solid 2px #7B7B7B",
-      padding: "0 1em",
-      margin: "10px 2em",
-    },
-  };
+const styles = {
+  container: {
+    borderLeft: "solid 2px #7B7B7B",
+    padding: "0 1em",
+    margin: "10px 2em",
+  },
 
+  slogan: {
+    color: "#9CDCFB",
+    fontSize: "25px",
+    fontWeight: "300",
+    letterSpacing: "3px",
+  },
+
+  brackets: {
+    color: "#F2D700",
+  },
+
+  h2: {
+    color: "#CE9178",
+  },
+
+  textColor: {
+    color: "#649955",
+  },
+
+  semiColon: {
+    color: "white",
+  },
+
+  input: {
+    width: "350px",
+    color: "#FFFFFF",
+    border: "2px solid #FFFFFF",
+    borderRadius: "30px",
+    fontSize: "15px",
+    letterSpacing: "2.5px",
+    backgroundColor: "transparent",
+    textDecoration: "none",
+    paddingLeft: "10px",
+    paddingRight: "10px",
+  },
+
+  inputDiv: {
+    paddingBottom: "5px",
+    paddingLeft: "20px",
+  },
+
+  buttonDiv: {
+    paddingLeft: "20px",
+  },
+
+  button: {
+    color: "#FFFFFF",
+    border: "2px solid #FFFFFF",
+    borderRadius: "30px",
+    fontSize: "15px",
+    letterSpacing: "2.5px",
+    backgroundColor: "transparent",
+    textDecoration: "none",
+    paddingLeft: "10px",
+    paddingRight: "10px",
+  },
+  
+  p: {
+    color: "#FFFFFF",
+  },
+
+  backLink: {
+    paddingLeft: "20px",
+    color: "#9CDCFB",
+  }
+};
+
+function Login(props) {
   const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error }] = useMutation(REC_LOGIN);
 
@@ -40,36 +106,51 @@ function Login(props) {
 
   return (
     <div>
-      <div className="sloganContainer" style={styles.LeftBorder}>
-        <h2>&#123; #COMMIT TO YOUR RIGHT DEVELOPER &#125;</h2>
-        <div style={styles.LeftBorder}>
-          <h3>
-            'sign in'<span>;</span>
-          </h3>
+      <div className="container" style={styles.container}>
+        <div>
+          <h2 style={styles.slogan}>
+            <span style={styles.brackets}>&#123;</span> #COMMIT TO YOUR RIGHT
+            DEVELOPER <span style={styles.brackets}>&#125;</span>
+          </h2>
+        </div>
+        <div className="container" style={styles.container}>
+          <h2 style={styles.h2}>
+            'sign in'<span style={styles.semiColon}>&#59;</span>
+          </h2>
+          <div className="container" style={styles.container}>
+            <h2 style={styles.textColor}>
+              // sign-in to your recruiter account //
+            </h2>
+          </div>
         </div>
       </div>
       <br />
-      <div className="container my-1">
-        <Link to="/signuprec">← Go to Signup</Link>
+      <div style={styles.inputDiv}>
+        <form onSubmit={handleFormSubmit}>
+          <input
+            style={styles.input}
+            placeholder="email"
+            name="email"
+            type="email"
+            id="email"
+            onChange={handleChange}
+          />
+          <input
+            style={styles.input}
+            placeholder="password"
+            name="password"
+            type="password"
+            id="pwd"
+            onChange={handleChange}
+          />
+          {error ? <p style={styles.p}>The login information is not correct</p> : null}
+          <button type="submit" style={styles.button}>Submit</button>
+        </form>
       </div>
-      <form onSubmit={handleFormSubmit}>
-        <input
-          placeholder="email"
-          name="email"
-          type="email"
-          id="email"
-          onChange={handleChange}
-        />
-        <input
-          placeholder="password"
-          name="password"
-          type="password"
-          id="pwd"
-          onChange={handleChange}
-        />
-        {error ? <p>The login information is not correct</p> : null}
-        <button type="submit">Submit</button>
-      </form>
+      <br />
+      <div className="container my-1" >
+        <Link to="/signuprec" style={styles.backLink}>← Haven't Signed Up Yet?</Link>
+      </div>
     </div>
   );
 }
