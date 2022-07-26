@@ -19,7 +19,9 @@ function AddProject() {
     source: "",
     link: "",
   });
-  const [addProject] = useMutation(ADD_PROJECT);
+  const [addProject] = useMutation(ADD_PROJECT, {
+    refetchQueries: [{ query: QUERY_ME_DEV }, "meDev"],
+  });
 
   const formSubmitHandler = async (event) => {
     event.preventDefault();
