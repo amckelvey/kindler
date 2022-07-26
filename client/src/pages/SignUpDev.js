@@ -3,18 +3,19 @@ import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import Auth from "../utils/auth";
 import { ADD_DEV } from "../utils/mutations";
-
 const styles = {
   container: {
     borderLeft: "solid 2px #7B7B7B",
     padding: "0 1em",
     margin: "10px 2em",
+    letterSpacing: "3px",
+    fontFamily: "Source Code Pro, monospace",
   },
 
   slogan: {
     color: "#9CDCFB",
     fontSize: "25px",
-    fontWeight: "100",
+    fontWeight: "300",
     letterSpacing: "3px",
     fontFamily: "Source Code Pro, monospace",
   },
@@ -24,23 +25,22 @@ const styles = {
     fontFamily: "Source Code Pro, monospace",
   },
 
-  h2: {
+  colorOra: {
     color: "#CE9178",
     fontFamily: "Source Code Pro, monospace",
   },
 
   textColor: {
     color: "#649955",
-    fontFamily: "Source Code Pro, monospace",
+    fontSize: "3vw"
   },
 
   semiColon: {
     color: "white",
-    fontFamily: "Source Code Pro, monospace",
   },
 
   input: {
-    width: "350px",
+    width: "80vw",
     color: "#FFFFFF",
     border: "2px solid #FFFFFF",
     borderRadius: "30px",
@@ -48,15 +48,23 @@ const styles = {
     letterSpacing: "2.5px",
     backgroundColor: "transparent",
     textDecoration: "none",
-    paddingLeft: "10px",
-    paddingRight: "10px",
+    padding: "2px 10px",
+    margin: "10px 0",
     fontFamily: "Source Code Pro, monospace",
   },
 
   inputDiv: {
     paddingBottom: "5px",
     paddingLeft: "20px",
-    fontFamily: "Source Code Pro, monospace",
+    height: "50px",
+    display: "flex",
+    justifyContent: "center",
+  },
+
+  formstyle: {
+    display: "flex",
+    alignItems: "center",
+    flexDirection: "column"
   },
 
   buttonDiv: {
@@ -75,6 +83,7 @@ const styles = {
     paddingRight: "10px",
     fontFamily: "Source Code Pro, monospace",
   },
+
   backLink: {
     paddingLeft: "20px",
     color: "#9CDCFB",
@@ -120,17 +129,16 @@ function SignUpDev(props) {
           </h2>
         </div>
         <div className="container" style={styles.container}>
-          <h2 style={styles.h2}>
+          <p style={styles.h2}>
             'sign up'<span style={styles.semiColon}>&#59;</span>
-          </h2>
+          </p>
           <div className="container" style={styles.container}>
-            <h2 style={styles.textColor}>// create new developer account //</h2>
+            <p style={styles.textColor}>// create new developer account //</p>
           </div>
         </div>
       </div>
-      <div className="container">
-        <form onSubmit={handleFormSubmit}>
-          <div className="flex-row space-between my-2" style={styles.inputDiv}>
+      <div>
+        <form onSubmit={handleFormSubmit} style={styles.formstyle}>
             <input
               style={styles.input}
               placeholder="name"
@@ -139,8 +147,6 @@ function SignUpDev(props) {
               id="name"
               onChange={handleChange}
             />
-          </div>
-          <div className="flex-row space-between my-2" style={styles.inputDiv}>
             <input
               style={styles.input}
               placeholder="email"
@@ -149,8 +155,6 @@ function SignUpDev(props) {
               id="email"
               onChange={handleChange}
             />
-          </div>
-          <div className="flex-row space-between my-2" style={styles.inputDiv}>
             <input
               style={styles.input}
               placeholder="password"
@@ -159,8 +163,7 @@ function SignUpDev(props) {
               id="password"
               onChange={handleChange}
             />
-          </div>
-          <div className="flex-row flex-end" style={styles.buttonDiv}>
+          <div style={{display: "flex", justifyContent: "center" }}>
             <button type="submit" style={styles.button}>
               Submit
             </button>

@@ -9,6 +9,7 @@ const styles = {
     borderLeft: "solid 2px #7B7B7B",
     padding: "0 1em",
     margin: "10px 2em",
+    letterSpacing: "3px",
     fontFamily: "Source Code Pro, monospace",
   },
 
@@ -25,7 +26,7 @@ const styles = {
     fontFamily: "Source Code Pro, monospace",
   },
 
-  h2: {
+  colorOra: {
     color: "#CE9178",
     fontFamily: "Source Code Pro, monospace",
   },
@@ -48,17 +49,22 @@ const styles = {
     letterSpacing: "2.5px",
     backgroundColor: "transparent",
     textDecoration: "none",
-    paddingLeft: "10px",
-    paddingRight: "10px",
-    display: "block"
+    padding: "2px 10px",
+    margin: "10px 0",
+    display: "block",
+    fontFamily: "Source Code Pro, monospace",
   },
 
   inputDiv: {
     paddingBottom: "5px",
     paddingLeft: "20px",
+    height: "100px",
     display: "flex",
-    justifyContent: "center"
+    justifyContent: "center",
+  },
 
+  buttonDiv: {
+    paddingLeft: "20px",
   },
 
   button: {
@@ -73,16 +79,12 @@ const styles = {
     paddingRight: "10px",
     flex: "1"
   },
-
-  p: {
-    color: "#FFFFFF",
-  },
-
+  
 
   backLink: {
     paddingLeft: "20px",
     color: "#9CDCFB",
-  },
+  }
 };
 
 function Login(props) {
@@ -121,19 +123,19 @@ function Login(props) {
           </h2>
         </div>
         <div className="container" style={styles.container}>
-          <h2 style={styles.h2}>
+          <p style={styles.colorOra}>
             'sign-in'<span style={styles.semiColon}>&#59;</span>
-          </h2>
+          </p>
           <div className="container" style={styles.container}>
-            <h2 style={styles.textColor}>
+            <p style={styles.textColor}>
               // sign-in to your developer account //
-            </h2>
+            </p>
           </div>
         </div>
       </div>
       <br />
       <div style={styles.inputDiv}>
-        <form onSubmit={handleFormSubmit} style={styles.formstyle}>
+        <form onSubmit={handleFormSubmit}>
           <input
             style={styles.input}
             placeholder="email"

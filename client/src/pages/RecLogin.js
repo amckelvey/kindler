@@ -9,6 +9,7 @@ const styles = {
     borderLeft: "solid 2px #7B7B7B",
     padding: "0 1em",
     margin: "10px 2em",
+    letterSpacing: "3px",
     fontFamily: "Source Code Pro, monospace",
   },
 
@@ -48,16 +49,22 @@ const styles = {
     letterSpacing: "2.5px",
     backgroundColor: "transparent",
     textDecoration: "none",
-    paddingLeft: "10px",
-    paddingRight: "10px",
+    padding: "2px 10px",
+    margin: "10px 0",
     display: "block"
   },
 
   inputDiv: {
     paddingBottom: "5px",
     paddingLeft: "20px",
+    height: "100px",
     display: "flex",
-    justifyContent: "center"
+    justifyContent: "center",
+  },
+
+  colorOra: {
+    color: "#CE9178",
+    fontFamily: "Source Code Pro, monospace",
   },
 
   buttonDiv: {
@@ -123,13 +130,13 @@ function Login(props) {
           </h2>
         </div>
         <div className="container" style={styles.container}>
-          <h2 style={styles.h2}>
-            'sign in'<span style={styles.semiColon}>&#59;</span>
-          </h2>
+          <p style={styles.colorOra}>
+            'sign-in'<span style={styles.semiColon}>&#59;</span>
+          </p>
           <div className="container" style={styles.container}>
-            <h2 style={styles.textColor}>
+            <p style={styles.textColor}>
               // sign-in to your recruiter account //
-            </h2>
+            </p>
           </div>
         </div>
       </div>

@@ -9,6 +9,8 @@ const styles = {
     borderLeft: "solid 2px #7B7B7B",
     padding: "0 1em",
     margin: "10px 2em",
+    letterSpacing: "3px",
+    fontFamily: "Source Code Pro, monospace",
   },
 
   slogan: {
@@ -21,15 +23,17 @@ const styles = {
 
   brackets: {
     color: "#F2D700",
+    fontFamily: "Source Code Pro, monospace",
   },
 
-  h2: {
+  colorOra: {
     color: "#CE9178",
     fontFamily: "Source Code Pro, monospace",
   },
 
   textColor: {
     color: "#649955",
+    fontSize: "3vw"
   },
 
   semiColon: {
@@ -37,7 +41,7 @@ const styles = {
   },
 
   input: {
-    width: "350px",
+    width: "80vw",
     color: "#FFFFFF",
     border: "2px solid #FFFFFF",
     borderRadius: "30px",
@@ -45,14 +49,23 @@ const styles = {
     letterSpacing: "2.5px",
     backgroundColor: "transparent",
     textDecoration: "none",
-    paddingLeft: "10px",
-    paddingRight: "10px",
+    padding: "2px 10px",
+    margin: "10px 0",
     fontFamily: "Source Code Pro, monospace",
   },
 
   inputDiv: {
     paddingBottom: "5px",
     paddingLeft: "20px",
+    height: "50px",
+    display: "flex",
+    justifyContent: "center",
+  },
+
+  formstyle: {
+    display: "flex",
+    alignItems: "center",
+    flexDirection: "column"
   },
 
   buttonDiv: {
@@ -117,48 +130,42 @@ function SignUpRec(props) {
           </h2>
         </div>
         <div className="container" style={styles.container}>
-          <h2 style={styles.h2}>
+          <p style={styles.h2}>
             'sign up'<span style={styles.semiColon}>&#59;</span>
-          </h2>
+          </p>
           <div className="container" style={styles.container}>
-            <h2 style={styles.textColor}>// create new recruiter account //</h2>
+            <p style={styles.textColor}>// create new recruiter account //</p>
           </div>
         </div>
       </div>
 
       <div className="container">
-        <form onSubmit={handleFormSubmit}>
-          <div className="flex-row space-between my-2" style={styles.inputDiv}>
-            <input
-              style={styles.input}
-              placeholder="name"
-              name="name"
-              type="name"
-              id="name"
-              onChange={handleChange}
-            />
-          </div>
-          <div className="flex-row space-between my-2" style={styles.inputDiv}>
-            <input
-              style={styles.input}
-              placeholder="email"
-              name="email"
-              type="email"
-              id="email"
-              onChange={handleChange}
-            />
-          </div>
-          <div className="flex-row space-between my-2" style={styles.inputDiv}>
-            <input
-              style={styles.input}
-              placeholder="password"
-              name="password"
-              type="password"
-              id="password"
-              onChange={handleChange}
-            />
-          </div>
-          <div className="flex-row flex-end" style={styles.buttonDiv}>
+        <form onSubmit={handleFormSubmit} style={styles.formstyle}>
+          <input
+            style={styles.input}
+            placeholder="name"
+            name="name"
+            type="name"
+            id="name"
+            onChange={handleChange}
+          />
+          <input
+            style={styles.input}
+            placeholder="email"
+            name="email"
+            type="email"
+            id="email"
+            onChange={handleChange}
+          />
+          <input
+            style={styles.input}
+            placeholder="password"
+            name="password"
+            type="password"
+            id="password"
+            onChange={handleChange}
+          />
+          <div style={{display: "flex", justifyContent: "center" }}>
             <button type="submit" style={styles.button}>
               Submit
             </button>
