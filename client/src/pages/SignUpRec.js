@@ -7,7 +7,7 @@ import { ADD_RECRUITER } from "../utils/mutations";
 const styles = {
   container: {
     borderLeft: "solid 2px #7B7B7B",
-    padding: "0 10em",
+    padding: "0 1em",
     margin: "10px 2em",
   },
 
