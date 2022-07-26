@@ -1,4 +1,4 @@
-function Button({ text, onClick }) {
+function ProjectBtn({ text, onClick }) {
   const styles = {
     btn: {
       backgroundColor: "#0094ff",
@@ -12,11 +12,15 @@ function Button({ text, onClick }) {
     },
   };
 
+  function Change() {
+    console.log("Project Button Clicked");
+  }
+
   return (
-    <button style={styles.btn} onClick={onClick}>
+    <button onClick={Change} style={styles.btn}>
       {text}
     </button>
   );
 }
 
-export default Button;
+export default ProjectBtn;

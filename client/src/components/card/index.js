@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
-import Button from "../cardBtn/index";
-import "./card.css";
+import ContactBtn from "../cardBtn/contactBtnIndex";
+import ProjectBtn from "../cardBtn/projectBtnIndex";
+
 function Card({ imagen, name, position, job_status, bio, email, _id }) {
   const styles = {
     card: {
@@ -39,6 +40,12 @@ function Card({ imagen, name, position, job_status, bio, email, _id }) {
       justifyContent: "space-between",
       alignItems: "center",
     },
+
+    contact: {
+      display: "none",
+      backgroundColor: "#333333",
+      color: "#CE9178",
+    },
   };
   const [show, setShown] = useState(false);
 
@@ -48,22 +55,6 @@ function Card({ imagen, name, position, job_status, bio, email, _id }) {
       ? "0 20px 25px rgb(0 0 0 / 25%)"
       : "0 2px 10px rgb(0 0 0 / 8%)",
   });
-
-  const contactClickHandler = async (event) => {
-    event.preventDefault();
-
-    const contactEl = Array.from(document.querySelectorAll("#contact-toggle"));
-
-    contactEl.forEach((contact) => {
-      if (contact.getAttribute("class") === "hidden") {
-        contact.removeAttribute("class");
-        contact.setAttribute("class", "visible");
-      } else {
-        contact.removeAttribute("class");
-        contact.setAttribute("class", "hidden");
-      }
-    });
-  };
 
   const devProjectClickHandler = async (event) => {
     event.preventDefault();
@@ -81,12 +72,13 @@ function Card({ imagen, name, position, job_status, bio, email, _id }) {
           {name}, {position}, {job_status}
         </h2>
         <p style={styles.p}>{bio}</p>
-        <p id="contact-toggle" className="hidden" style={styles.p}>
-          {email}
-        </p>
         <div style={styles.btnn}>
-          <Button text="Contact" onClick={contactClickHandler} />
-          <Button text="Project" onClick={devProjectClickHandler} />
+          <ContactBtn text="Contact" id={_id} />
+          <ProjectBtn text="Project" onClick={devProjectClickHandler} />
+        </div>
+        <div id={_id} style={styles.contact}>
+          <br></br>
+          Contact email: {email}
         </div>
       </div>
     </animated.div>
