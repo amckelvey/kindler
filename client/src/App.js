@@ -77,7 +77,7 @@ function App() {
     return (
       <ApolloProvider client={client}>
         <Router>
-          <div className="flex-column justify-flex-start min-100-vh" style={{display: "flex"}}>
+          <div className="flex-column justify-flex-start min-100-vh">
             <Header />
             <div style={styles.pageWrap}>
               <h1 style={styles.name}>
@@ -133,8 +133,8 @@ function App() {
               <Route path="/developers" element={<SignUpDevProfile />} />
               <Route */}
             </Routes>
+            <Footer />
           </div>
-          <Footer />
         </div>
       </Router>
     </ApolloProvider>
