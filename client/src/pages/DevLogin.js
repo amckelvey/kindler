@@ -87,6 +87,10 @@ const styles = {
     p: {
       color: "#FFFFFF",
     },
+
+    formstyle: {
+      padding: "0 25%"
+    },
   
     backLink: {
       paddingLeft: "20px",

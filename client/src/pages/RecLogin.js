@@ -84,6 +84,10 @@ const styles = {
     flex: "1"
   },
   
+  formstyle: {
+    padding: "0 25%"
+  },
+  
   p: {
     color: "#FFFFFF",
   },
