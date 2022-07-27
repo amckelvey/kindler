@@ -232,7 +232,7 @@ function SignUpDevProfile() {
                   value={formState.bio}
                   onChange={handleChange}
                   rows="5"
-                  cols="30"
+                  cols="28"
                 />
               </div>
 
