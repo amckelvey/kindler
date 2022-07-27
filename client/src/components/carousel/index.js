@@ -27,7 +27,7 @@ export default function Carroussel(props) {
 
   useEffect(() => {
     setGoToSlide(props.currentDev);
-  }, []);
+  }, [props.currentDev]);
 
   return (
     <div style={{ width: "70%", height: props.height, margin: props.margin }}>

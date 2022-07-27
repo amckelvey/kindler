@@ -7,24 +7,25 @@ function Card({ imagen, name, position, job_status, bio, email, _id, i }) {
   const styles = {
     card: {
       display: "flex",
+      position: "relative",
       flexDirection: "column",
-      justifyContent: "center",
       backgroundColor: "#333333",
-      width: "12rem",
+      width: "14rem",
       height: "24rem",
-      padding: "0 2rem 2rem 2rem",
+      padding: "0 1.5rem 1.5rem 1.5rem",
       borderRadius: "10px",
     },
 
     img: {
-      marginTop: "-10%",
-      width: "20%",
+      width: "25%",
       borderRadius: "20px",
+      position: "absolute",
+      top: "6%",
+      left: "8%",
     },
 
     h2: {
-      margin: "0",
-      marginTop: "1rem",
+      marginTop: "50%",
       color: "#9CDCFB",
     },
 
@@ -33,12 +34,20 @@ function Card({ imagen, name, position, job_status, bio, email, _id, i }) {
       color: "#CE9178",
     },
 
-    btnn: {
+    btnn1: {
+      width: "10%",
       display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
+      position: "absolute",
+      bottom: "8%",
+      left: "8%",
     },
-
+    btnn2: {
+      width: "10%",
+      display: "flex",
+      position: "absolute",
+      bottom: "8%",
+      right: "35%",
+    },
     contact: {
       display: "none",
       backgroundColor: "#333333",
@@ -51,6 +60,9 @@ function Card({ imagen, name, position, job_status, bio, email, _id, i }) {
     empty: {
       minHeight: "200px",
     },
+    title: {
+      color: "#9CDCFB",
+    },
   };
   const [show, setShown] = useState(false);
 
@@ -62,7 +74,6 @@ function Card({ imagen, name, position, job_status, bio, email, _id, i }) {
   });
 
   return (
-    
     <animated.div
       style={props3}
       onMouseEnter={() => setShown(true)}
@@ -71,12 +82,20 @@ function Card({ imagen, name, position, job_status, bio, email, _id, i }) {
       <div style={styles.card}>
         <img style={styles.img} src={imagen} alt="default profile pic" />
         <h2 style={styles.h2}>{name}</h2>
-        <p style={styles.p}>Position: {position}</p>
-        <p style={styles.p}>Job Status: {job_status}</p>
+        <p style={styles.p}>
+          <span style={styles.title}>Position:</span> {position}
+        </p>
+        <p style={styles.p}>
+          <span style={styles.title}>Job Status:</span> {job_status}
+        </p>
         <p style={styles.p}>{bio}</p>
         <div style={styles.btnn}>
-          <ContactBtn text="Contact" id={_id} />
-          <ProjectBtn text="Project" id={i} />
+          <div style={styles.btnn1}>
+            <ContactBtn text="Contact" id={_id} />
+          </div>
+          <div style={styles.btnn2}>
+            <ProjectBtn text="Project" id={i} />
+          </div>
         </div>
         <div id={_id} style={styles.contact}>
           <br></br>
@@ -84,7 +103,6 @@ function Card({ imagen, name, position, job_status, bio, email, _id, i }) {
         </div>
       </div>
     </animated.div>
-    
   );
 }
 
