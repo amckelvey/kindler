@@ -35,6 +35,7 @@ const styles = {
     border: "none",
     padding: "2vh 15px",
     fontWeight: "100",
+    textDecoration: "none"
   },
   
   mainbuttons: {
