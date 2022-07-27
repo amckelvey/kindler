@@ -12,7 +12,6 @@ export default function Footer() {
       borderTop: "1px solid #B6B4B4",
       justifyContent: "left",
       marginTop: "100px",
-      marginBottom: "100px",
       flex: "1",
 
       paddingLeft: "3vw",
