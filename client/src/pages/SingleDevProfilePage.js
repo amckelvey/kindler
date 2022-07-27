@@ -4,7 +4,6 @@ import { useMutation, useQuery } from "@apollo/client";
 import { QUERY_ME_DEV, QUERY_SINGLE_DEVELOPER } from "../utils/queries";
 import Auth from "../utils/auth";
 import { REMOVE_PROJECT } from "../utils/mutations";
-import "./SignUpDevProfile.css"
 
 function DevProfile() {
   const { _id: userParam } = useParams();
@@ -37,7 +36,6 @@ function DevProfile() {
       letterSpacing: "3px",
       color: "white",
       fontFamily: "Source Code Pro, monospace",
-
     },
 
     slogan: {
@@ -121,45 +119,68 @@ function DevProfile() {
   // }
 
   return (
-    <div className="smallertext" style={styles.LeftBorder} >
-       <h2 style={styles.slogan} className="smallertext">
-          <span style={styles.brackets} className="smallertext">&#123;</span> #COMMIT TO YOUR RIGHT
-          DEVELOPER <span style={styles.brackets} className="smallertext">&#125;</span>
-        </h2>
-      <div style={styles.LeftBorder} className="smallertext">
+    <div className="responsive-font" style={styles.LeftBorder}>
+      <h2 style={styles.slogan} className="responsive-font">
+        <span style={styles.brackets} className="responsive-font">
+          &#123;
+        </span>{" "}
+        #COMMIT TO YOUR RIGHT DEVELOPER{" "}
+        <span style={styles.brackets} className="responsive-font">
+          &#125;
+        </span>
+      </h2>
+      <div style={styles.LeftBorder} className="responsive-font">
         <h3 style={styles.colorGreen}>/My Profile/</h3>
         <div style={styles.LeftBorder}>
           <h3 style={styles.colorBlue}>
-            const <span style={styles.colorYellow}>myProfile<span style={styles.colorOra}>&#40;</span><span style={styles.colorBlue}>&#123;</span></span>
+            const{" "}
+            <span style={styles.colorYellow}>
+              myProfile<span style={styles.colorOra}>&#40;</span>
+              <span style={styles.colorBlue}>&#123;</span>
+            </span>
           </h3>
           <div style={styles.LeftBorder}>
             <p style={styles.colorLightBlue}>
-              name: <span>"{dev.name}"</span><span style={styles.whtSemiColon} >;</span>
+              name: <span>"{dev.name}"</span>
+              <span style={styles.whtSemiColon}>;</span>
             </p>
             <p style={styles.colorLightBlue}>
-              email: <span>"{dev.email}"</span> <span style={styles.whtSemiColon} >;</span>
+              email: <span>"{dev.email}"</span>{" "}
+              <span style={styles.whtSemiColon}>;</span>
             </p>
             <p style={styles.colorLightBlue}>
-              position: <span>"{dev.position}"</span> <span style={styles.whtSemiColon} >;</span>
+              position: <span>"{dev.position}"</span>{" "}
+              <span style={styles.whtSemiColon}>;</span>
             </p>
             <p style={styles.colorLightBlue}>
-              job_status: <span>"{dev.job_status}"</span> <span style={styles.whtSemiColon} >;</span>
+              job_status: <span>"{dev.job_status}"</span>{" "}
+              <span style={styles.whtSemiColon}>;</span>
             </p>
             <p style={styles.colorLightBlue}>
-              bio: <span>"{dev.bio}"</span> <span style={styles.whtSemiColon} >;</span>
+              bio: <span>"{dev.bio}"</span>{" "}
+              <span style={styles.whtSemiColon}>;</span>
             </p>
           </div>
 
-          <h3> <span style={styles.brackets}>&#125;</span><span style={styles.colorOra}>&#41;</span><span style={styles.whtSemiColon} >;</span></h3>
+          <h3>
+            {" "}
+            <span style={styles.brackets}>&#125;</span>
+            <span style={styles.colorOra}>&#41;</span>
+            <span style={styles.whtSemiColon}>;</span>
+          </h3>
         </div>
-        <h3 style={styles.colorPurple} className="smallertext">Edit Your Profile <span style={styles.brackets}>&#123;</span> </h3>
+        <h3 style={styles.colorPurple}>
+          Edit Your Profile <span style={styles.brackets}>&#123;</span>{" "}
+        </h3>
         <div style={styles.LeftBorder}>
-          <Link to={link} style={styles.button} className="smallertext">
+          <Link to={link} style={styles.button} className="responsive-font">
             click here!
           </Link>
         </div>
-        <h3  style={styles.brackets} >&#125;</h3>
-        <h3 style={styles.colorPurple} >Projects <span style={styles.brackets}>&#123;</span> </h3>
+        <h3 style={styles.brackets}>&#125;</h3>
+        <h3 style={styles.colorPurple}>
+          Projects <span style={styles.brackets}>&#123;</span>{" "}
+        </h3>
 
         {dev.projects.map((project) => {
           return (
@@ -188,7 +209,7 @@ function DevProfile() {
             </div>
           );
         })}
-        <h3  style={styles.brackets} >&#125;</h3>
+        <h3 style={styles.brackets}>&#125;</h3>
       </div>
     </div>
   );
