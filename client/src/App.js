@@ -14,6 +14,7 @@ import Footer from "./components/footer";
 import "./index.css";
 
 import Support from "./pages/support";
+import Legal from "./pages/Legal";
 import DevCarousel from "./pages/Developers";
 import LandingPage from "./pages/LandingPage";
 import DevRecSignup from "./pages/DevOrRecSignup";
@@ -96,6 +97,7 @@ function App() {
                 <Route path="/logintype" element={<DevRecLogin />} />
                 <Route path="/projects" element={<ReviewProjects />} />
                 <Route path="/support" element={<Support />} />
+                <Route path="/legal" element={<Legal />} />
 
                 <Route path="/*" element={<LandingPage />} />
               </Routes>
@@ -126,6 +128,7 @@ function App() {
               <Route path="/developers" element={<DevCarousel />} />
               <Route path="/:developerId/edit" element={<SignUpDevProfile />} />
               <Route path="/support" element={<Support />} />
+              <Route path="/legal" element={<Legal />} />
               <Route path="/me" element={<DevProfile />} />
               <Route path="/*" element={<DevCarousel />} />
               <Route path="/:developerId/addproject" element={<AddProject />} />
