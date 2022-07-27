@@ -36,6 +36,7 @@ function DevCarousel() {
   const styles = {
     fit: {
       height: "90vh",
+      width: "90vw"
     },
     projects: {
       display: "none",
