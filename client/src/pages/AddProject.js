@@ -157,7 +157,7 @@ function AddProject() {
           <div style={styles.LeftBorder}>
             <form onSubmit={formSubmitHandler}>
               <div className="form-group">
-                <h4 style={styles.colorGreen}> /your name:/ </h4>
+                <h4 style={styles.colorGreen}> /project name:/ </h4>
                 {/* <label style={styles.colorLightBlue} htmlFor="nameInput">name: </label> */}
                 <input
                   type="name"
