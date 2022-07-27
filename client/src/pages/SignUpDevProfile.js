@@ -264,7 +264,7 @@ function SignUpDevProfile() {
             click here!
           </Link>
         </div>
-        <h3>&#125;</h3>
+        <h3> <span style={styles.brackets}>&#125;</span><span style={styles.colorOra}>&#41;</span><span style={styles.whtSemiColon} >;</span></h3>
       </div>
     </div>
   );
