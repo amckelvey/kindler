@@ -20,18 +20,22 @@ function Card({ imagen, name, position, job_status, bio, email, _id, i }) {
       width: "25%",
       borderRadius: "20px",
       position: "absolute",
-      top: "6%",
-      left: "8%",
+      top: "-8%",
+      right: "5%",
     },
 
     h2: {
-      marginTop: "50%",
+      marginTop: "10%",
+      marginBottom: "10%",
       color: "#9CDCFB",
     },
 
     p: {
       margin: "0",
       color: "#CE9178",
+      borderLeft: "solid 2px #7B7B7B",
+      padding: "0 5px",
+      overflowWrap: "break-word",
     },
 
     btnn1: {
@@ -63,6 +67,12 @@ function Card({ imagen, name, position, job_status, bio, email, _id, i }) {
     title: {
       color: "#9CDCFB",
     },
+    bio: {
+      color: "#F2D700",
+    },
+    purple: {
+      color: "#C586C0",
+    },
   };
   const [show, setShown] = useState(false);
 
@@ -84,11 +94,24 @@ function Card({ imagen, name, position, job_status, bio, email, _id, i }) {
         <h2 style={styles.h2}>{name}</h2>
         <p style={styles.p}>
           <span style={styles.title}>Position:</span> {position}
+          <p style={styles.p}>
+            <span style={styles.title}>Job Status:</span> {job_status}
+            <p style={styles.p}>
+              <p style={styles.bio}>{bio}</p>
+              <div id={_id} style={styles.contact}>
+                <span style={styles.purple}>if </span>
+                <span style={styles.bio}>&#40;</span>
+                <span style={styles.title}>contact</span>
+                <span style={styles.bio}>&#41; &#123;</span>
+                <br></br>
+                <span style={styles.purple}>return </span>
+                <span style={styles.title}>{email}</span>
+                <br></br>
+                <span style={styles.bio}>&#125;</span>
+              </div>
+            </p>
+          </p>
         </p>
-        <p style={styles.p}>
-          <span style={styles.title}>Job Status:</span> {job_status}
-        </p>
-        <p style={styles.p}>{bio}</p>
         <div>
           <div style={styles.btnn1}>
             <ContactBtn text="Contact" id={_id} />
@@ -96,10 +119,6 @@ function Card({ imagen, name, position, job_status, bio, email, _id, i }) {
           <div style={styles.btnn2}>
             <ProjectBtn text="Project" id={i} />
           </div>
-        </div>
-        <div id={_id} style={styles.contact}>
-          <br></br>
-          Contact email: {email}
         </div>
       </div>
     </animated.div>

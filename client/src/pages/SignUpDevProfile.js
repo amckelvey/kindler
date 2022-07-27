@@ -5,7 +5,7 @@ import { useQuery } from "@apollo/client";
 import { useMutation } from "@apollo/client";
 import { Navigate, Link, useParams } from "react-router-dom";
 import Auth from "../utils/auth";
-import './SignUpDevProfile.css'
+import "./SignUpDevProfile.css";
 
 function SignUpDevProfile() {
   const { _id: userParam } = useParams();
@@ -159,19 +159,26 @@ function SignUpDevProfile() {
         DEVELOPER <span style={styles.brackets}>&#125;</span>
       </h2>
       <div style={styles.LeftBorder}>
-        <h3 style={styles.colorGreen} className="smaller">// SETUP YOUR PROFILE //</h3>
+        <h3 style={styles.colorGreen} className="smaller">
+          // SETUP YOUR PROFILE //
+        </h3>
         <div style={styles.LeftBorder}>
           <h3 style={styles.colorBlue} className="smaller">
             const{" "}
             <span style={styles.colorYellow} className="smaller">
-              myProfile<span style={styles.colorOra} className="smaller">&#40;</span>
-              <span style={styles.colorBlue} className="smaller">&#123;</span>
+              myProfile
+              <span style={styles.colorOra} className="smaller">
+                &#40;
+              </span>
+              <span style={styles.colorBlue} className="smaller">
+                &#123;
+              </span>
             </span>
           </h3>
           <div style={styles.LeftBorder}>
             <form onSubmit={formSubmitHandler}>
               <div className="form-group">
-              <h4 style={styles.colorGreen}> /name:/ </h4>
+                <h4 style={styles.colorGreen}> /name:/ </h4>
                 {/* <label htmlFor="exampleInputEmail1">name: </label> */}
                 <input
                   type="name"
@@ -185,7 +192,7 @@ function SignUpDevProfile() {
                 />
               </div>
               <div className="form-group">
-              <h4 style={styles.colorGreen}> /status:/ </h4>
+                <h4 style={styles.colorGreen}> /status:/ </h4>
                 {/* <label htmlFor="statusInput">status: </label> */}
                 <select
                   name="jobStatus"
@@ -201,7 +208,7 @@ function SignUpDevProfile() {
                 </select>
               </div>
               <div className="form-group">
-              <h4 style={styles.colorGreen}> /position:/ </h4>
+                <h4 style={styles.colorGreen}> /position:/ </h4>
                 {/* <label htmlFor="positionInput">position: </label> */}
                 <select
                   name="position"
@@ -223,7 +230,7 @@ function SignUpDevProfile() {
                 </select>
               </div>
               <div className="form-group">
-              <h4 style={styles.colorGreen}> /bio:/ </h4>
+                <h4 style={styles.colorGreen}> /bio:/ </h4>
                 {/* <label htmlFor="bioInput">bio: </label> */}
                 <textarea
                   className="form-control"
@@ -233,6 +240,7 @@ function SignUpDevProfile() {
                   onChange={handleChange}
                   rows="5"
                   cols="30"
+                  maxlength="90"
                 />
               </div>
 
@@ -241,7 +249,12 @@ function SignUpDevProfile() {
               </button>
             </form>
           </div>
-          <h3> <span style={styles.brackets}>&#125;</span><span style={styles.colorOra}>&#41;</span><span style={styles.whtSemiColon} >;</span></h3>
+          <h3>
+            {" "}
+            <span style={styles.brackets}>&#125;</span>
+            <span style={styles.colorOra}>&#41;</span>
+            <span style={styles.whtSemiColon}>;</span>
+          </h3>
         </div>
         <h3 style={styles.colorYellow}>
           <span style={styles.colorBlue}>const</span> returnToProfile
@@ -253,7 +266,12 @@ function SignUpDevProfile() {
             click here!
           </Link>
         </div>
-        <h3> <span style={styles.brackets}>&#125;</span><span style={styles.colorOra}>&#41;</span><span style={styles.whtSemiColon} >;</span></h3>
+        <h3>
+          {" "}
+          <span style={styles.brackets}>&#125;</span>
+          <span style={styles.colorOra}>&#41;</span>
+          <span style={styles.whtSemiColon}>;</span>
+        </h3>
 
         <h3 style={styles.colorYellow}>
           <span style={styles.colorBlue}>const</span> addProject
@@ -265,7 +283,12 @@ function SignUpDevProfile() {
             click here!
           </Link>
         </div>
-        <h3> <span style={styles.brackets}>&#125;</span><span style={styles.colorOra}>&#41;</span><span style={styles.whtSemiColon} >;</span></h3>
+        <h3>
+          {" "}
+          <span style={styles.brackets}>&#125;</span>
+          <span style={styles.colorOra}>&#41;</span>
+          <span style={styles.whtSemiColon}>;</span>
+        </h3>
       </div>
     </div>
   );
