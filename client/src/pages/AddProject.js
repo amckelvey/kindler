@@ -139,12 +139,12 @@ function AddProject() {
   };
 
   return (
-    <div className="sloganContainer" style={styles.LeftBorder}>
-      <h2 style={styles.slogan}>
-        <span style={styles.brackets}>&#123;</span> #COMMIT TO YOUR RIGHT
-        DEVELOPER <span style={styles.brackets}>&#125;</span>
+    <div className="smallertext" style={styles.LeftBorder} >
+      <h2 style={styles.slogan} className="smallertext">
+        <span style={styles.brackets} className="smallertext">&#123;</span> #COMMIT TO YOUR RIGHT
+        DEVELOPER <span style={styles.brackets} className="smallertext">&#125;</span>
       </h2>
-      <div style={styles.LeftBorder}>
+      <div style={styles.LeftBorder} className="smallertext">
         <h3 style={styles.colorGreen}>// ADD YOUR PROJECT //</h3>
         <div style={styles.LeftBorder}>
           <h3 style={styles.colorBlue}>
@@ -210,7 +210,7 @@ function AddProject() {
                   value={formState.bio}
                   onChange={handleChange}
                   rows="5"
-                  cols="40"
+                  cols="30"
                 />
               </div>
 
