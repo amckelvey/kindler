@@ -3,10 +3,6 @@ import Auth from "../../utils/auth";
 
 const LogoutBtn = () => {
   const styles = {
-    whtSemiColon: {
-      color: "#FFFFFF",
-      
-    },
     button: {
       color: "#CE9178",
       fontSize: "16px",
@@ -16,12 +12,11 @@ const LogoutBtn = () => {
       width: "120px",
       height: "30px",
       fontWeight: "bolder",
-    
     },
   };
   return (
     <button style={styles.button} onClick={() => Auth.logout()}>
-      'logout' <span style={styles.whtSemiColon}>;</span>
+      'logout'
     </button>
   );
 };
