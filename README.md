@@ -11,7 +11,8 @@ Kindler is a streamlined way for software developers and recruiters to match wit
 
 ### Project Image: 
 
-![Profile Page](./assets/images/profile-page.png)
+<img width="1439" alt="image" src="https://user-images.githubusercontent.com/103960619/181138697-3ab41326-fe31-4010-97c2-b5843017aa20.png">
+
 
 
 ### Deployed URL:
