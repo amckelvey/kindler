@@ -4,7 +4,7 @@ export default function Footer() {
   const styles = {
     footerContainer: {
       position: "relative",
-      width: "98%",
+      width: "90%",
       height: "2.5rem",
       display: "inline-block",
       fontFamily: "Source Code Pro, monospace",

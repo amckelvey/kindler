@@ -45,6 +45,78 @@ function SignUpDevProfile() {
       marginTop: "10px",
       fontFamily: "Source Code Pro, monospace",
     },
+    card: {
+      maxWidth: "400px",
+      color: "#FFFFFF",
+      border: "2px solid #FFFFFF",
+      borderRadius: "30px",
+      fontSize: "15px",
+      letterSpacing: "2.5px",
+      backgroundColor: "transparent",
+      textDecoration: "none",
+      paddingLeft: "10px",
+      paddingRight: "10px",
+      paddingBottom: "5px",
+      fontFamily: "Source Code Pro, monospace",
+    },
+    textColor: {
+      color: "#649955",
+    },
+
+    brackets: {
+      color: "#F2D700",
+      fontFamily: "Source Code Pro, monospace",
+      fontWeight: "lighter",
+    },
+
+    colorOra: {
+      color: "#CE9178",
+      fontFamily: "Source Code Pro, monospace",
+      fontWeight: "lighter",
+    },
+
+    colorYellow: {
+      color: "#F2D700",
+      fontFamily: "Source Code Pro, monospace",
+      fontWeight: "lighter",
+    },
+
+    colorLightBlue: {
+      color: "#9CDCFB",
+      fontFamily: "Source Code Pro, monospace",
+      fontWeight: "lighter",
+    },
+    colorBlue: {
+      color: "#179FF6",
+      fontFamily: "Source Code Pro, monospace",
+      fontWeight: "lighter",
+    },
+
+    colorPurple: {
+      color: "#C586C0",
+      fontFamily: "Source Code Pro, monospace",
+      fontWeight: "lighter",
+    },
+
+    colorGreen: {
+      color: "#649955",
+      fontFamily: "Source Code Pro, monospace",
+      fontWeight: "lighter",
+    },
+
+    slogan: {
+      color: "#9CDCFB",
+      fontSize: "25px",
+      fontWeight: "300",
+      letterSpacing: "3px",
+      fontFamily: "Source Code Pro, monospace",
+    },
+
+    whtSemiColon: {
+      color: "#FFFFFF",
+      fontWeight: "lighter",
+      fontFamily: "Source Code Pro, monospace",
+    },
   };
 
   const formSubmitHandler = async (event) => {
@@ -81,17 +153,25 @@ function SignUpDevProfile() {
   }
   return (
     <div className="sloganContainer" style={styles.LeftBorder}>
-      <h2>&#123; #COMMIT TO YOUR RIGHT DEVELOPER &#125;</h2>
+      <h2 style={styles.slogan}>
+        <span style={styles.brackets}>&#123;</span> #COMMIT TO YOUR RIGHT
+        DEVELOPER <span style={styles.brackets}>&#125;</span>
+      </h2>
       <div style={styles.LeftBorder}>
-        <h3>// SET UP YOUR PROFILE //</h3>
+        <h3 style={styles.colorGreen}>// SETUP YOUR PROFILE //</h3>
         <div style={styles.LeftBorder}>
-          <h3>
-            const <span>myProfile &#40;</span>&#123;
+          <h3 style={styles.colorBlue}>
+            const{" "}
+            <span style={styles.colorYellow}>
+              myProfile<span style={styles.colorOra}>&#40;</span>
+              <span style={styles.colorBlue}>&#123;</span>
+            </span>
           </h3>
           <div style={styles.LeftBorder}>
             <form onSubmit={formSubmitHandler}>
               <div className="form-group">
-                <label htmlFor="exampleInputEmail1">name: </label>
+              <h4 style={styles.colorGreen}> /name:/ </h4>
+                {/* <label htmlFor="exampleInputEmail1">name: </label> */}
                 <input
                   type="name"
                   name="name"
@@ -104,7 +184,8 @@ function SignUpDevProfile() {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="statusInput">status: </label>
+              <h4 style={styles.colorGreen}> /status:/ </h4>
+                {/* <label htmlFor="statusInput">status: </label> */}
                 <select
                   name="jobStatus"
                   className="form-control"
@@ -119,7 +200,8 @@ function SignUpDevProfile() {
                 </select>
               </div>
               <div className="form-group">
-                <label htmlFor="positionInput">position: </label>
+              <h4 style={styles.colorGreen}> /position:/ </h4>
+                {/* <label htmlFor="positionInput">position: </label> */}
                 <select
                   name="position"
                   className="form-control"
@@ -140,13 +222,16 @@ function SignUpDevProfile() {
                 </select>
               </div>
               <div className="form-group">
-                <label htmlFor="bioInput">bio: </label>
+              <h4 style={styles.colorGreen}> /bio:/ </h4>
+                {/* <label htmlFor="bioInput">bio: </label> */}
                 <textarea
                   className="form-control"
                   id="bioInput"
                   name="bio"
                   value={formState.bio}
                   onChange={handleChange}
+                  rows="5"
+                  cols="40"
                 />
               </div>
 
@@ -155,19 +240,24 @@ function SignUpDevProfile() {
               </button>
             </form>
           </div>
-          <h3> &#125;&#41;;</h3>
+          <h3> <span style={styles.brackets}>&#125;</span><span style={styles.colorOra}>&#41;</span><span style={styles.whtSemiColon} >;</span></h3>
         </div>
-        <h3>
-          <span>const</span> returnToProfile &#123;
+        <h3 style={styles.colorYellow}>
+          <span style={styles.colorBlue}>const</span> returnToProfile
+          <span style={styles.colorOra}>&#40;</span>
+          <span style={styles.colorBlue}>&#123;</span>
         </h3>
         <div style={styles.LeftBorder}>
           <Link to="/me" style={styles.button}>
             click here!
           </Link>
         </div>
-        <h3>&#125;</h3>
-        <h3>
-          <span>const</span> addProject &#123;
+        <h3> <span style={styles.brackets}>&#125;</span><span style={styles.colorOra}>&#41;</span><span style={styles.whtSemiColon} >;</span></h3>
+
+        <h3 style={styles.colorYellow}>
+          <span style={styles.colorBlue}>const</span> addProject
+          <span style={styles.colorOra}>&#40;</span>
+          <span style={styles.colorBlue}>&#123;</span>
         </h3>
         <div style={styles.LeftBorder}>
           <Link to={link} style={styles.button}>
