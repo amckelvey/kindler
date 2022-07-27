@@ -69,7 +69,7 @@ function DevRecLogin() {
         </h2>
         <div style={styles.LeftBorder}>
           <p>
-            <span style={styles.colorOra}>'sign in'</span>
+            <span style={styles.colorOra}>'sign-in'</span>
             <span>;</span>
           </p>
           <div style={styles.LeftBorder}>

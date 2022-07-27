@@ -66,6 +66,10 @@ const styles = {
     marginTop: "3vh",
     marginLeft: "2vh",
   },
+  pageWrap: {
+    display: "flex",
+    flexDirection: "column"
+  }
 };
 
 function App() {
@@ -95,8 +99,8 @@ function App() {
 
                 <Route path="/*" element={<LandingPage />} />
               </Routes>
+              <Footer />
             </div>
-            <Footer />
           </div>
         </Router>
       </ApolloProvider>
@@ -129,8 +133,8 @@ function App() {
               <Route path="/developers" element={<SignUpDevProfile />} />
               <Route */}
             </Routes>
+            <Footer />
           </div>
-          <Footer />
         </div>
       </Router>
     </ApolloProvider>

@@ -5,85 +5,94 @@ import { Link } from "react-router-dom";
 import Auth from "../utils/auth";
 
 const styles = {
-  container: {
-    borderLeft: "solid 2px #7B7B7B",
-    padding: "0 1em",
-    margin: "10px 2em",
-    fontFamily: "Source Code Pro, monospace",
-  },
-
-  slogan: {
-    color: "#9CDCFB",
-    fontSize: "25px",
-    fontWeight: "300",
-    letterSpacing: "3px",
-    fontFamily: "Source Code Pro, monospace",
-  },
-
-  brackets: {
-    color: "#F2D700",
-    fontFamily: "Source Code Pro, monospace",
-  },
-
-  h2: {
-    color: "#CE9178",
-    fontFamily: "Source Code Pro, monospace",
-  },
-
-  textColor: {
-    color: "#649955",
-    fontSize: "3vw"
-  },
-
-  semiColon: {
-    color: "white",
-  },
-
-  input: {
-    width: "80vw",
-    color: "#FFFFFF",
-    border: "2px solid #FFFFFF",
-    borderRadius: "30px",
-    fontSize: "15px",
-    letterSpacing: "2.5px",
-    backgroundColor: "transparent",
-    textDecoration: "none",
-    paddingLeft: "10px",
-    paddingRight: "10px",
-    display: "block"
-  },
-
-  inputDiv: {
-    paddingBottom: "5px",
-    paddingLeft: "20px",
-    display: "flex",
-    justifyContent: "center"
-
-  },
-
-  button: {
-    color: "#FFFFFF",
-    border: "2px solid #FFFFFF",
-    borderRadius: "30px",
-    fontSize: "15px",
-    letterSpacing: "2.5px",
-    backgroundColor: "transparent",
-    textDecoration: "none",
-    paddingLeft: "10px",
-    paddingRight: "10px",
-    flex: "1"
-  },
-
-  p: {
-    color: "#FFFFFF",
-  },
-
-
-  backLink: {
-    paddingLeft: "20px",
-    color: "#9CDCFB",
-  },
-};
+    container: {
+      borderLeft: "solid 2px #7B7B7B",
+      padding: "0 1em",
+      margin: "10px 2em",
+      letterSpacing: "3px",
+      fontFamily: "Source Code Pro, monospace",
+    },
+  
+    slogan: {
+      color: "#9CDCFB",
+      fontSize: "25px",
+      fontWeight: "300",
+      letterSpacing: "3px",
+      fontFamily: "Source Code Pro, monospace",
+    },
+  
+    brackets: {
+      color: "#F2D700",
+      fontFamily: "Source Code Pro, monospace",
+    },
+  
+    h2: {
+      color: "#CE9178",
+      fontFamily: "Source Code Pro, monospace",
+    },
+  
+    textColor: {
+      color: "#649955",
+      fontSize: "3vw"
+    },
+  
+    semiColon: {
+      color: "white",
+    },
+  
+    input: {
+      width: "80vw",
+      color: "#FFFFFF",
+      border: "2px solid #FFFFFF",
+      borderRadius: "30px",
+      fontSize: "15px",
+      letterSpacing: "2.5px",
+      backgroundColor: "transparent",
+      textDecoration: "none",
+      padding: "2px 10px",
+      margin: "10px 0",
+    },
+  
+    inputDiv: {
+      paddingBottom: "5px",
+      paddingLeft: "20px",
+      height: "90px",
+      display: "flex",
+      justifyContent: "center",
+    },
+  
+    colorOra: {
+      color: "#CE9178",
+      fontFamily: "Source Code Pro, monospace",
+    },
+  
+    buttonDiv: {
+      paddingLeft: "20px",
+    },
+  
+    button: {
+      color: "#FFFFFF",
+      border: "2px solid #FFFFFF",
+      borderRadius: "30px",
+      fontSize: "15px",
+      letterSpacing: "2.5px",
+      backgroundColor: "transparent",
+      textDecoration: "none",
+      paddingLeft: "10px",
+      paddingRight: "10px",
+      fontFamily: "Source Code Pro, monospace",
+      flex: "1"
+    },
+    
+    p: {
+      color: "#FFFFFF",
+    },
+  
+    backLink: {
+      paddingLeft: "20px",
+      color: "#9CDCFB",
+    },
+  };
 
 function Login(props) {
   const [formState, setFormState] = useState({ email: "", password: "" });
@@ -121,13 +130,13 @@ function Login(props) {
           </h2>
         </div>
         <div className="container" style={styles.container}>
-          <h2 style={styles.h2}>
+          <p style={styles.colorOra}>
             'sign-in'<span style={styles.semiColon}>&#59;</span>
-          </h2>
+          </p>
           <div className="container" style={styles.container}>
-            <h2 style={styles.textColor}>
+            <p style={styles.textColor}>
               // sign-in to your developer account //
-            </h2>
+            </p>
           </div>
         </div>
       </div>
@@ -150,10 +159,12 @@ function Login(props) {
             id="pwd"
             onChange={handleChange}
           />
-          <div style={{display: "flex", flexDirection: "column"}}>
+          <div style={{display: "flex", justifyContent: "center", width: "20px", padding: "0 40%"}}>
             {error ? 
             <p style={styles.p}>The login information is not correct</p> : null}
-            <button type="submit" style={styles.button}>Submit</button>
+            <button type="submit" style={styles.button}>
+              Submit
+            </button>          
           </div>
         </form>
       </div>
