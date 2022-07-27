@@ -5,6 +5,7 @@ import { useQuery } from "@apollo/client";
 import { useMutation } from "@apollo/client";
 import { Navigate, Link, useParams } from "react-router-dom";
 import Auth from "../utils/auth";
+import './SignUpDevProfile.css'
 
 function SignUpDevProfile() {
   const { _id: userParam } = useParams();
@@ -152,19 +153,19 @@ function SignUpDevProfile() {
     return <h4>You need to be logged in to see this.</h4>;
   }
   return (
-    <div className="sloganContainer" style={styles.LeftBorder}>
-      <h2 style={styles.slogan}>
+    <div className="smallertext" style={styles.LeftBorder}>
+      <h2 style={styles.slogan} className="smallertext">
         <span style={styles.brackets}>&#123;</span> #COMMIT TO YOUR RIGHT
         DEVELOPER <span style={styles.brackets}>&#125;</span>
       </h2>
       <div style={styles.LeftBorder}>
-        <h3 style={styles.colorGreen}>// SETUP YOUR PROFILE //</h3>
+        <h3 style={styles.colorGreen} className="smaller">// SETUP YOUR PROFILE //</h3>
         <div style={styles.LeftBorder}>
-          <h3 style={styles.colorBlue}>
+          <h3 style={styles.colorBlue} className="smaller">
             const{" "}
-            <span style={styles.colorYellow}>
-              myProfile<span style={styles.colorOra}>&#40;</span>
-              <span style={styles.colorBlue}>&#123;</span>
+            <span style={styles.colorYellow} className="smaller">
+              myProfile<span style={styles.colorOra} className="smaller">&#40;</span>
+              <span style={styles.colorBlue} className="smaller">&#123;</span>
             </span>
           </h3>
           <div style={styles.LeftBorder}>
@@ -231,7 +232,7 @@ function SignUpDevProfile() {
                   value={formState.bio}
                   onChange={handleChange}
                   rows="5"
-                  cols="40"
+                  cols="30"
                 />
               </div>
 

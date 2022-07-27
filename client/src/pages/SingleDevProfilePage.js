@@ -4,6 +4,7 @@ import { useMutation, useQuery } from "@apollo/client";
 import { QUERY_ME_DEV, QUERY_SINGLE_DEVELOPER } from "../utils/queries";
 import Auth from "../utils/auth";
 import { REMOVE_PROJECT } from "../utils/mutations";
+import "./SignUpDevProfile.css"
 
 function DevProfile() {
   const { _id: userParam } = useParams();
@@ -103,55 +104,6 @@ function DevProfile() {
       color: "#649955",
     },
 
-    brackets: {
-      color: "#F2D700",
-      fontFamily: "Source Code Pro, monospace",
-      fontWeight: "lighter"
-    },
-
-    colorOra: {
-      color: "#CE9178",
-      fontFamily: "Source Code Pro, monospace",
-      fontWeight: "lighter"
-    },
-
-    colorYellow: {
-      color: "#F2D700",
-      fontFamily: "Source Code Pro, monospace",
-      fontWeight: "lighter"
-    },
-
-    colorLightBlue: {
-      color: "#9CDCFB",
-      fontFamily: "Source Code Pro, monospace",
-      fontWeight: "lighter"
-    },
-    colorBlue: {
-      color: "#179FF6",
-      fontFamily: "Source Code Pro, monospace",
-      fontWeight: "lighter"
-    },
-
-    colorPurple: {
-      color: "#C586C0",
-      fontFamily: "Source Code Pro, monospace",
-      fontWeight: "lighter"
-    },
-
-    colorGreen: {
-      color: "#649955",
-      fontFamily: "Source Code Pro, monospace",
-      fontWeight: "lighter"
-    },
-
-    slogan: {
-      color: "#9CDCFB",
-      fontSize: "25px",
-      fontWeight: "300",
-      letterSpacing: "3px",
-      fontFamily: "Source Code Pro, monospace",
-    },
-
     whtSemiColon: {
       color: "#FFFFFF",
       fontWeight: "lighter",
@@ -169,12 +121,12 @@ function DevProfile() {
   // }
 
   return (
-    <div className="sloganContainer" style={styles.LeftBorder}>
-       <h2 style={styles.slogan}>
-          <span style={styles.brackets}>&#123;</span> #COMMIT TO YOUR RIGHT
-          DEVELOPER <span style={styles.brackets}>&#125;</span>
+    <div className="smallertext" style={styles.LeftBorder} >
+       <h2 style={styles.slogan} className="smallertext">
+          <span style={styles.brackets} className="smallertext">&#123;</span> #COMMIT TO YOUR RIGHT
+          DEVELOPER <span style={styles.brackets} className="smallertext">&#125;</span>
         </h2>
-      <div style={styles.LeftBorder}>
+      <div style={styles.LeftBorder} className="smallertext">
         <h3 style={styles.colorGreen}>/My Profile/</h3>
         <div style={styles.LeftBorder}>
           <h3 style={styles.colorBlue}>
@@ -200,9 +152,9 @@ function DevProfile() {
 
           <h3> <span style={styles.brackets}>&#125;</span><span style={styles.colorOra}>&#41;</span><span style={styles.whtSemiColon} >;</span></h3>
         </div>
-        <h3 style={styles.colorPurple} >Edit Your Profile <span style={styles.brackets}>&#123;</span> </h3>
+        <h3 style={styles.colorPurple} className="smallertext">Edit Your Profile <span style={styles.brackets}>&#123;</span> </h3>
         <div style={styles.LeftBorder}>
-          <Link to={link} style={styles.button}>
+          <Link to={link} style={styles.button} className="smallertext">
             click here!
           </Link>
         </div>
