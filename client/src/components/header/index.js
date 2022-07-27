@@ -97,12 +97,11 @@ export default function Header() {
           </Link>
         </div>
         <div className="hider">
-          <button
-            style={styles.navbarbutton}
-            onClick={() => alert("This is our website")}
-          >
-            Learn<span className="makeSmall" style={styles.whtSemiColon}>;</span>
-          </button>
+          <Link to="/legal" >
+            <button style={styles.navbarbutton}>
+              Learn<span className="makeSmall" style={styles.whtSemiColon}>;</span>
+            </button>
+          </Link>
         </div>
         <div className="hider">
           <button style={styles.navbarbutton} onClick={() => alert("Stay safe")}>

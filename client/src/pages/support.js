@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 
 
-const FORM_ENDPOINT = ""; 
-
 const styles = {
   LeftBorder: {
     borderLeft: "solid 2px #7B7B7B",
@@ -111,6 +109,7 @@ const Support = () => {
       <>
         <div className="text-2xl">Thank you!</div>
         <div className="text-md">We'll be in touch soon.</div>
+        <img src="https://drive.google.com/file/d/1KUHy3lWbVDKEbNXYZl5JrPdEqTnAOl-K/view" alt="I will find you, I will help you"/>
       </>
     );
   }
