@@ -159,13 +159,13 @@ function Login(props) {
             id="pwd"
             onChange={handleChange}
           />
+
           <div style={{display: "flex", justifyContent: "center", width: "20px", padding: "0 40%"}}>
-            {error ? 
-            <p style={styles.p}>The login information is not correct</p> : null}
             <button type="submit" style={styles.button}>
               Submit
-            </button>          
+            </button>
           </div>
+          {error ? <p style={styles.p}>The login information is not correct</p> : null}
         </form>
       </div>
       <br />
