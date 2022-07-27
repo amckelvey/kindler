@@ -89,7 +89,7 @@ function Card({ imagen, name, position, job_status, bio, email, _id, i }) {
           <span style={styles.title}>Job Status:</span> {job_status}
         </p>
         <p style={styles.p}>{bio}</p>
-        <div style={styles.btnn}>
+        <div>
           <div style={styles.btnn1}>
             <ContactBtn text="Contact" id={_id} />
           </div>
