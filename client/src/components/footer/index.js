@@ -84,37 +84,61 @@ export default function Footer() {
           <ul className="list-inline" style={styles.ul}>
             <span style={styles.curlyBrackYellow}>[</span>
             <li className="list-inline-item" style={styles.listInlineItem}>
-              <a style={styles.a} href="https://github.com/Lunirs">
+              <a
+                style={styles.a}
+                href="https://github.com/Lunirs"
+                target="_blank"
+              >
                 Dan
               </a>
               <span style={styles.whtSemiColon}>,</span>
             </li>
             <li className="list-inline-item" style={styles.listInlineItem}>
-              <a style={styles.a} href="https://github.com/lyf703331869">
+              <a
+                style={styles.a}
+                href="https://github.com/lyf703331869"
+                target="_blank"
+              >
                 Yafei
               </a>
               <span style={styles.whtSemiColon}>,</span>
             </li>
             <li className="list-inline-item" style={styles.listInlineItem}>
-              <a style={styles.a} href="https://github.com/amckelvey">
+              <a
+                style={styles.a}
+                href="https://github.com/amckelvey"
+                target="_blank"
+              >
                 Andrew
               </a>
               <span style={styles.whtSemiColon}>,</span>
             </li>
             <li className="list-inline-item" style={styles.listInlineItem}>
-              <a style={styles.a} href="https://github.com/shayosullivan">
+              <a
+                style={styles.a}
+                href="https://github.com/shayosullivan"
+                target="_blank"
+              >
                 Shay
               </a>
               <span style={styles.whtSemiColon}>,</span>
             </li>
             <li className="list-inline-item" style={styles.listInlineItem}>
-              <a style={styles.a} href="https://github.com/saukchung">
+              <a
+                style={styles.a}
+                href="https://github.com/saukchung"
+                target="_blank"
+              >
                 Brian
               </a>
               <span style={styles.whtSemiColon}>,</span>
             </li>
             <li className="list-inline-item" style={styles.listInlineItem}>
-              <a style={styles.a} href="https://github.com/taa2153">
+              <a
+                style={styles.a}
+                href="https://github.com/taa2153"
+                target="_blank"
+              >
                 Tasha
               </a>
               <span style={styles.whtSemiColon}>,</span>
