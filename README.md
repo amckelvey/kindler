@@ -23,8 +23,9 @@ Kindler is a streamlined way for software developers and recruiters to match wit
 5. GraphQL
 6. react-spring-3d-carousel
 7. dotenv
-8. CSS
-9. JavaScript
+8. jwt-decode
+9. CSS
+10. JavaScript
 
 ## ScreenShots
 
@@ -35,18 +36,6 @@ Kindler is a streamlined way for software developers and recruiters to match wit
 <img width="1439" alt="image" src="./assets/images/carousel.png">
 
 <img width="1439" alt="image" src="./assets/images/profile.png">
-
-## Technologies Used:
-
-- MongoDB
-- Express
-- React
-- Node.js
-- Redux
-- Heroku
-- MongoDB Atlas
-- graphql
-- jwt-decode
 
 ## Team:
 
