@@ -10,7 +10,7 @@ Kindler is a streamlined way for software developers and recruiters to match wit
 
 > The site is hosted on Heroku, so please allow a few moments for the app to spin up.
 
-[Kindler Live Deployment](https://guarded-castle-49878.herokuapp.com/)
+[Kindler Live Deployment](https://kindler-9621bf2094f8.herokuapp.com/)
 
 <br>
 
